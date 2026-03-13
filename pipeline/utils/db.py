@@ -195,6 +195,17 @@ def upsert_restaurant(
         raise
 
 
+def get_all_restaurant_names() -> list[str]:
+    """Return all restaurant names from the sheet."""
+    try:
+        ws = _get_worksheet("restaurants")
+        all_rows = ws.get_all_values()
+        return [row[1] for row in all_rows[1:] if len(row) > 1 and row[1]]
+    except Exception:
+        logger.exception("Error loading restaurant names")
+        return []
+
+
 def find_restaurant_by_name(name: str) -> dict | None:
     """Fuzzy match using difflib.SequenceMatcher (threshold 0.3)."""
     try:

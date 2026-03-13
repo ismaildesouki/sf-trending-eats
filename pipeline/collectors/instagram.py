@@ -22,7 +22,7 @@ from pipeline.utils.nlp import (
     is_food_related,
     generate_slug,
 )
-from pipeline.utils.db import upsert_restaurant, insert_mention, get_cursor
+from pipeline.utils.db import upsert_restaurant, insert_mention, get_all_restaurant_names
 
 logger = logging.getLogger(__name__)
 
@@ -30,10 +30,12 @@ ACTOR_ID = "apify/instagram-hashtag-scraper"
 
 
 def _get_known_restaurant_names() -> list[str]:
-    """Load known restaurant names from DB for matching."""
-    with get_cursor() as cur:
-        cur.execute("SELECT name FROM restaurants WHERE is_active = TRUE")
-        return [row["name"] for row in cur.fetchall()]
+    """Load known restaurant names from the sheet for matching."""
+    try:
+        return get_all_restaurant_names()
+    except Exception as e:
+        logger.warning(f"Could not load known restaurant names: {e}")
+        return []
 
 
 def _build_engagement(item: dict) -> dict:

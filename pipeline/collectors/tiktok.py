@@ -31,7 +31,7 @@ from pipeline.utils.db import (
     upsert_restaurant,
     insert_mention,
     insert_mention_batch,
-    get_cursor,
+    get_all_restaurant_names,
 )
 
 logger = logging.getLogger(__name__)
@@ -40,11 +40,9 @@ ACTOR_ID = "clockworks/tiktok-hashtag-scraper"
 
 
 def _get_known_restaurant_names() -> list[str]:
-    """Load known restaurant names from DB for matching."""
+    """Load known restaurant names from the sheet for matching."""
     try:
-        with get_cursor() as cur:
-            cur.execute("SELECT name FROM restaurants WHERE is_active = TRUE")
-            return [row["name"] for row in cur.fetchall()]
+        return get_all_restaurant_names()
     except Exception as e:
         logger.warning(f"Could not load known restaurant names: {e}")
         return []

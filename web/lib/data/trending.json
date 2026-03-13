@@ -1,55 +1,125 @@
 {
   "week_start": "2026-03-09",
-  "generated_at": "2026-03-13T09:00:00Z",
+  "generated_at": "2026-03-13T16:34:35.255774+00:00",
   "restaurants": [
     {
       "rank": 1,
-      "name": "Burma Superstar",
-      "neighborhood": "Inner Richmond",
-      "cuisine_type": "Burmese",
-      "score": 5.12,
-      "trending_reason": "Tea leaf salad TikTok went viral with 2.3M views. Mentioned across 5 platforms this week.",
-      "platforms_active": ["tiktok", "instagram", "yelp", "reddit", "threads"],
+      "name": "Original Joe's",
+      "neighborhood": "North Beach",
+      "cuisine_type": "Italian-American",
+      "score": 8.02,
+      "trending_reason": "Trending on TikTok with 958K+ plays across multiple videos. Classic SF institution getting new social media buzz.",
+      "platforms_active": [
+        "tiktok"
+      ],
       "price_range": "$$"
     },
     {
       "rank": 2,
-      "name": "Dumpling Home",
-      "neighborhood": "SoMa",
-      "cuisine_type": "Chinese",
-      "score": 4.45,
-      "trending_reason": "Soup dumplings trending on Instagram Reels. Multiple food creators posted this week.",
-      "platforms_active": ["instagram", "tiktok", "yelp"],
+      "name": "Bette's",
+      "neighborhood": "FiDi",
+      "cuisine_type": "American",
+      "score": 7.67,
+      "trending_reason": "Pop-up chicken parm in FiDi going viral on TikTok with 472K plays. Follow for dates and locations.",
+      "platforms_active": [
+        "tiktok"
+      ],
       "price_range": "$$"
     },
     {
       "rank": 3,
-      "name": "Tartine Manufactory",
+      "name": "Yamo",
       "neighborhood": "Mission",
-      "cuisine_type": "Bakery",
-      "score": 3.98,
-      "trending_reason": "New spring menu getting buzz on Reddit r/SFFood and Threads.",
-      "platforms_active": ["reddit", "threads", "google"],
-      "price_range": "$$$"
+      "cuisine_type": "Burmese",
+      "score": 6.79,
+      "trending_reason": "Featured in viral TikTok with 259K plays about supporting small businesses. Known for $6 noodle bowls.",
+      "platforms_active": [
+        "tiktok"
+      ],
+      "price_range": "$"
     },
     {
       "rank": 4,
-      "name": "Senor Sisig",
+      "name": "Taqueria El Farolito",
       "neighborhood": "Mission",
-      "cuisine_type": "Filipino-Mexican",
-      "score": 3.67,
-      "trending_reason": "California burrito challenge going viral on TikTok with local food creators.",
-      "platforms_active": ["tiktok", "instagram", "yelp"],
+      "cuisine_type": "Mexican",
+      "score": 6.79,
+      "trending_reason": "Called out in a viral TikTok (259K plays) as a must-visit SF spot. Perennial Mission District favorite.",
+      "platforms_active": [
+        "tiktok"
+      ],
       "price_range": "$"
     },
     {
       "rank": 5,
-      "name": "Che Fico",
-      "neighborhood": "NoPa",
+      "name": "Hamburguesa Bar",
+      "neighborhood": "SoMa",
+      "cuisine_type": "Burgers",
+      "score": 5.2,
+      "trending_reason": "New opening (6 weeks old) featured on TikTok \u2014 $8 smash burger open til midnight. Already 33 Yelp reviews.",
+      "platforms_active": [
+        "tiktok"
+      ],
+      "price_range": "$"
+    },
+    {
+      "rank": 6,
+      "name": "Paper Son Coffee",
+      "neighborhood": "Chinatown",
+      "cuisine_type": "Coffee",
+      "score": 5.07,
+      "trending_reason": "8 Instagram mentions this week from food bloggers. Drip coffee and pastries getting consistent buzz.",
+      "platforms_active": [
+        "instagram"
+      ],
+      "price_range": "$"
+    },
+    {
+      "rank": 7,
+      "name": "Le Marais Bakery",
+      "neighborhood": "Castro",
+      "cuisine_type": "French Bakery",
+      "score": 3.64,
+      "trending_reason": "Trending on Instagram with 4 posts this week. French pastries and afternoon vibes in the Castro.",
+      "platforms_active": [
+        "instagram"
+      ],
+      "price_range": "$$"
+    },
+    {
+      "rank": 8,
+      "name": "Florio Cafe & Bar",
+      "neighborhood": "Pacific Heights",
       "cuisine_type": "Italian",
-      "score": 3.21,
-      "trending_reason": "Named to Eater SF's essential list. Trending search on Google this week.",
-      "platforms_active": ["google", "yelp", "reddit"],
+      "score": 3.18,
+      "trending_reason": "New menu items (Tonnarelli Nero, Ossobuco alla Milanese) getting Instagram love. Upscale Pacific Heights staple.",
+      "platforms_active": [
+        "instagram"
+      ],
+      "price_range": "$$$"
+    },
+    {
+      "rank": 9,
+      "name": "Mariposas",
+      "neighborhood": "SoMa",
+      "cuisine_type": "Peruvian",
+      "score": 1.7,
+      "trending_reason": "5 Instagram mentions this week. Anticuchos de Corazon and Peruvian specialties getting consistent posts.",
+      "platforms_active": [
+        "instagram"
+      ],
+      "price_range": "$$"
+    },
+    {
+      "rank": 10,
+      "name": "Yank Sing",
+      "neighborhood": "SoMa",
+      "cuisine_type": "Dim Sum",
+      "score": 1.35,
+      "trending_reason": "Michelin Bib Gourmand dim sum cart restaurant featured on Instagram. One of few spots still doing cart service.",
+      "platforms_active": [
+        "instagram"
+      ],
       "price_range": "$$$"
     }
   ]
