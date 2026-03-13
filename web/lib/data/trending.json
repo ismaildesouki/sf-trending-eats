@@ -1,0 +1,24 @@
+{
+  "week_start": "2026-03-09",
+  "generated_at": "2026-03-11T09:00:00Z",
+  "restaurants": [
+    {
+      "rank": 1,
+      "name": "Sample Restaurant One",
+      "neighborhood": "Mission",
+      "cuisine_type": "Mexican",
+      "score": 4.72,
+      "trending_reason": "This is sample data. Run the pipeline to populate with real trending restaurants.",
+      "platforms_active": ["yelp", "reddit", "threads"]
+    },
+    {
+      "rank": 2,
+      "name": "Sample Restaurant Two",
+      "neighborhood": "Hayes Valley",
+      "cuisine_type": "Japanese",
+      "score": 3.85,
+      "trending_reason": "Sample data placeholder. Connect your API keys and run collection to see real results.",
+      "platforms_active": ["yelp", "google"]
+    }
+  ]
+}

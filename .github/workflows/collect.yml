@@ -1,0 +1,51 @@
+name: Collect Data
+
+on:
+  schedule:
+    # Every 6 hours: midnight, 6am, noon, 6pm UTC
+    - cron: "0 0,6,12,18 * * *"
+  workflow_dispatch:
+    inputs:
+      source:
+        description: "Specific source to collect from (leave empty for all)"
+        required: false
+        type: choice
+        options:
+          - all
+          - yelp
+          - reddit
+          - threads
+          - google_places
+          - google_trends
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run collection
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          YELP_API_KEY: ${{ secrets.YELP_API_KEY }}
+          REDDIT_CLIENT_ID: ${{ secrets.REDDIT_CLIENT_ID }}
+          REDDIT_CLIENT_SECRET: ${{ secrets.REDDIT_CLIENT_SECRET }}
+          GOOGLE_PLACES_API_KEY: ${{ secrets.GOOGLE_PLACES_API_KEY }}
+          THREADS_ACCESS_TOKEN: ${{ secrets.THREADS_ACCESS_TOKEN }}
+        run: |
+          if [ "${{ github.event.inputs.source }}" = "" ] || [ "${{ github.event.inputs.source }}" = "all" ]; then
+            python pipeline/run_collection.py
+          else
+            python pipeline/run_collection.py --source ${{ github.event.inputs.source }}
+          fi
