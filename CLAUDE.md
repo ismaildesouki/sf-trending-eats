@@ -47,6 +47,9 @@ db/
 - **Yelp:** Fusion API hot_and_new filter
 - **Google Places:** Review velocity tracking
 
+## Skills
+- **restaurant-finder** — Dining concierge skill that recommends restaurants based on social media virality and food media buzz. Located at `.claude/skills/restaurant-finder.md`
+
 ## Rules
 - NEVER store individual user identities — aggregate and anonymize all social data
 - API keys go in .env (never committed) — see .env.example

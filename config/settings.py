@@ -11,8 +11,9 @@ load_dotenv()
 
 
 @dataclass
-class DatabaseConfig:
-    url: str = os.getenv("DATABASE_URL", "postgresql://localhost:5432/sf_trending_eats")
+class SheetsConfig:
+    spreadsheet_id: str = os.getenv("GOOGLE_SHEETS_SPREADSHEET_ID", "")
+    credentials_file: str = os.getenv("GOOGLE_SHEETS_CREDENTIALS_FILE", "credentials.json")
 
 
 @dataclass
@@ -132,8 +133,38 @@ class GeoConfig:
     })
 
 
+@dataclass
+class TikTokConfig:
+    apify_token: str = os.getenv("APIFY_TOKEN", "")
+    hashtags: list = field(default_factory=lambda: [
+        "sffood", "sfrestaurants", "sanfranciscofood", "bayareaeats",
+        "sfeats", "oaklandfood", "sfbrunch", "sfdining",
+        "bayareafoodie", "sffoodies",
+    ])
+    results_per_hashtag: int = int(os.getenv("TIKTOK_RESULTS_PER_HASHTAG", "50"))
+
+
+@dataclass
+class InstagramConfig:
+    apify_token: str = os.getenv("APIFY_TOKEN", "")
+    hashtags: list = field(default_factory=lambda: [
+        "sffood", "sfrestaurants", "sanfranciscofood", "bayareaeats",
+        "sfeats", "oaklandfood", "sfbrunch", "sfdining",
+        "bayareafoodie", "sffoodie",
+    ])
+    results_per_hashtag: int = int(os.getenv("INSTAGRAM_RESULTS_PER_HASHTAG", "50"))
+
+
+@dataclass
+class EntityResolverConfig:
+    api_key: str = os.getenv("ANTHROPIC_API_KEY", "")
+    model: str = os.getenv("ENTITY_RESOLVER_MODEL", "claude-sonnet-4-20250514")
+    batch_size: int = int(os.getenv("ENTITY_RESOLVER_BATCH_SIZE", "20"))
+    min_confidence: float = float(os.getenv("ENTITY_RESOLVER_MIN_CONFIDENCE", "0.5"))
+
+
 # Singleton config instances
-db = DatabaseConfig()
+db = SheetsConfig()
 yelp = YelpConfig()
 reddit = RedditConfig()
 threads = ThreadsConfig()
@@ -141,3 +172,6 @@ google_places = GooglePlacesConfig()
 scoring = ScoringConfig()
 publishing = PublishingConfig()
 geo = GeoConfig()
+tiktok = TikTokConfig()
+instagram = InstagramConfig()
+entity_resolver = EntityResolverConfig()

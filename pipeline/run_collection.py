@@ -27,7 +27,7 @@ logger = logging.getLogger("collection")
 async def run_collection(sources: list[str] = None, skip_scoring: bool = False):
     """Run data collection from specified sources (or all)."""
 
-    all_sources = ["yelp", "reddit", "threads", "google_places", "google_trends"]
+    all_sources = ["yelp", "reddit", "threads", "google_places", "google_trends", "tiktok", "instagram"]
     sources = sources or all_sources
 
     start_time = datetime.now(timezone.utc)
@@ -58,6 +58,16 @@ async def run_collection(sources: list[str] = None, skip_scoring: bool = False):
             from pipeline.collectors import google_places
             results["google_places"] = await google_places.run(client)
 
+        if "tiktok" in sources:
+            logger.info("Collecting from TikTok via Apify...")
+            from pipeline.collectors import tiktok
+            results["tiktok"] = await tiktok.run(client)
+
+        if "instagram" in sources:
+            logger.info("Collecting from Instagram via Apify...")
+            from pipeline.collectors import instagram
+            results["instagram"] = await instagram.run(client)
+
     # Google Trends uses synchronous pytrends
     if "google_trends" in sources:
         logger.info("Collecting from Google Trends...")
@@ -83,7 +93,7 @@ def main():
     parser = argparse.ArgumentParser(description="SF Trending Eats data collection")
     parser.add_argument(
         "--source",
-        choices=["yelp", "reddit", "threads", "google_places", "google_trends"],
+        choices=["yelp", "reddit", "threads", "google_places", "google_trends", "tiktok", "instagram"],
         help="Run only a specific source",
     )
     parser.add_argument(

@@ -39,3 +39,8 @@ Thumbs.db
 # Secrets
 *.pem
 *.key
+
+# Google Sheets credentials (NEVER commit)
+credentials.json
+service-account.json
+*.json.bak

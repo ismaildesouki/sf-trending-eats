@@ -1,24 +1,56 @@
 {
   "week_start": "2026-03-09",
-  "generated_at": "2026-03-11T09:00:00Z",
+  "generated_at": "2026-03-13T09:00:00Z",
   "restaurants": [
     {
       "rank": 1,
-      "name": "Sample Restaurant One",
-      "neighborhood": "Mission",
-      "cuisine_type": "Mexican",
-      "score": 4.72,
-      "trending_reason": "This is sample data. Run the pipeline to populate with real trending restaurants.",
-      "platforms_active": ["yelp", "reddit", "threads"]
+      "name": "Burma Superstar",
+      "neighborhood": "Inner Richmond",
+      "cuisine_type": "Burmese",
+      "score": 5.12,
+      "trending_reason": "Tea leaf salad TikTok went viral with 2.3M views. Mentioned across 5 platforms this week.",
+      "platforms_active": ["tiktok", "instagram", "yelp", "reddit", "threads"],
+      "price_range": "$$"
     },
     {
       "rank": 2,
-      "name": "Sample Restaurant Two",
-      "neighborhood": "Hayes Valley",
-      "cuisine_type": "Japanese",
-      "score": 3.85,
-      "trending_reason": "Sample data placeholder. Connect your API keys and run collection to see real results.",
-      "platforms_active": ["yelp", "google"]
+      "name": "Dumpling Home",
+      "neighborhood": "SoMa",
+      "cuisine_type": "Chinese",
+      "score": 4.45,
+      "trending_reason": "Soup dumplings trending on Instagram Reels. Multiple food creators posted this week.",
+      "platforms_active": ["instagram", "tiktok", "yelp"],
+      "price_range": "$$"
+    },
+    {
+      "rank": 3,
+      "name": "Tartine Manufactory",
+      "neighborhood": "Mission",
+      "cuisine_type": "Bakery",
+      "score": 3.98,
+      "trending_reason": "New spring menu getting buzz on Reddit r/SFFood and Threads.",
+      "platforms_active": ["reddit", "threads", "google"],
+      "price_range": "$$$"
+    },
+    {
+      "rank": 4,
+      "name": "Senor Sisig",
+      "neighborhood": "Mission",
+      "cuisine_type": "Filipino-Mexican",
+      "score": 3.67,
+      "trending_reason": "California burrito challenge going viral on TikTok with local food creators.",
+      "platforms_active": ["tiktok", "instagram", "yelp"],
+      "price_range": "$"
+    },
+    {
+      "rank": 5,
+      "name": "Che Fico",
+      "neighborhood": "NoPa",
+      "cuisine_type": "Italian",
+      "score": 3.21,
+      "trending_reason": "Named to Eater SF's essential list. Trending search on Google this week.",
+      "platforms_active": ["google", "yelp", "reddit"],
+      "price_range": "$$$"
     }
   ]
 }

@@ -8,6 +8,9 @@ interface Restaurant {
   score: number;
   trending_reason: string | null;
   platforms_active: string[];
+  image_url?: string | null;
+  yelp_url?: string | null;
+  price_range?: string | null;
 }
 
 const PLATFORM_LABELS: Record<string, string> = {
@@ -16,6 +19,8 @@ const PLATFORM_LABELS: Record<string, string> = {
   threads: "Threads",
   google: "Google",
   trends: "Search",
+  tiktok: "TikTok",
+  instagram: "Instagram",
 };
 
 const PLATFORM_COLORS: Record<string, string> = {
@@ -24,6 +29,8 @@ const PLATFORM_COLORS: Record<string, string> = {
   threads: "bg-gray-100 text-gray-700",
   google: "bg-blue-50 text-blue-700",
   trends: "bg-green-50 text-green-700",
+  tiktok: "bg-pink-50 text-pink-700",
+  instagram: "bg-purple-50 text-purple-700",
 };
 
 export function TrendingList({ restaurants }: { restaurants: Restaurant[] }) {
@@ -43,10 +50,21 @@ export function TrendingList({ restaurants }: { restaurants: Restaurant[] }) {
             <div className="flex-1 min-w-0">
               {/* Name and meta */}
               <h2 className="text-lg font-semibold leading-tight">
-                {r.name}
+                {r.yelp_url ? (
+                  <a
+                    href={r.yelp_url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-orange-600 transition-colors"
+                  >
+                    {r.name}
+                  </a>
+                ) : (
+                  r.name
+                )}
               </h2>
               <p className="text-sm text-gray-500 mt-1">
-                {[r.neighborhood, r.cuisine_type].filter(Boolean).join(" · ")}
+                {[r.neighborhood, r.cuisine_type, r.price_range].filter(Boolean).join(" · ")}
               </p>
 
               {/* Trending reason */}

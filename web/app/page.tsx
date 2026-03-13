@@ -25,6 +25,9 @@ export default async function Home() {
           <p className="mt-2 text-gray-500 text-lg">
             Bay Area restaurants trending on social media this week
           </p>
+          <p className="mt-1 text-xs text-gray-400">
+            Sourced from TikTok, Instagram, Reddit, Yelp, Threads &amp; Google
+          </p>
         </div>
       </header>
 
@@ -59,9 +62,9 @@ export default async function Home() {
       <footer className="border-t border-gray-100 mt-16">
         <div className="max-w-2xl mx-auto px-4 py-8 text-center text-sm text-gray-400">
           <p>
-            SF Trending Eats tracks social media signals across Yelp, Reddit,
-            Threads, Google, and more to surface restaurants that are trending
-            before they hit mainstream food media.
+            SF Trending Eats tracks social media signals across TikTok,
+            Instagram, Yelp, Reddit, Threads, Google, and more to surface
+            restaurants that are trending before they hit mainstream food media.
           </p>
           <p className="mt-4">
             Built with data, not opinions.

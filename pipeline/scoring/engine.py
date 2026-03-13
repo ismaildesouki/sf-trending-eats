@@ -13,8 +13,11 @@ The composite score combines five signals:
 
 Each signal is z-score normalized against all restaurants in the scoring window
 so that platform-specific metrics are comparable.
+
+Data source: Google Sheets via gspread (replaces PostgreSQL).
 """
 
+import json
 import logging
 from datetime import datetime, timezone, timedelta
 from dataclasses import dataclass
@@ -22,7 +25,7 @@ from dataclasses import dataclass
 import numpy as np
 
 from config import settings
-from pipeline.utils.db import get_cursor, insert_trend_scores
+from pipeline.utils.db import _get_worksheet, insert_trend_scores
 
 logger = logging.getLogger(__name__)
 
@@ -61,7 +64,7 @@ class RestaurantSignals:
 
 def compute_scores() -> list[dict]:
     """
-    Main scoring function. Queries the database for recent activity,
+    Main scoring function. Reads Google Sheets for recent activity,
     computes raw signals, normalizes them, and produces ranked trend scores.
     """
     now = datetime.now(timezone.utc)
@@ -175,96 +178,167 @@ def run() -> dict:
 # Internal helpers
 # ============================================================
 
+def _parse_engagement(raw: str | dict) -> dict:
+    """Parse engagement from a sheet cell (JSON string or already a dict)."""
+    if not raw:
+        return {}
+    if isinstance(raw, dict):
+        return raw
+    try:
+        return json.loads(raw)
+    except (json.JSONDecodeError, TypeError):
+        return {}
+
+
+def _total_engagement(engagement: dict) -> int:
+    """Sum all engagement metrics from an engagement dict."""
+    return sum([
+        engagement.get("likes", 0) or 0,
+        engagement.get("comments", 0) or 0,
+        engagement.get("upvotes", 0) or 0,
+        engagement.get("replies", 0) or 0,
+        engagement.get("reposts", 0) or 0,
+        engagement.get("shares", 0) or 0,
+        engagement.get("plays", 0) or 0,
+        engagement.get("score", 0) or 0,
+    ])
+
+
+def _parse_time(raw: str) -> datetime | None:
+    """Parse a timestamp string from the sheet into a timezone-aware datetime."""
+    if not raw:
+        return None
+    try:
+        dt = datetime.fromisoformat(raw)
+        # Ensure timezone-aware (assume UTC if naive)
+        if dt.tzinfo is None:
+            dt = dt.replace(tzinfo=timezone.utc)
+        return dt
+    except (ValueError, TypeError):
+        return None
+
+
+def _safe_float(val, default: float = 0.0) -> float:
+    """Safely convert a sheet cell value to float."""
+    if val is None or val == "":
+        return default
+    try:
+        return float(val)
+    except (ValueError, TypeError):
+        return default
+
+
+def _safe_int(val, default: int = 0) -> int:
+    """Safely convert a sheet cell value to int."""
+    if val is None or val == "":
+        return default
+    try:
+        return int(float(val))
+    except (ValueError, TypeError):
+        return default
+
+
 def _gather_signals(
     window_start: datetime,
     baseline_start: datetime,
     now: datetime,
 ) -> dict[int, RestaurantSignals]:
-    """Query the database for raw signals."""
-    signals = {}
+    """Read Google Sheets and compute raw signals for each restaurant."""
+    signals: dict[int, RestaurantSignals] = {}
 
-    with get_cursor() as cur:
-        # Get all restaurants with recent mentions
-        cur.execute("""
-            SELECT
-                r.id,
-                r.name,
-                m.platform,
-                COUNT(*) AS mention_count,
-                AVG(m.sentiment_score) AS avg_sentiment,
-                MAX(m.author_reach) AS max_reach,
-                SUM(
-                    COALESCE((m.engagement->>'likes')::int, 0) +
-                    COALESCE((m.engagement->>'comments')::int, 0) +
-                    COALESCE((m.engagement->>'upvotes')::int, 0) +
-                    COALESCE((m.engagement->>'replies')::int, 0) +
-                    COALESCE((m.engagement->>'reposts')::int, 0) +
-                    COALESCE((m.engagement->>'score')::int, 0)
-                ) AS total_engagement,
-                COUNT(*) FILTER (WHERE m.author_reach > 10000) AS high_reach_mentions
-            FROM mentions m
-            JOIN restaurants r ON r.id = m.restaurant_id
-            WHERE m.time >= %(window_start)s
-              AND m.time <= %(now)s
-            GROUP BY r.id, r.name, m.platform
-        """, {"window_start": window_start, "now": now})
+    # ---- Load restaurants from sheet ----
+    restaurants_ws = _get_worksheet("restaurants")
+    all_restaurants = restaurants_ws.get_all_records()
 
-        for row in cur.fetchall():
-            rid = row["id"]
-            if rid not in signals:
-                signals[rid] = RestaurantSignals(
-                    restaurant_id=rid,
-                    name=row["name"],
+    # Row-based IDs: row 2 = id 1, row 3 = id 2, etc.
+    restaurant_names: dict[int, str] = {}
+    for idx, r in enumerate(all_restaurants, 1):
+        restaurant_names[idx] = r.get("name", f"Unknown #{idx}")
+
+    # ---- Load mentions from sheet ----
+    mentions_ws = _get_worksheet("mentions")
+    all_mentions = mentions_ws.get_all_records()
+
+    # ---- Classify each mention into scoring window or baseline window ----
+    for m in all_mentions:
+        mention_time = _parse_time(m.get("time", ""))
+        if mention_time is None:
+            continue
+
+        restaurant_id = _safe_int(m.get("restaurant_id"))
+        if restaurant_id == 0:
+            continue
+
+        platform = m.get("platform", "unknown")
+        engagement = _parse_engagement(m.get("engagement", ""))
+        sentiment = _safe_float(m.get("sentiment_score"))
+        author_reach = _safe_int(m.get("author_reach"))
+
+        eng_total = _total_engagement(engagement)
+
+        # ---- Scoring window: window_start <= time <= now ----
+        if mention_time >= window_start and mention_time <= now:
+            # Initialize signal entry if new restaurant
+            if restaurant_id not in signals:
+                name = restaurant_names.get(
+                    restaurant_id,
+                    f"Unknown #{restaurant_id}",
+                )
+                signals[restaurant_id] = RestaurantSignals(
+                    restaurant_id=restaurant_id,
+                    name=name,
                 )
 
-            sig = signals[rid]
-            sig.mentions_current += row["mention_count"]
-            sig.platforms.add(row["platform"])
-            sig.avg_sentiment = (
-                (sig.avg_sentiment + (row["avg_sentiment"] or 0)) / 2
+            sig = signals[restaurant_id]
+            sig.mentions_current += 1
+            sig.platforms.add(platform)
+
+            # Running average for sentiment
+            sig.avg_sentiment = (sig.avg_sentiment + sentiment) / 2
+
+            sig.engagement_current += eng_total
+            sig.max_reach = max(sig.max_reach, author_reach)
+
+            if author_reach > 10000:
+                sig.high_reach_mentions += 1
+
+        # ---- Baseline window: baseline_start <= time < window_start ----
+        elif mention_time >= baseline_start and mention_time < window_start:
+            # We need the restaurant in signals dict to record baseline.
+            # If it only appears in baseline and not scoring window, we still
+            # need it so the ratio can be computed, but it will be filtered out
+            # later if mentions_current < min_mentions.
+            if restaurant_id not in signals:
+                name = restaurant_names.get(
+                    restaurant_id,
+                    f"Unknown #{restaurant_id}",
+                )
+                signals[restaurant_id] = RestaurantSignals(
+                    restaurant_id=restaurant_id,
+                    name=name,
+                )
+
+            sig = signals[restaurant_id]
+            # Accumulate raw baseline counts (we'll normalize to weekly later)
+            sig.mentions_baseline += 1
+            sig.engagement_previous += eng_total
+
+    # ---- Normalize baseline to weekly averages ----
+    baseline_weeks = max((window_start - baseline_start).days / 7, 1)
+
+    for sig in signals.values():
+        sig.mentions_baseline = sig.mentions_baseline / baseline_weeks
+        sig.engagement_previous = sig.engagement_previous / baseline_weeks
+
+    # ---- Compute engagement acceleration ----
+    for sig in signals.values():
+        if sig.engagement_previous > 0:
+            sig.engagement_acceleration = (
+                (sig.engagement_current - sig.engagement_previous)
+                / sig.engagement_previous
             )
-            sig.engagement_current += row["total_engagement"] or 0
-            sig.max_reach = max(sig.max_reach, row["max_reach"] or 0)
-            sig.high_reach_mentions += row["high_reach_mentions"] or 0
-
-        # Get baseline mention counts (older period)
-        cur.execute("""
-            SELECT
-                m.restaurant_id,
-                COUNT(*) AS mention_count,
-                SUM(
-                    COALESCE((m.engagement->>'likes')::int, 0) +
-                    COALESCE((m.engagement->>'comments')::int, 0) +
-                    COALESCE((m.engagement->>'upvotes')::int, 0)
-                ) AS total_engagement
-            FROM mentions m
-            WHERE m.time >= %(baseline_start)s
-              AND m.time < %(window_start)s
-            GROUP BY m.restaurant_id
-        """, {"baseline_start": baseline_start, "window_start": window_start})
-
-        # Compute weekly average for baseline
-        baseline_weeks = max(
-            (window_start - baseline_start).days / 7, 1
-        )
-
-        for row in cur.fetchall():
-            rid = row["restaurant_id"]
-            if rid in signals:
-                signals[rid].mentions_baseline = row["mention_count"] / baseline_weeks
-                signals[rid].engagement_previous = (
-                    (row["total_engagement"] or 0) / baseline_weeks
-                )
-
-        # Compute engagement acceleration
-        for sig in signals.values():
-            if sig.engagement_previous > 0:
-                sig.engagement_acceleration = (
-                    (sig.engagement_current - sig.engagement_previous)
-                    / sig.engagement_previous
-                )
-            elif sig.engagement_current > 0:
-                sig.engagement_acceleration = 1.0
+        elif sig.engagement_current > 0:
+            sig.engagement_acceleration = 1.0
 
     return signals
 
