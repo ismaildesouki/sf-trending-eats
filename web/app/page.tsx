@@ -36,8 +36,8 @@ export default async function Home() {
         {data ? (
           <>
             <p className="text-sm text-gray-400 mb-8">
-              Week of {data.week_start} · Updated{" "}
-              {new Date(data.generated_at).toLocaleDateString()}
+              Updated{" "}
+              {new Date(data.generated_at).toLocaleDateString()} · {data.restaurants.length} restaurants tracked
             </p>
             <TrendingList restaurants={data.restaurants} />
           </>
