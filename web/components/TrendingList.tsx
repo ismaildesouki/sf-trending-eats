@@ -33,27 +33,52 @@ const PLATFORM_LABELS: Record<string, string> = {
   instagram: "Instagram",
 };
 
-const PLATFORM_COLORS: Record<string, string> = {
-  yelp: "bg-red-50 text-red-700",
-  reddit: "bg-orange-50 text-orange-700",
-  threads: "bg-gray-100 text-gray-700",
-  google: "bg-blue-50 text-blue-700",
-  trends: "bg-green-50 text-green-700",
-  tiktok: "bg-pink-50 text-pink-700",
-  instagram: "bg-purple-50 text-purple-700",
+const PLATFORM_ICONS: Record<string, string> = {
+  tiktok: "♪",
+  instagram: "◎",
+  yelp: "★",
+  reddit: "◆",
 };
 
-const PLATFORM_LINK_COLORS: Record<string, string> = {
-  tiktok: "text-pink-600 hover:text-pink-800",
-  instagram: "text-purple-600 hover:text-purple-800",
-  yelp: "text-red-600 hover:text-red-800",
-  reddit: "text-orange-600 hover:text-orange-800",
+const PLATFORM_BADGE_STYLES: Record<string, string> = {
+  yelp: "bg-red-100/80 text-red-700 border-red-200/60",
+  reddit: "bg-orange-100/80 text-orange-700 border-orange-200/60",
+  threads: "bg-gray-100/80 text-gray-700 border-gray-200/60",
+  google: "bg-blue-100/80 text-blue-700 border-blue-200/60",
+  trends: "bg-green-100/80 text-green-700 border-green-200/60",
+  tiktok: "bg-pink-100/80 text-pink-700 border-pink-200/60",
+  instagram: "bg-purple-100/80 text-purple-700 border-purple-200/60",
+};
+
+const PLATFORM_LINK_STYLES: Record<string, string> = {
+  tiktok: "text-pink-600 hover:text-pink-700 hover:bg-pink-50",
+  instagram: "text-purple-600 hover:text-purple-700 hover:bg-purple-50",
+  yelp: "text-red-600 hover:text-red-700 hover:bg-red-50",
+  reddit: "text-orange-600 hover:text-orange-700 hover:bg-orange-50",
 };
 
 function formatNumber(n: number): string {
   if (n >= 1_000_000) return (n / 1_000_000).toFixed(1) + "M";
   if (n >= 1_000) return (n / 1_000).toFixed(1) + "K";
   return n.toString();
+}
+
+function ScoreBadge({ score, rank }: { score: number; rank: number }) {
+  const hot = rank <= 3;
+  const warm = rank <= 10;
+  return (
+    <div className={`
+      flex flex-col items-center justify-center w-14 h-14 rounded-xl shrink-0
+      ${hot ? "bg-orange-500 text-white" : warm ? "bg-orange-100 text-orange-700" : "bg-gray-100 text-gray-600"}
+    `}>
+      <span className={`text-lg font-bold leading-none tabular-nums ${hot ? "" : ""}`}>
+        {score}
+      </span>
+      <span className={`text-[10px] font-medium leading-none mt-0.5 ${hot ? "text-orange-100" : warm ? "text-orange-500" : "text-gray-400"}`}>
+        score
+      </span>
+    </div>
+  );
 }
 
 export function TrendingList({ restaurants }: { restaurants: Restaurant[] }) {
@@ -77,15 +102,9 @@ export function TrendingList({ restaurants }: { restaurants: Restaurant[] }) {
     return restaurants.filter((r) => {
       if (filterCuisine !== "all" && r.cuisine_type !== filterCuisine)
         return false;
-      if (
-        filterNeighborhood !== "all" &&
-        r.neighborhood !== filterNeighborhood
-      )
+      if (filterNeighborhood !== "all" && r.neighborhood !== filterNeighborhood)
         return false;
-      if (
-        filterPlatform !== "all" &&
-        !r.platforms_active.includes(filterPlatform)
-      )
+      if (filterPlatform !== "all" && !r.platforms_active.includes(filterPlatform))
         return false;
       return true;
     });
@@ -98,148 +117,174 @@ export function TrendingList({ restaurants }: { restaurants: Restaurant[] }) {
 
   return (
     <div>
-      {/* Filters */}
-      <div className="flex flex-wrap gap-2 mb-6">
-        <select
-          value={filterCuisine}
-          onChange={(e) => setFilterCuisine(e.target.value)}
-          className="px-3 py-1.5 text-sm border border-gray-200 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-orange-500"
-        >
-          <option value="all">All Cuisines</option>
-          {cuisines.map((c) => (
-            <option key={c} value={c}>
-              {c}
-            </option>
-          ))}
-        </select>
+      {/* Filter bar */}
+      <div className="sticky top-0 z-10 bg-[#fefcf9]/95 backdrop-blur-sm pb-4 pt-2 -mx-4 px-4 sm:-mx-6 sm:px-6">
+        <div className="flex flex-wrap items-center gap-2">
+          <span className="text-xs font-medium text-gray-400 mr-1">Filter:</span>
+          <select
+            value={filterCuisine}
+            onChange={(e) => setFilterCuisine(e.target.value)}
+            className="px-2.5 py-1.5 text-xs border border-gray-200 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-orange-400 focus:border-orange-400 text-gray-700"
+          >
+            <option value="all">All Cuisines</option>
+            {cuisines.map((c) => (
+              <option key={c} value={c}>{c}</option>
+            ))}
+          </select>
 
-        <select
-          value={filterNeighborhood}
-          onChange={(e) => setFilterNeighborhood(e.target.value)}
-          className="px-3 py-1.5 text-sm border border-gray-200 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-orange-500"
-        >
-          <option value="all">All Neighborhoods</option>
-          {neighborhoods.map((n) => (
-            <option key={n} value={n}>
-              {n}
-            </option>
-          ))}
-        </select>
+          <select
+            value={filterNeighborhood}
+            onChange={(e) => setFilterNeighborhood(e.target.value)}
+            className="px-2.5 py-1.5 text-xs border border-gray-200 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-orange-400 focus:border-orange-400 text-gray-700"
+          >
+            <option value="all">All Neighborhoods</option>
+            {neighborhoods.map((n) => (
+              <option key={n} value={n}>{n}</option>
+            ))}
+          </select>
 
-        <select
-          value={filterPlatform}
-          onChange={(e) => setFilterPlatform(e.target.value)}
-          className="px-3 py-1.5 text-sm border border-gray-200 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-orange-500"
-        >
-          <option value="all">All Platforms</option>
-          <option value="tiktok">TikTok</option>
-          <option value="instagram">Instagram</option>
-          <option value="yelp">Yelp</option>
-          <option value="reddit">Reddit</option>
-        </select>
+          <select
+            value={filterPlatform}
+            onChange={(e) => setFilterPlatform(e.target.value)}
+            className="px-2.5 py-1.5 text-xs border border-gray-200 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-orange-400 focus:border-orange-400 text-gray-700"
+          >
+            <option value="all">All Platforms</option>
+            <option value="tiktok">TikTok</option>
+            <option value="instagram">Instagram</option>
+            <option value="yelp">Yelp</option>
+            <option value="reddit">Reddit</option>
+          </select>
+
+          {hasFilters && (
+            <button
+              onClick={() => {
+                setFilterCuisine("all");
+                setFilterNeighborhood("all");
+                setFilterPlatform("all");
+              }}
+              className="px-2.5 py-1.5 text-xs text-orange-600 hover:text-orange-700 font-medium"
+            >
+              Clear
+            </button>
+          )}
+        </div>
 
         {hasFilters && (
-          <button
-            onClick={() => {
-              setFilterCuisine("all");
-              setFilterNeighborhood("all");
-              setFilterPlatform("all");
-            }}
-            className="px-3 py-1.5 text-sm text-gray-500 hover:text-gray-700 underline"
-          >
-            Clear filters
-          </button>
+          <p className="text-xs text-gray-400 mt-2">
+            Showing {filtered.length} of {restaurants.length}
+          </p>
         )}
       </div>
 
-      <p className="text-sm text-gray-400 mb-4">
-        Showing {filtered.length} of {restaurants.length} restaurants
-      </p>
-
       {/* Restaurant list */}
-      <div className="space-y-6">
-        {filtered.map((r, idx) => (
-          <article
-            key={r.name}
-            className="group rounded-lg border border-gray-100 p-5 hover:border-gray-200 transition-colors"
-          >
-            <div className="flex items-start gap-4">
-              {/* Rank */}
-              <span className="text-2xl font-bold text-orange-500 tabular-nums leading-none mt-1">
-                {hasFilters ? idx + 1 : r.rank}
-              </span>
+      <div className="space-y-3">
+        {filtered.map((r, idx) => {
+          const displayRank = hasFilters ? idx + 1 : r.rank;
+          const isTop3 = displayRank <= 3;
+          const isTop10 = displayRank <= 10;
 
-              <div className="flex-1 min-w-0">
-                {/* Name and meta */}
-                <h2 className="text-lg font-semibold leading-tight">
-                  {r.name}
-                </h2>
-                <p className="text-sm text-gray-500 mt-1">
-                  {[r.neighborhood, r.cuisine_type, r.price_range]
-                    .filter(Boolean)
-                    .join(" · ")}
-                </p>
-
-                {/* Trending reason */}
-                {r.trending_reason && (
-                  <p className="text-sm text-gray-600 mt-3 leading-relaxed">
-                    {r.trending_reason}
-                  </p>
-                )}
-
-                {/* Platform badges */}
-                <div className="flex flex-wrap gap-1.5 mt-3">
-                  {r.platforms_active.map((platform) => (
-                    <span
-                      key={platform}
-                      className={`inline-flex items-center px-2 py-0.5 rounded text-xs font-medium ${
-                        PLATFORM_COLORS[platform] || "bg-gray-100 text-gray-600"
-                      }`}
-                    >
-                      {PLATFORM_LABELS[platform] || platform}
-                    </span>
-                  ))}
+          return (
+            <article
+              key={r.name}
+              className={`
+                group rounded-xl p-4 sm:p-5 transition-all duration-200
+                ${isTop3
+                  ? "bg-white shadow-md shadow-orange-100/50 border border-orange-100 hover:shadow-lg hover:shadow-orange-100/60"
+                  : "bg-white/80 border border-gray-100 hover:bg-white hover:shadow-sm hover:border-gray-200"
+                }
+              `}
+            >
+              <div className="flex items-start gap-3 sm:gap-4">
+                {/* Rank number */}
+                <div className={`
+                  w-8 h-8 rounded-lg flex items-center justify-center shrink-0 mt-0.5
+                  ${isTop3
+                    ? "bg-gradient-to-br from-orange-400 to-orange-500 text-white font-bold text-sm"
+                    : isTop10
+                      ? "bg-orange-50 text-orange-600 font-bold text-sm"
+                      : "bg-gray-50 text-gray-400 font-semibold text-sm"
+                  }
+                `}>
+                  {displayRank}
                 </div>
 
-                {/* Source links */}
-                {r.sources && r.sources.length > 0 && (
-                  <div className="mt-3 pt-3 border-t border-gray-50">
-                    <p className="text-xs font-medium text-gray-400 mb-1.5">
-                      Sources
+                {/* Content */}
+                <div className="flex-1 min-w-0">
+                  <div className="flex items-start justify-between gap-3">
+                    <div className="min-w-0">
+                      <h2 className={`font-semibold leading-tight ${isTop3 ? "text-base sm:text-lg" : "text-base"}`}>
+                        {r.name}
+                      </h2>
+                      <p className="text-xs text-gray-400 mt-0.5 truncate">
+                        {[r.neighborhood, r.cuisine_type, r.price_range]
+                          .filter(Boolean)
+                          .join(" · ")}
+                      </p>
+                    </div>
+
+                    {/* Score badge */}
+                    <ScoreBadge score={r.score} rank={displayRank} />
+                  </div>
+
+                  {/* Trending reason */}
+                  {r.trending_reason && (
+                    <p className="text-sm text-gray-500 mt-2 leading-relaxed">
+                      {r.trending_reason}
                     </p>
-                    <div className="flex flex-wrap gap-x-4 gap-y-1">
+                  )}
+
+                  {/* Platform badges + Source links row */}
+                  <div className="flex flex-wrap items-center gap-1.5 mt-3">
+                    {r.platforms_active.map((platform) => (
+                      <span
+                        key={platform}
+                        className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-[11px] font-medium border ${
+                          PLATFORM_BADGE_STYLES[platform] || "bg-gray-100 text-gray-600 border-gray-200"
+                        }`}
+                      >
+                        <span className="opacity-70">{PLATFORM_ICONS[platform] || ""}</span>
+                        {PLATFORM_LABELS[platform] || platform}
+                      </span>
+                    ))}
+                  </div>
+
+                  {/* Source links */}
+                  {r.sources && r.sources.length > 0 && (
+                    <div className="flex flex-wrap items-center gap-1.5 mt-2">
+                      <span className="text-[10px] uppercase tracking-wider text-gray-300 font-medium mr-0.5">
+                        Sources:
+                      </span>
                       {r.sources.map((s, i) => (
                         <a
                           key={i}
                           href={s.url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className={`text-xs underline decoration-dotted ${
-                            PLATFORM_LINK_COLORS[s.platform] ||
-                            "text-gray-500 hover:text-gray-700"
+                          className={`inline-flex items-center gap-0.5 text-[11px] font-medium px-1.5 py-0.5 rounded transition-colors ${
+                            PLATFORM_LINK_STYLES[s.platform] ||
+                            "text-gray-500 hover:text-gray-700 hover:bg-gray-50"
                           }`}
                         >
                           {PLATFORM_LABELS[s.platform] || s.platform}
-                          {s.plays
-                            ? ` (${formatNumber(s.plays)} plays)`
-                            : s.likes
-                            ? ` (${formatNumber(s.likes)} likes)`
-                            : ""}
+                          {s.plays ? (
+                            <span className="text-[10px] opacity-70">
+                              {formatNumber(s.plays)}
+                            </span>
+                          ) : s.likes && s.likes > 0 ? (
+                            <span className="text-[10px] opacity-70">
+                              {formatNumber(s.likes)}
+                            </span>
+                          ) : null}
+                          <span className="opacity-40">↗</span>
                         </a>
                       ))}
                     </div>
-                  </div>
-                )}
+                  )}
+                </div>
               </div>
-
-              {/* Score */}
-              <div className="text-right shrink-0">
-                <div className="text-sm font-medium text-gray-400">Score</div>
-                <div className="text-xl font-bold tabular-nums">{r.score}</div>
-              </div>
-            </div>
-          </article>
-        ))}
+            </article>
+          );
+        })}
       </div>
     </div>
   );
