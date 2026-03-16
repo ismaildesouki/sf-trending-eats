@@ -33,12 +33,11 @@ class RedditConfig:
     subreddits: list = field(default_factory=lambda: [
         "SFFood",
         "sanfrancisco",
-        "bayarea",
-        "oakland",
         "AskSF",
-        "sanjose",
+        "bayarea",
+        "SanFranciscoEats",
     ])
-    posts_per_sub: int = 100  # hot + new posts to scan per sub
+    posts_per_sub: int = 200  # hot + new posts to scan per sub
 
 
 @dataclass
@@ -47,14 +46,24 @@ class ThreadsConfig:
     keywords: list = field(default_factory=lambda: [
         "sf restaurant",
         "san francisco food",
-        "bay area eats",
         "sf food",
-        "oakland restaurant",
         "sf brunch",
         "sf dinner",
         "sf ramen",
         "sf tacos",
         "sf pizza",
+        "sf sushi",
+        "sf dim sum",
+        "sf coffee",
+        "sf bakery",
+        "sf cocktails",
+        "sf hidden gem restaurant",
+        "sf new restaurant",
+        "san francisco best food",
+        "sf mission food",
+        "sf chinatown food",
+        "sf north beach food",
+        "san francisco trending food",
     ])
 
 
@@ -137,22 +146,50 @@ class GeoConfig:
 class TikTokConfig:
     apify_token: str = os.getenv("APIFY_TOKEN", "")
     hashtags: list = field(default_factory=lambda: [
-        "sffood", "sfrestaurants", "sanfranciscofood", "bayareaeats",
-        "sfeats", "oaklandfood", "sfbrunch", "sfdining",
-        "bayareafoodie", "sffoodies",
+        # Core SF
+        "sffood", "sfrestaurants", "sanfranciscofood", "sfeats",
+        "sfdining", "sffoodies", "sffoodie", "sfhiddengems",
+        "sanfranciscoeats", "sanfranciscorestaurants",
+        # Meal-specific
+        "sfbrunch", "sfdinner", "sflunch", "sfbreakfast",
+        "sfhappyhour", "sflatenightfood",
+        # Cuisine-specific
+        "sfpizza", "sframen", "sftacos", "sfsushi",
+        "sfcoffee", "sfbakery", "sfdimsum", "sfboba",
+        "sfcocktails", "sfseafood", "sfburgers",
+        # Neighborhood-specific
+        "sfmission", "sfchinatown", "sfnorthbeach", "sfmarina",
+        "sfcastro", "sfhayes", "sfsoma", "sfnoevalley", "sfsunset",
+        # Discovery/general
+        "whattoeatinsf", "sffoodtiktok", "bayareaeats", "bayareafoodie",
+        "bayareafood", "sfnewrestaurant", "sffoodscene",
     ])
-    results_per_hashtag: int = int(os.getenv("TIKTOK_RESULTS_PER_HASHTAG", "50"))
+    results_per_hashtag: int = int(os.getenv("TIKTOK_RESULTS_PER_HASHTAG", "100"))
 
 
 @dataclass
 class InstagramConfig:
     apify_token: str = os.getenv("APIFY_TOKEN", "")
     hashtags: list = field(default_factory=lambda: [
-        "sffood", "sfrestaurants", "sanfranciscofood", "bayareaeats",
-        "sfeats", "oaklandfood", "sfbrunch", "sfdining",
-        "bayareafoodie", "sffoodie",
+        # Core SF
+        "sffood", "sfrestaurants", "sanfranciscofood", "sfeats",
+        "sfdining", "sffoodie", "sffoodies", "sfhiddengems",
+        "sanfranciscoeats", "sanfranciscorestaurants",
+        # Meal-specific
+        "sfbrunch", "sfdinner", "sflunch", "sfbreakfast",
+        "sfhappyhour", "sflatenighteats",
+        # Cuisine-specific
+        "sfpizza", "sframen", "sftacos", "sfsushi",
+        "sfcoffee", "sfbakery", "sfdimsum", "sfboba",
+        "sfcocktails", "sfseafood", "sfburgers",
+        # Neighborhood-specific
+        "sfmission", "sfchinatown", "sfnorthbeach", "sfmarina",
+        "sfcastro", "sfhayes", "sfsoma", "sfnoevalley", "sfsunset",
+        # Discovery/general
+        "whattoeatinsf", "bayareaeats", "bayareafoodie", "bayareafood",
+        "sfnewrestaurant", "sffoodscene", "eatinsf",
     ])
-    results_per_hashtag: int = int(os.getenv("INSTAGRAM_RESULTS_PER_HASHTAG", "50"))
+    results_per_hashtag: int = int(os.getenv("INSTAGRAM_RESULTS_PER_HASHTAG", "100"))
 
 
 @dataclass

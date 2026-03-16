@@ -26,7 +26,8 @@
           "likes": 45500
         }
       ],
-      "rank": 1
+      "rank": 1,
+      "city": "San Francisco"
     },
     {
       "name": "Yank Sing",
@@ -58,7 +59,8 @@
           "likes": 1
         }
       ],
-      "rank": 2
+      "rank": 2,
+      "city": "San Francisco"
     },
     {
       "name": "Woodhouse Fish Co.",
@@ -78,7 +80,8 @@
           "likes": 22800
         }
       ],
-      "rank": 3
+      "rank": 3,
+      "city": "San Francisco"
     },
     {
       "name": "Bette's",
@@ -98,7 +101,8 @@
           "likes": 35200
         }
       ],
-      "rank": 4
+      "rank": 4,
+      "city": "San Francisco"
     },
     {
       "name": "Original Joe's",
@@ -118,7 +122,8 @@
           "likes": 24600
         }
       ],
-      "rank": 5
+      "rank": 5,
+      "city": "San Francisco"
     },
     {
       "name": "Ninniku",
@@ -138,7 +143,8 @@
           "likes": 18800
         }
       ],
-      "rank": 6
+      "rank": 6,
+      "city": "San Francisco"
     },
     {
       "name": "Mensho Tokyo",
@@ -158,7 +164,8 @@
           "likes": 5918
         }
       ],
-      "rank": 7
+      "rank": 7,
+      "city": "San Francisco"
     },
     {
       "name": "El Farolito",
@@ -184,7 +191,8 @@
           "likes": 30300
         }
       ],
-      "rank": 8
+      "rank": 8,
+      "city": "San Francisco"
     },
     {
       "name": "Fusion Dumpling",
@@ -204,7 +212,8 @@
           "likes": 7986
         }
       ],
-      "rank": 9
+      "rank": 9,
+      "city": "San Francisco"
     },
     {
       "name": "Maruwu Seicha",
@@ -224,7 +233,8 @@
           "likes": 29900
         }
       ],
-      "rank": 10
+      "rank": 10,
+      "city": "San Francisco"
     },
     {
       "name": "Takoyaki Yamachan",
@@ -244,7 +254,8 @@
           "likes": 29900
         }
       ],
-      "rank": 11
+      "rank": 11,
+      "city": "San Francisco"
     },
     {
       "name": "Butter & Crumble",
@@ -264,7 +275,8 @@
           "likes": 35700
         }
       ],
-      "rank": 12
+      "rank": 12,
+      "city": "San Francisco"
     },
     {
       "name": "Tacos El Patron",
@@ -284,7 +296,8 @@
           "likes": 35700
         }
       ],
-      "rank": 13
+      "rank": 13,
+      "city": "San Francisco"
     },
     {
       "name": "Sanhowon",
@@ -304,7 +317,8 @@
           "likes": 35700
         }
       ],
-      "rank": 14
+      "rank": 14,
+      "city": "San Francisco"
     },
     {
       "name": "Yamo",
@@ -330,7 +344,8 @@
           "likes": 69
         }
       ],
-      "rank": 15
+      "rank": 15,
+      "city": "San Francisco"
     },
     {
       "name": "Panchita's Pupuseria",
@@ -350,7 +365,8 @@
           "likes": 30300
         }
       ],
-      "rank": 16
+      "rank": 16,
+      "city": "San Francisco"
     },
     {
       "name": "Il Canto Cafe",
@@ -370,7 +386,8 @@
           "likes": 6313
         }
       ],
-      "rank": 17
+      "rank": 17,
+      "city": "San Francisco"
     },
     {
       "name": "Breakfast Little",
@@ -390,7 +407,8 @@
           "likes": 6313
         }
       ],
-      "rank": 18
+      "rank": 18,
+      "city": "San Francisco"
     },
     {
       "name": "Al Carajo",
@@ -410,7 +428,8 @@
           "likes": 6313
         }
       ],
-      "rank": 19
+      "rank": 19,
+      "city": "San Francisco"
     },
     {
       "name": "Hamburguesa Bar",
@@ -430,7 +449,8 @@
           "likes": 91
         }
       ],
-      "rank": 20
+      "rank": 20,
+      "city": "San Francisco"
     },
     {
       "name": "Dragon Eats",
@@ -450,7 +470,8 @@
           "likes": 69
         }
       ],
-      "rank": 21
+      "rank": 21,
+      "city": "San Francisco"
     },
     {
       "name": "Delicious Dim Sum",
@@ -470,7 +491,8 @@
           "likes": 69
         }
       ],
-      "rank": 22
+      "rank": 22,
+      "city": "San Francisco"
     },
     {
       "name": "Saigon Sandwich",
@@ -490,7 +512,8 @@
           "likes": 69
         }
       ],
-      "rank": 23
+      "rank": 23,
+      "city": "San Francisco"
     },
     {
       "name": "Kahnfections",
@@ -514,7 +537,8 @@
           "likes": 258
         }
       ],
-      "rank": 24
+      "rank": 24,
+      "city": "San Francisco"
     },
     {
       "name": "Woo Can Cook at Prescott Market",
@@ -538,7 +562,8 @@
           "likes": 127
         }
       ],
-      "rank": 25
+      "rank": 25,
+      "city": "Oakland"
     },
     {
       "name": "Blue Plate",
@@ -557,7 +582,8 @@
           "likes": 152
         }
       ],
-      "rank": 26
+      "rank": 26,
+      "city": "San Francisco"
     },
     {
       "name": "United Dumplings",
@@ -576,7 +602,8 @@
           "likes": 79
         }
       ],
-      "rank": 27
+      "rank": 27,
+      "city": "Oakland"
     },
     {
       "name": "Lobalita",
@@ -595,7 +622,8 @@
           "likes": 59
         }
       ],
-      "rank": 28
+      "rank": 28,
+      "city": "San Francisco"
     },
     {
       "name": "The Front Porch",
@@ -614,7 +642,8 @@
           "likes": 51
         }
       ],
-      "rank": 29
+      "rank": 29,
+      "city": "San Francisco"
     },
     {
       "name": "Paper Son Coffee",
@@ -638,7 +667,8 @@
           "likes": 22
         }
       ],
-      "rank": 30
+      "rank": 30,
+      "city": "San Francisco"
     },
     {
       "name": "Scoma's",
@@ -657,7 +687,8 @@
           "likes": 32
         }
       ],
-      "rank": 31
+      "rank": 31,
+      "city": "San Francisco"
     },
     {
       "name": "Frenchie Wine Bar",
@@ -676,7 +707,8 @@
           "likes": 29
         }
       ],
-      "rank": 32
+      "rank": 32,
+      "city": "San Francisco"
     },
     {
       "name": "Hook Fish Co.",
@@ -695,7 +727,8 @@
           "likes": 54
         }
       ],
-      "rank": 33
+      "rank": 33,
+      "city": "San Francisco"
     },
     {
       "name": "Saru Hand Roll Bar",
@@ -714,7 +747,8 @@
           "likes": 54
         }
       ],
-      "rank": 34
+      "rank": 34,
+      "city": "San Francisco"
     },
     {
       "name": "Le Marais Bakery",
@@ -733,7 +767,8 @@
           "likes": 22
         }
       ],
-      "rank": 35
+      "rank": 35,
+      "city": "San Francisco"
     },
     {
       "name": "The Fold Cafe",
@@ -752,7 +787,8 @@
           "likes": 22
         }
       ],
-      "rank": 36
+      "rank": 36,
+      "city": "San Francisco"
     },
     {
       "name": "Native Twins Coffee",
@@ -776,7 +812,8 @@
           "likes": 15
         }
       ],
-      "rank": 37
+      "rank": 37,
+      "city": "San Francisco"
     },
     {
       "name": "Florio",
@@ -800,7 +837,8 @@
           "likes": 13
         }
       ],
-      "rank": 38
+      "rank": 38,
+      "city": "San Francisco"
     },
     {
       "name": "Bosco",
@@ -819,7 +857,8 @@
           "likes": 17
         }
       ],
-      "rank": 39
+      "rank": 39,
+      "city": "San Francisco"
     },
     {
       "name": "La Promenade Cafe",
@@ -838,7 +877,8 @@
           "likes": 15
         }
       ],
-      "rank": 40
+      "rank": 40,
+      "city": "San Francisco"
     },
     {
       "name": "Falasteen SF",
@@ -857,7 +897,8 @@
           "likes": 13
         }
       ],
-      "rank": 41
+      "rank": 41,
+      "city": "San Francisco"
     },
     {
       "name": "Cafe Gonzalez",
@@ -876,7 +917,8 @@
           "likes": 12
         }
       ],
-      "rank": 42
+      "rank": 42,
+      "city": "San Francisco"
     },
     {
       "name": "Braid Bakery",
@@ -895,7 +937,8 @@
           "likes": 10
         }
       ],
-      "rank": 43
+      "rank": 43,
+      "city": "San Francisco"
     },
     {
       "name": "Thai House Express",
@@ -914,7 +957,8 @@
           "likes": 7
         }
       ],
-      "rank": 44
+      "rank": 44,
+      "city": "San Francisco"
     },
     {
       "name": "Trestle",
@@ -933,7 +977,8 @@
           "likes": 7
         }
       ],
-      "rank": 45
+      "rank": 45,
+      "city": "San Francisco"
     },
     {
       "name": "Hedge Coffee",
@@ -957,7 +1002,8 @@
           "likes": 2
         }
       ],
-      "rank": 46
+      "rank": 46,
+      "city": "San Francisco"
     },
     {
       "name": "Q Specialty Coffee",
@@ -976,7 +1022,8 @@
           "likes": 4
         }
       ],
-      "rank": 47
+      "rank": 47,
+      "city": "San Francisco"
     },
     {
       "name": "Taisan Huakee",
@@ -995,7 +1042,8 @@
           "likes": 3
         }
       ],
-      "rank": 48
+      "rank": 48,
+      "city": "San Francisco"
     },
     {
       "name": "Breakwater Barbecue",
@@ -1014,7 +1062,8 @@
           "likes": 3
         }
       ],
-      "rank": 49
+      "rank": 49,
+      "city": "San Francisco"
     },
     {
       "name": "Day Moon Bread",
@@ -1033,7 +1082,8 @@
           "likes": 3
         }
       ],
-      "rank": 50
+      "rank": 50,
+      "city": "San Francisco"
     },
     {
       "name": "RT Bistro",
@@ -1052,7 +1102,8 @@
           "likes": 2
         }
       ],
-      "rank": 51
+      "rank": 51,
+      "city": "San Francisco"
     },
     {
       "name": "El Dorado",
@@ -1071,7 +1122,8 @@
           "likes": 2
         }
       ],
-      "rank": 52
+      "rank": 52,
+      "city": "San Francisco"
     },
     {
       "name": "Mariposas",
@@ -1094,7 +1146,8 @@
           "likes": 1
         }
       ],
-      "rank": 53
+      "rank": 53,
+      "city": "San Francisco"
     },
     {
       "name": "Urban Kitchen",
@@ -1113,7 +1166,8 @@
           "likes": 1
         }
       ],
-      "rank": 54
+      "rank": 54,
+      "city": "East Bay"
     },
     {
       "name": "Amoura",
@@ -1132,7 +1186,8 @@
           "likes": 1
         }
       ],
-      "rank": 55
+      "rank": 55,
+      "city": "San Francisco"
     },
     {
       "name": "Sheba Lounge",
@@ -1151,7 +1206,8 @@
           "likes": 1
         }
       ],
-      "rank": 56
+      "rank": 56,
+      "city": "San Francisco"
     },
     {
       "name": "Toy Soldier",
@@ -1170,7 +1226,8 @@
           "likes": 1
         }
       ],
-      "rank": 57
+      "rank": 57,
+      "city": "San Francisco"
     },
     {
       "name": "Bao Bao Dumpling",
@@ -1188,7 +1245,8 @@
           "url": "https://www.instagram.com/p/DVzSJrpEkib/"
         }
       ],
-      "rank": 58
+      "rank": 58,
+      "city": "San Francisco"
     },
     {
       "name": "Itria",
@@ -1206,7 +1264,8 @@
           "url": "https://www.instagram.com/p/DVwtPNcgWgT/"
         }
       ],
-      "rank": 59
+      "rank": 59,
+      "city": "San Francisco"
     },
     {
       "name": "Maria Isabel",
@@ -1224,7 +1283,8 @@
           "url": "https://www.instagram.com/p/DVgwa6rlKlj/"
         }
       ],
-      "rank": 60
+      "rank": 60,
+      "city": "San Francisco"
     }
   ]
 }

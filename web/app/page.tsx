@@ -1,5 +1,6 @@
 import { TrendingList } from "../components/TrendingList";
 import { NewsletterSignup } from "../components/NewsletterSignup";
+import { SkillInstall } from "../components/SkillInstall";
 
 async function getTrendingData() {
   try {
@@ -25,7 +26,7 @@ export default async function Home() {
             </h1>
           </div>
           <p className="text-gray-500 mt-1">
-            Bay Area restaurants trending on social media right now
+            San Francisco restaurants trending on social media right now
           </p>
           {data && (
             <p className="text-xs text-gray-400 mt-3">
@@ -53,6 +54,11 @@ export default async function Home() {
         {/* Newsletter signup */}
         <div className="mt-16 pt-8 border-t border-gray-200/60">
           <NewsletterSignup />
+        </div>
+
+        {/* Claude skill install */}
+        <div className="mt-8">
+          <SkillInstall />
         </div>
       </div>
 

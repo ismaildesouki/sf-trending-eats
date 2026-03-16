@@ -22,7 +22,7 @@ from pipeline.utils.nlp import (
     is_food_related,
     generate_slug,
 )
-from pipeline.utils.db import upsert_restaurant, insert_mention_batch, get_cursor
+from pipeline.utils.db import upsert_restaurant, insert_mention_batch, get_all_restaurant_names
 
 logger = logging.getLogger(__name__)
 
@@ -43,10 +43,8 @@ async def _get_access_token(client: httpx.AsyncClient) -> str:
 
 
 def _get_known_restaurant_names() -> list[str]:
-    """Load known restaurant names from DB for matching."""
-    with get_cursor() as cur:
-        cur.execute("SELECT name FROM restaurants WHERE is_active = TRUE")
-        return [row["name"] for row in cur.fetchall()]
+    """Load known restaurant names from the Google Sheet."""
+    return get_all_restaurant_names()
 
 
 async def collect_subreddit(

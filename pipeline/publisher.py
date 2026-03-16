@@ -60,6 +60,7 @@ async def publish_weekly_list() -> dict:
             for r in existing.get("restaurants", []):
                 existing_metadata[r["name"]] = {
                     "neighborhood": r.get("neighborhood", ""),
+                    "city": r.get("city", "San Francisco"),
                     "cuisine_type": r.get("cuisine_type", ""),
                     "price_range": r.get("price_range", ""),
                 }
@@ -118,6 +119,7 @@ async def publish_weekly_list() -> dict:
             "rank": rank,
             "name": name,
             "neighborhood": meta.get("neighborhood", ""),
+            "city": meta.get("city", "San Francisco"),
             "cuisine_type": meta.get("cuisine_type", ""),
             "price_range": meta.get("price_range", ""),
             "score": round(r["score"], 2),

@@ -14,7 +14,7 @@ from datetime import datetime, timezone
 import httpx
 
 from config import settings
-from pipeline.utils.db import get_cursor, insert_mention
+from pipeline.utils.db import _get_worksheet, _row_to_dict, insert_mention, upsert_restaurant
 
 logger = logging.getLogger(__name__)
 
@@ -71,15 +71,19 @@ async def enrich_known_restaurants(client: httpx.AsyncClient) -> dict:
     """
     stats = {"restaurants_checked": 0, "enriched": 0, "mentions_created": 0}
 
-    with get_cursor() as cur:
-        cur.execute("""
-            SELECT id, name, google_place_id
-            FROM restaurants
-            WHERE is_active = TRUE
-            ORDER BY updated_at ASC
-            LIMIT 100
-        """)
-        restaurants = cur.fetchall()
+    # Load restaurants from the Google Sheet
+    _RESTAURANT_COLS = [
+        "id", "name", "slug", "neighborhood", "cuisine_type", "price_range",
+        "latitude", "longitude", "yelp_id", "google_place_id", "yelp_url",
+        "google_maps_url", "image_url", "first_seen", "updated_at",
+    ]
+    ws = _get_worksheet("restaurants")
+    all_rows = ws.get_all_values()
+    restaurants = [
+        _row_to_dict(row, _RESTAURANT_COLS)
+        for row in all_rows[1:]
+        if len(row) > 1 and row[1]
+    ][:100]
 
     for restaurant in restaurants:
         stats["restaurants_checked"] += 1
@@ -102,18 +106,12 @@ async def enrich_known_restaurants(client: httpx.AsyncClient) -> dict:
 
             # Update restaurant with Google data if we found a new place_id
             if not restaurant["google_place_id"] and place_id:
-                with get_cursor() as cur:
-                    cur.execute("""
-                        UPDATE restaurants
-                        SET google_place_id = %s,
-                            google_maps_url = %s,
-                            updated_at = NOW()
-                        WHERE id = %s
-                    """, (
-                        place_id,
-                        place.get("googleMapsUri"),
-                        restaurant["id"],
-                    ))
+                upsert_restaurant(
+                    name=restaurant["name"],
+                    slug=restaurant["slug"],
+                    google_place_id=place_id,
+                    google_maps_url=place.get("googleMapsUri"),
+                )
 
             # Create mention with current review counts
             # The scoring engine computes velocity from historical snapshots

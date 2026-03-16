@@ -13,6 +13,7 @@ interface Restaurant {
   rank: number;
   name: string;
   neighborhood: string | null;
+  city: string | null;
   cuisine_type: string | null;
   score: number;
   trending_reason: string | null;
@@ -82,9 +83,16 @@ function ScoreBadge({ score, rank }: { score: number; rank: number }) {
 }
 
 export function TrendingList({ restaurants }: { restaurants: Restaurant[] }) {
+  const [filterCity, setFilterCity] = useState<string>("all");
   const [filterCuisine, setFilterCuisine] = useState<string>("all");
   const [filterNeighborhood, setFilterNeighborhood] = useState<string>("all");
   const [filterPlatform, setFilterPlatform] = useState<string>("all");
+
+  const cities = useMemo(() => {
+    const set = new Set<string>();
+    restaurants.forEach((r) => r.city && set.add(r.city));
+    return Array.from(set).sort();
+  }, [restaurants]);
 
   const cuisines = useMemo(() => {
     const set = new Set<string>();
@@ -92,11 +100,14 @@ export function TrendingList({ restaurants }: { restaurants: Restaurant[] }) {
     return Array.from(set).sort();
   }, [restaurants]);
 
+  // Neighborhoods filtered by selected city
   const neighborhoods = useMemo(() => {
     const set = new Set<string>();
-    restaurants.forEach((r) => r.neighborhood && set.add(r.neighborhood));
+    restaurants
+      .filter((r) => filterCity === "all" || r.city === filterCity)
+      .forEach((r) => r.neighborhood && set.add(r.neighborhood));
     return Array.from(set).sort();
-  }, [restaurants]);
+  }, [restaurants, filterCity]);
 
   const platforms = useMemo(() => {
     const set = new Set<string>();
@@ -106,6 +117,8 @@ export function TrendingList({ restaurants }: { restaurants: Restaurant[] }) {
 
   const filtered = useMemo(() => {
     return restaurants.filter((r) => {
+      if (filterCity !== "all" && r.city !== filterCity)
+        return false;
       if (filterCuisine !== "all" && r.cuisine_type !== filterCuisine)
         return false;
       if (filterNeighborhood !== "all" && r.neighborhood !== filterNeighborhood)
@@ -114,9 +127,10 @@ export function TrendingList({ restaurants }: { restaurants: Restaurant[] }) {
         return false;
       return true;
     });
-  }, [restaurants, filterCuisine, filterNeighborhood, filterPlatform]);
+  }, [restaurants, filterCity, filterCuisine, filterNeighborhood, filterPlatform]);
 
   const hasFilters =
+    filterCity !== "all" ||
     filterCuisine !== "all" ||
     filterNeighborhood !== "all" ||
     filterPlatform !== "all";
@@ -127,6 +141,23 @@ export function TrendingList({ restaurants }: { restaurants: Restaurant[] }) {
       <div className="sticky top-0 z-10 bg-[#fefcf9]/95 backdrop-blur-sm pb-4 pt-2 -mx-4 px-4 sm:-mx-6 sm:px-6">
         <div className="flex flex-wrap items-center gap-2">
           <span className="text-xs font-medium text-gray-400 mr-1">Filter:</span>
+
+          {cities.length > 1 && (
+            <select
+              value={filterCity}
+              onChange={(e) => {
+                setFilterCity(e.target.value);
+                setFilterNeighborhood("all");
+              }}
+              className="px-2.5 py-1.5 text-xs border border-gray-200 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-orange-400 focus:border-orange-400 text-gray-700"
+            >
+              <option value="all">All Cities</option>
+              {cities.map((c) => (
+                <option key={c} value={c}>{c}</option>
+              ))}
+            </select>
+          )}
+
           <select
             value={filterCuisine}
             onChange={(e) => setFilterCuisine(e.target.value)}
@@ -163,6 +194,7 @@ export function TrendingList({ restaurants }: { restaurants: Restaurant[] }) {
           {hasFilters && (
             <button
               onClick={() => {
+                setFilterCity("all");
                 setFilterCuisine("all");
                 setFilterNeighborhood("all");
                 setFilterPlatform("all");
@@ -221,7 +253,7 @@ export function TrendingList({ restaurants }: { restaurants: Restaurant[] }) {
                         {r.name}
                       </h2>
                       <p className="text-xs text-gray-400 mt-0.5 truncate">
-                        {[r.neighborhood, r.cuisine_type, r.price_range]
+                        {[r.neighborhood, r.city && r.city !== "San Francisco" ? r.city : null, r.cuisine_type, r.price_range]
                           .filter(Boolean)
                           .join(" · ")}
                       </p>

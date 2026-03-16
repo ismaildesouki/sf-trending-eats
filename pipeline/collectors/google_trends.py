@@ -16,7 +16,7 @@ from datetime import datetime, timezone
 from pytrends.request import TrendReq
 
 from config import settings
-from pipeline.utils.db import get_cursor, insert_mention
+from pipeline.utils.db import _get_worksheet, _row_to_dict, insert_mention
 
 logger = logging.getLogger(__name__)
 
@@ -96,14 +96,19 @@ def run() -> dict:
     stats = {"restaurants_checked": 0, "mentions_created": 0}
 
     # Get top restaurants to check (limit to avoid rate limiting)
-    with get_cursor() as cur:
-        cur.execute("""
-            SELECT id, name FROM restaurants
-            WHERE is_active = TRUE
-            ORDER BY updated_at DESC
-            LIMIT 50
-        """)
-        restaurants = {row["name"]: row["id"] for row in cur.fetchall()}
+    _RESTAURANT_COLS = [
+        "id", "name", "slug", "neighborhood", "cuisine_type", "price_range",
+        "latitude", "longitude", "yelp_id", "google_place_id", "yelp_url",
+        "google_maps_url", "image_url", "first_seen", "updated_at",
+    ]
+    ws = _get_worksheet("restaurants")
+    all_rows = ws.get_all_values()
+    all_restaurants = [
+        _row_to_dict(row, _RESTAURANT_COLS)
+        for row in all_rows[1:]
+        if len(row) > 1 and row[1]
+    ]
+    restaurants = {r["name"]: r["id"] for r in all_restaurants[:50]}
 
     names = list(restaurants.keys())
 
