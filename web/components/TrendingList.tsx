@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useRef, useEffect } from "react";
 
 interface SourceLink {
   platform: string;
@@ -67,6 +67,81 @@ function formatNumber(n: number): string {
   return n.toString();
 }
 
+// ── Multi-select dropdown ──────────────────────────────────
+function MultiSelect({
+  label,
+  options,
+  selected,
+  onChange,
+  labelMap,
+}: {
+  label: string;
+  options: string[];
+  selected: Set<string>;
+  onChange: (next: Set<string>) => void;
+  labelMap?: Record<string, string>;
+}) {
+  const [open, setOpen] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    function handleClick(e: MouseEvent) {
+      if (ref.current && !ref.current.contains(e.target as Node)) setOpen(false);
+    }
+    document.addEventListener("mousedown", handleClick);
+    return () => document.removeEventListener("mousedown", handleClick);
+  }, []);
+
+  const toggle = (val: string) => {
+    const next = new Set(selected);
+    if (next.has(val)) next.delete(val);
+    else next.add(val);
+    onChange(next);
+  };
+
+  const count = selected.size;
+  const buttonLabel = count === 0 ? label : `${label} (${count})`;
+
+  return (
+    <div ref={ref} className="relative">
+      <button
+        onClick={() => setOpen(!open)}
+        className={`
+          px-2.5 py-1.5 text-xs border rounded-lg bg-white
+          focus:outline-none focus:ring-2 focus:ring-orange-400 focus:border-orange-400
+          flex items-center gap-1
+          ${count > 0 ? "border-orange-300 text-orange-700" : "border-gray-200 text-gray-700"}
+        `}
+      >
+        {buttonLabel}
+        <svg className="w-3 h-3 opacity-50" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+
+      {open && (
+        <div className="absolute top-full left-0 mt-1 bg-white border border-gray-200 rounded-lg shadow-lg z-20 min-w-[180px] max-h-64 overflow-y-auto py-1">
+          {options.map((opt) => (
+            <label
+              key={opt}
+              className="flex items-center gap-2 px-3 py-1.5 text-xs text-gray-700 hover:bg-orange-50 cursor-pointer"
+            >
+              <input
+                type="checkbox"
+                checked={selected.has(opt)}
+                onChange={() => toggle(opt)}
+                className="rounded border-gray-300 text-orange-500 focus:ring-orange-400"
+              />
+              {labelMap?.[opt] || opt}
+            </label>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
+// ── Score badge ────────────────────────────────────────────
 function ScoreBadge({ score, rank }: { score: number; rank: number }) {
   const hot = rank <= 3;
   const warm = rank <= 10;
@@ -75,7 +150,7 @@ function ScoreBadge({ score, rank }: { score: number; rank: number }) {
       flex flex-col items-center justify-center w-14 h-14 rounded-xl shrink-0
       ${hot ? "bg-orange-500 text-white" : warm ? "bg-orange-100 text-orange-700" : "bg-gray-100 text-gray-600"}
     `}>
-      <span className={`text-lg font-bold leading-none tabular-nums ${hot ? "" : ""}`}>
+      <span className="text-lg font-bold leading-none tabular-nums">
         {score}
       </span>
       <span className={`text-[10px] font-medium leading-none mt-0.5 ${hot ? "text-orange-100" : warm ? "text-orange-500" : "text-gray-400"}`}>
@@ -85,17 +160,12 @@ function ScoreBadge({ score, rank }: { score: number; rank: number }) {
   );
 }
 
+// ── Main component ─────────────────────────────────────────
 export function TrendingList({ restaurants }: { restaurants: Restaurant[] }) {
-  const [filterCity, setFilterCity] = useState<string>("all");
-  const [filterCuisine, setFilterCuisine] = useState<string>("all");
-  const [filterNeighborhood, setFilterNeighborhood] = useState<string>("all");
-  const [filterPlatform, setFilterPlatform] = useState<string>("all");
-
-  const cities = useMemo(() => {
-    const set = new Set<string>();
-    restaurants.forEach((r) => r.city && set.add(r.city));
-    return Array.from(set).sort();
-  }, [restaurants]);
+  const [filterCuisines, setFilterCuisines] = useState<Set<string>>(new Set());
+  const [filterNeighborhoods, setFilterNeighborhoods] = useState<Set<string>>(new Set());
+  const [filterPlatforms, setFilterPlatforms] = useState<Set<string>>(new Set());
+  const [filterPrices, setFilterPrices] = useState<Set<string>>(new Set());
 
   const cuisines = useMemo(() => {
     const set = new Set<string>();
@@ -103,14 +173,11 @@ export function TrendingList({ restaurants }: { restaurants: Restaurant[] }) {
     return Array.from(set).sort();
   }, [restaurants]);
 
-  // Neighborhoods filtered by selected city
   const neighborhoods = useMemo(() => {
     const set = new Set<string>();
-    restaurants
-      .filter((r) => filterCity === "all" || r.city === filterCity)
-      .forEach((r) => r.neighborhood && set.add(r.neighborhood));
+    restaurants.forEach((r) => r.neighborhood && set.add(r.neighborhood));
     return Array.from(set).sort();
-  }, [restaurants, filterCity]);
+  }, [restaurants]);
 
   const platforms = useMemo(() => {
     const set = new Set<string>();
@@ -118,25 +185,39 @@ export function TrendingList({ restaurants }: { restaurants: Restaurant[] }) {
     return Array.from(set).sort();
   }, [restaurants]);
 
+  const prices = useMemo(() => {
+    const set = new Set<string>();
+    restaurants.forEach((r) => r.price_range && set.add(r.price_range));
+    // Sort by $ count
+    return Array.from(set).sort((a, b) => a.length - b.length || a.localeCompare(b));
+  }, [restaurants]);
+
   const filtered = useMemo(() => {
     return restaurants.filter((r) => {
-      if (filterCity !== "all" && r.city !== filterCity)
+      if (filterCuisines.size > 0 && (!r.cuisine_type || !filterCuisines.has(r.cuisine_type)))
         return false;
-      if (filterCuisine !== "all" && r.cuisine_type !== filterCuisine)
+      if (filterNeighborhoods.size > 0 && (!r.neighborhood || !filterNeighborhoods.has(r.neighborhood)))
         return false;
-      if (filterNeighborhood !== "all" && r.neighborhood !== filterNeighborhood)
+      if (filterPlatforms.size > 0 && !r.platforms_active.some((p) => filterPlatforms.has(p)))
         return false;
-      if (filterPlatform !== "all" && !r.platforms_active.includes(filterPlatform))
+      if (filterPrices.size > 0 && (!r.price_range || !filterPrices.has(r.price_range)))
         return false;
       return true;
     });
-  }, [restaurants, filterCity, filterCuisine, filterNeighborhood, filterPlatform]);
+  }, [restaurants, filterCuisines, filterNeighborhoods, filterPlatforms, filterPrices]);
 
   const hasFilters =
-    filterCity !== "all" ||
-    filterCuisine !== "all" ||
-    filterNeighborhood !== "all" ||
-    filterPlatform !== "all";
+    filterCuisines.size > 0 ||
+    filterNeighborhoods.size > 0 ||
+    filterPlatforms.size > 0 ||
+    filterPrices.size > 0;
+
+  const clearAll = () => {
+    setFilterCuisines(new Set());
+    setFilterNeighborhoods(new Set());
+    setFilterPlatforms(new Set());
+    setFilterPrices(new Set());
+  };
 
   return (
     <div>
@@ -145,63 +226,38 @@ export function TrendingList({ restaurants }: { restaurants: Restaurant[] }) {
         <div className="flex flex-wrap items-center gap-2">
           <span className="text-xs font-medium text-gray-400 mr-1">Filter:</span>
 
-          {cities.length > 1 && (
-            <select
-              value={filterCity}
-              onChange={(e) => {
-                setFilterCity(e.target.value);
-                setFilterNeighborhood("all");
-              }}
-              className="px-2.5 py-1.5 text-xs border border-gray-200 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-orange-400 focus:border-orange-400 text-gray-700"
-            >
-              <option value="all">All Cities</option>
-              {cities.map((c) => (
-                <option key={c} value={c}>{c}</option>
-              ))}
-            </select>
-          )}
+          <MultiSelect
+            label="Cuisine"
+            options={cuisines}
+            selected={filterCuisines}
+            onChange={setFilterCuisines}
+          />
 
-          <select
-            value={filterCuisine}
-            onChange={(e) => setFilterCuisine(e.target.value)}
-            className="px-2.5 py-1.5 text-xs border border-gray-200 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-orange-400 focus:border-orange-400 text-gray-700"
-          >
-            <option value="all">All Cuisines</option>
-            {cuisines.map((c) => (
-              <option key={c} value={c}>{c}</option>
-            ))}
-          </select>
+          <MultiSelect
+            label="Neighborhood"
+            options={neighborhoods}
+            selected={filterNeighborhoods}
+            onChange={setFilterNeighborhoods}
+          />
 
-          <select
-            value={filterNeighborhood}
-            onChange={(e) => setFilterNeighborhood(e.target.value)}
-            className="px-2.5 py-1.5 text-xs border border-gray-200 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-orange-400 focus:border-orange-400 text-gray-700"
-          >
-            <option value="all">All Neighborhoods</option>
-            {neighborhoods.map((n) => (
-              <option key={n} value={n}>{n}</option>
-            ))}
-          </select>
+          <MultiSelect
+            label="Price"
+            options={prices}
+            selected={filterPrices}
+            onChange={setFilterPrices}
+          />
 
-          <select
-            value={filterPlatform}
-            onChange={(e) => setFilterPlatform(e.target.value)}
-            className="px-2.5 py-1.5 text-xs border border-gray-200 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-orange-400 focus:border-orange-400 text-gray-700"
-          >
-            <option value="all">All Platforms</option>
-            {platforms.map((p) => (
-              <option key={p} value={p}>{PLATFORM_LABELS[p] || p}</option>
-            ))}
-          </select>
+          <MultiSelect
+            label="Platform"
+            options={platforms}
+            selected={filterPlatforms}
+            onChange={setFilterPlatforms}
+            labelMap={PLATFORM_LABELS}
+          />
 
           {hasFilters && (
             <button
-              onClick={() => {
-                setFilterCity("all");
-                setFilterCuisine("all");
-                setFilterNeighborhood("all");
-                setFilterPlatform("all");
-              }}
+              onClick={clearAll}
               className="px-2.5 py-1.5 text-xs text-orange-600 hover:text-orange-700 font-medium"
             >
               Clear
@@ -256,7 +312,7 @@ export function TrendingList({ restaurants }: { restaurants: Restaurant[] }) {
                         {r.name}
                       </h2>
                       <p className="text-xs text-gray-400 mt-0.5 truncate">
-                        {[r.neighborhood, r.city && r.city !== "San Francisco" ? r.city : null, r.cuisine_type, r.price_range]
+                        {[r.neighborhood, r.cuisine_type, r.price_range]
                           .filter(Boolean)
                           .join(" · ")}
                       </p>
@@ -273,7 +329,7 @@ export function TrendingList({ restaurants }: { restaurants: Restaurant[] }) {
                     </p>
                   )}
 
-                  {/* Platform badges + Source links row */}
+                  {/* Platform badges */}
                   <div className="flex flex-wrap items-center gap-1.5 mt-3">
                     {r.platforms_active.map((platform) => (
                       <span
