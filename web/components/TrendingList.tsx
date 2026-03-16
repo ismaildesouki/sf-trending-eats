@@ -98,6 +98,12 @@ export function TrendingList({ restaurants }: { restaurants: Restaurant[] }) {
     return Array.from(set).sort();
   }, [restaurants]);
 
+  const platforms = useMemo(() => {
+    const set = new Set<string>();
+    restaurants.forEach((r) => r.platforms_active.forEach((p) => set.add(p)));
+    return Array.from(set).sort();
+  }, [restaurants]);
+
   const filtered = useMemo(() => {
     return restaurants.filter((r) => {
       if (filterCuisine !== "all" && r.cuisine_type !== filterCuisine)
@@ -149,10 +155,9 @@ export function TrendingList({ restaurants }: { restaurants: Restaurant[] }) {
             className="px-2.5 py-1.5 text-xs border border-gray-200 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-orange-400 focus:border-orange-400 text-gray-700"
           >
             <option value="all">All Platforms</option>
-            <option value="tiktok">TikTok</option>
-            <option value="instagram">Instagram</option>
-            <option value="yelp">Yelp</option>
-            <option value="reddit">Reddit</option>
+            {platforms.map((p) => (
+              <option key={p} value={p}>{PLATFORM_LABELS[p] || p}</option>
+            ))}
           </select>
 
           {hasFilters && (
