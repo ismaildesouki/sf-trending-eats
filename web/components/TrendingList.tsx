@@ -7,6 +7,7 @@ interface SourceLink {
   url: string;
   plays?: number;
   likes?: number;
+  label?: string;
 }
 
 interface Restaurant {
@@ -59,6 +60,7 @@ const PLATFORM_LINK_STYLES: Record<string, string> = {
   instagram: "text-purple-600 hover:text-purple-700 hover:bg-purple-50",
   yelp: "text-red-600 hover:text-red-700 hover:bg-red-50",
   reddit: "text-orange-600 hover:text-orange-700 hover:bg-orange-50",
+  food_media: "text-emerald-600 hover:text-emerald-700 hover:bg-emerald-50",
 };
 
 function formatNumber(n: number): string {
@@ -82,21 +84,52 @@ function MultiSelect({
   labelMap?: Record<string, string>;
 }) {
   const [open, setOpen] = useState(false);
+  const [search, setSearch] = useState("");
   const ref = useRef<HTMLDivElement>(null);
+  const searchRef = useRef<HTMLInputElement>(null);
+
+  const SEARCH_THRESHOLD = 8;
 
   useEffect(() => {
     function handleClick(e: MouseEvent) {
-      if (ref.current && !ref.current.contains(e.target as Node)) setOpen(false);
+      if (ref.current && !ref.current.contains(e.target as Node)) {
+        setOpen(false);
+        setSearch("");
+      }
     }
     document.addEventListener("mousedown", handleClick);
     return () => document.removeEventListener("mousedown", handleClick);
   }, []);
+
+  useEffect(() => {
+    if (open && options.length >= SEARCH_THRESHOLD) {
+      searchRef.current?.focus();
+    }
+  }, [open, options.length]);
 
   const toggle = (val: string) => {
     const next = new Set(selected);
     if (next.has(val)) next.delete(val);
     else next.add(val);
     onChange(next);
+  };
+
+  const filteredOptions = search
+    ? options.filter((o) => (labelMap?.[o] || o).toLowerCase().includes(search.toLowerCase()))
+    : options;
+
+  const allSelected = filteredOptions.length > 0 && filteredOptions.every((o) => selected.has(o));
+
+  const toggleAll = () => {
+    if (allSelected) {
+      const next = new Set(selected);
+      filteredOptions.forEach((o) => next.delete(o));
+      onChange(next);
+    } else {
+      const next = new Set(selected);
+      filteredOptions.forEach((o) => next.add(o));
+      onChange(next);
+    }
   };
 
   const count = selected.size;
@@ -120,21 +153,49 @@ function MultiSelect({
       </button>
 
       {open && (
-        <div className="absolute top-full left-0 mt-1 bg-white border border-gray-200 rounded-lg shadow-lg z-20 min-w-[180px] max-h-64 overflow-y-auto py-1">
-          {options.map((opt) => (
-            <label
-              key={opt}
-              className="flex items-center gap-2 px-3 py-1.5 text-xs text-gray-700 hover:bg-orange-50 cursor-pointer"
-            >
+        <div className="absolute top-full left-0 mt-1 bg-white border border-gray-200 rounded-lg shadow-lg z-20 min-w-[200px] max-h-72 flex flex-col">
+          {options.length >= SEARCH_THRESHOLD && (
+            <div className="px-2 pt-2 pb-1 border-b border-gray-100">
               <input
-                type="checkbox"
-                checked={selected.has(opt)}
-                onChange={() => toggle(opt)}
-                className="rounded border-gray-300 text-orange-500 focus:ring-orange-400"
+                ref={searchRef}
+                type="text"
+                value={search}
+                onChange={(e) => setSearch(e.target.value)}
+                placeholder={`Search ${label.toLowerCase()}...`}
+                className="w-full px-2 py-1 text-xs border border-gray-200 rounded bg-gray-50 focus:outline-none focus:ring-1 focus:ring-orange-400 focus:border-orange-400"
               />
-              {labelMap?.[opt] || opt}
-            </label>
-          ))}
+            </div>
+          )}
+
+          {options.length >= SEARCH_THRESHOLD && (
+            <button
+              onClick={toggleAll}
+              className="px-3 py-1.5 text-[11px] text-left text-orange-600 hover:bg-orange-50 font-medium border-b border-gray-100"
+            >
+              {allSelected ? "Deselect all" : "Select all"}{search ? " (filtered)" : ""}
+            </button>
+          )}
+
+          <div className="overflow-y-auto py-1">
+            {filteredOptions.length === 0 ? (
+              <p className="px-3 py-2 text-xs text-gray-400">No matches</p>
+            ) : (
+              filteredOptions.map((opt) => (
+                <label
+                  key={opt}
+                  className="flex items-center gap-2 px-3 py-1.5 text-xs text-gray-700 hover:bg-orange-50 cursor-pointer"
+                >
+                  <input
+                    type="checkbox"
+                    checked={selected.has(opt)}
+                    onChange={() => toggle(opt)}
+                    className="rounded border-gray-300 text-orange-500 focus:ring-orange-400"
+                  />
+                  {labelMap?.[opt] || opt}
+                </label>
+              ))
+            )}
+          </div>
         </div>
       )}
     </div>
@@ -361,7 +422,7 @@ export function TrendingList({ restaurants }: { restaurants: Restaurant[] }) {
                             "text-gray-500 hover:text-gray-700 hover:bg-gray-50"
                           }`}
                         >
-                          {PLATFORM_LABELS[s.platform] || s.platform}
+                          {s.label || PLATFORM_LABELS[s.platform] || s.platform}
                           {s.plays ? (
                             <span className="text-[10px] opacity-70">
                               {formatNumber(s.plays)}

@@ -12,6 +12,23 @@
       "trending_reason": "New French seafood from Lazy Bear's David Barzelay \u2014 raw bar, caviar, fine dining.",
       "platforms_active": [
         "food_media"
+      ],
+      "sources": [
+        {
+          "platform": "food_media",
+          "url": "https://www.theinfatuation.com/san-francisco/guides/best-new-san-francisco-restaurants-hit-list",
+          "label": "Infatuation Hit List"
+        },
+        {
+          "platform": "food_media",
+          "url": "https://sfstandard.com/2026/03/01/new-san-francisco-restaurants-joujou-big-four/",
+          "label": "SF Standard"
+        },
+        {
+          "platform": "food_media",
+          "url": "https://www.theinfatuation.com/san-francisco/guides/san-francisco-spring-restaurant-openings-2026",
+          "label": "Infatuation Spring"
+        }
       ]
     },
     {
@@ -108,6 +125,18 @@
       "trending_reason": "Best izakaya in the US \u2014 charcoal-grilled items and hand-rolled udon.",
       "platforms_active": [
         "food_media"
+      ],
+      "sources": [
+        {
+          "platform": "food_media",
+          "url": "https://blog.resy.com/the-hit-list/sf-restaurants/",
+          "label": "Resy Hit List"
+        },
+        {
+          "platform": "food_media",
+          "url": "https://www.theinfatuation.com/san-francisco/guides/best-restaurants-in-san-francisco",
+          "label": "Infatuation Best 25"
+        }
       ]
     },
     {
@@ -126,6 +155,16 @@
         {
           "platform": "instagram",
           "url": "https://www.instagram.com/p/DVgwa6rlKlj/"
+        },
+        {
+          "platform": "food_media",
+          "url": "https://www.theinfatuation.com/san-francisco/guides/best-new-san-francisco-restaurants-hit-list",
+          "label": "Infatuation Hit List"
+        },
+        {
+          "platform": "food_media",
+          "url": "https://sfstandard.com/2026/03/01/new-san-francisco-restaurants-joujou-big-four/",
+          "label": "SF Standard"
         }
       ]
     },
@@ -146,6 +185,16 @@
           "platform": "instagram",
           "url": "https://www.instagram.com/p/DV11MsBkmzT/",
           "likes": 59
+        },
+        {
+          "platform": "food_media",
+          "url": "https://www.theinfatuation.com/san-francisco/guides/san-francisco-spring-restaurant-openings-2026",
+          "label": "Infatuation Spring"
+        },
+        {
+          "platform": "food_media",
+          "url": "https://sfstandard.com/2026/03/01/new-san-francisco-restaurants-joujou-big-four/",
+          "label": "SF Standard"
         }
       ]
     },
@@ -206,6 +255,18 @@
       "trending_reason": "Stunning guava tarts and fluffy focaccia \u2014 first brick-and-mortar.",
       "platforms_active": [
         "food_media"
+      ],
+      "sources": [
+        {
+          "platform": "food_media",
+          "url": "https://www.theinfatuation.com/san-francisco/guides/san-francisco-spring-restaurant-openings-2026",
+          "label": "Infatuation Spring"
+        },
+        {
+          "platform": "food_media",
+          "url": "https://sfstandard.com/2026/03/01/new-san-francisco-restaurants-joujou-big-four/",
+          "label": "SF Standard"
+        }
       ]
     },
     {
@@ -465,6 +526,11 @@
           "platform": "instagram",
           "url": "https://www.instagram.com/p/DV1MkH4GCpc/",
           "likes": 2
+        },
+        {
+          "platform": "food_media",
+          "url": "https://www.theinfatuation.com/san-francisco/guides/best-new-san-francisco-restaurants-hit-list",
+          "label": "Infatuation Hit List"
         }
       ]
     },
@@ -538,6 +604,13 @@
       "trending_reason": "Phenomenal ramen-inspired tasting menu, nothing else like it.",
       "platforms_active": [
         "food_media"
+      ],
+      "sources": [
+        {
+          "platform": "food_media",
+          "url": "https://www.theinfatuation.com/san-francisco/guides/best-restaurants-in-san-francisco",
+          "label": "Infatuation Best 25"
+        }
       ]
     },
     {
@@ -550,6 +623,13 @@
       "trending_reason": "Upscale grilled meats in an elegant setting.",
       "platforms_active": [
         "food_media"
+      ],
+      "sources": [
+        {
+          "platform": "food_media",
+          "url": "https://www.theinfatuation.com/san-francisco/guides/best-restaurants-in-san-francisco",
+          "label": "Infatuation Best 25"
+        }
       ]
     },
     {
@@ -562,6 +642,13 @@
       "trending_reason": "Fine dining breaded cutlet with creative flourishes.",
       "platforms_active": [
         "food_media"
+      ],
+      "sources": [
+        {
+          "platform": "food_media",
+          "url": "https://www.theinfatuation.com/san-francisco/guides/best-restaurants-in-san-francisco",
+          "label": "Infatuation Best 25"
+        }
       ]
     },
     {
@@ -574,6 +661,13 @@
       "trending_reason": "SF's first Burmese restaurant, icon since 1984.",
       "platforms_active": [
         "food_media"
+      ],
+      "sources": [
+        {
+          "platform": "food_media",
+          "url": "https://www.theinfatuation.com/san-francisco/guides/best-restaurants-in-san-francisco",
+          "label": "Infatuation Best 25"
+        }
       ]
     },
     {
@@ -586,6 +680,13 @@
       "trending_reason": "Seven-seat omakase counter, intimate party atmosphere.",
       "platforms_active": [
         "food_media"
+      ],
+      "sources": [
+        {
+          "platform": "food_media",
+          "url": "https://www.theinfatuation.com/san-francisco/guides/best-restaurants-in-san-francisco",
+          "label": "Infatuation Best 25"
+        }
       ]
     },
     {
@@ -598,6 +699,13 @@
       "trending_reason": "Mexican fine dining presented as a spectacular production.",
       "platforms_active": [
         "food_media"
+      ],
+      "sources": [
+        {
+          "platform": "food_media",
+          "url": "https://www.theinfatuation.com/san-francisco/guides/best-restaurants-in-san-francisco",
+          "label": "Infatuation Best 25"
+        }
       ]
     },
     {
@@ -610,6 +718,13 @@
       "trending_reason": "Cal-Italian legend delivering creative pasta.",
       "platforms_active": [
         "food_media"
+      ],
+      "sources": [
+        {
+          "platform": "food_media",
+          "url": "https://www.theinfatuation.com/san-francisco/guides/best-restaurants-in-san-francisco",
+          "label": "Infatuation Best 25"
+        }
       ]
     },
     {
@@ -622,6 +737,13 @@
       "trending_reason": "Northern Vietnamese cuisine with unexpected creative touches.",
       "platforms_active": [
         "food_media"
+      ],
+      "sources": [
+        {
+          "platform": "food_media",
+          "url": "https://www.theinfatuation.com/san-francisco/guides/best-restaurants-in-san-francisco",
+          "label": "Infatuation Best 25"
+        }
       ]
     },
     {
@@ -634,6 +756,13 @@
       "trending_reason": "Candlelit wine bar with exceptional French cuisine.",
       "platforms_active": [
         "food_media"
+      ],
+      "sources": [
+        {
+          "platform": "food_media",
+          "url": "https://www.theinfatuation.com/san-francisco/guides/best-restaurants-in-san-francisco",
+          "label": "Infatuation Best 25"
+        }
       ]
     },
     {
@@ -646,6 +775,13 @@
       "trending_reason": "Best boiled dumplings in the city.",
       "platforms_active": [
         "food_media"
+      ],
+      "sources": [
+        {
+          "platform": "food_media",
+          "url": "https://www.theinfatuation.com/san-francisco/guides/best-restaurants-in-san-francisco",
+          "label": "Infatuation Best 25"
+        }
       ]
     },
     {
@@ -658,6 +794,13 @@
       "trending_reason": "Special occasion Thai in beautiful surroundings.",
       "platforms_active": [
         "food_media"
+      ],
+      "sources": [
+        {
+          "platform": "food_media",
+          "url": "https://www.theinfatuation.com/san-francisco/guides/best-restaurants-in-san-francisco",
+          "label": "Infatuation Best 25"
+        }
       ]
     },
     {
@@ -670,6 +813,13 @@
       "trending_reason": "Best dim sum in the city \u2014 legendary bakery.",
       "platforms_active": [
         "food_media"
+      ],
+      "sources": [
+        {
+          "platform": "food_media",
+          "url": "https://www.theinfatuation.com/san-francisco/guides/best-restaurants-in-san-francisco",
+          "label": "Infatuation Best 25"
+        }
       ]
     },
     {
@@ -682,6 +832,13 @@
       "trending_reason": "Outstanding pad thai at this intimate eight-table spot.",
       "platforms_active": [
         "food_media"
+      ],
+      "sources": [
+        {
+          "platform": "food_media",
+          "url": "https://www.theinfatuation.com/san-francisco/guides/best-restaurants-in-san-francisco",
+          "label": "Infatuation Best 25"
+        }
       ]
     },
     {
@@ -694,6 +851,13 @@
       "trending_reason": "Authentic Palestinian and Jordanian cooking.",
       "platforms_active": [
         "food_media"
+      ],
+      "sources": [
+        {
+          "platform": "food_media",
+          "url": "https://www.theinfatuation.com/san-francisco/guides/best-restaurants-in-san-francisco",
+          "label": "Infatuation Best 25"
+        }
       ]
     },
     {
@@ -706,6 +870,13 @@
       "trending_reason": "Exceptional thin-crust pizza, simply prepared.",
       "platforms_active": [
         "food_media"
+      ],
+      "sources": [
+        {
+          "platform": "food_media",
+          "url": "https://www.theinfatuation.com/san-francisco/guides/best-restaurants-in-san-francisco",
+          "label": "Infatuation Best 25"
+        }
       ]
     },
     {
@@ -718,6 +889,13 @@
       "trending_reason": "Upscale steakhouse focused on Japanese wagyu.",
       "platforms_active": [
         "food_media"
+      ],
+      "sources": [
+        {
+          "platform": "food_media",
+          "url": "https://www.theinfatuation.com/san-francisco/guides/best-restaurants-in-san-francisco",
+          "label": "Infatuation Best 25"
+        }
       ]
     },
     {
@@ -730,6 +908,13 @@
       "trending_reason": "Mexico City-inspired cocktail bar with solid small plates.",
       "platforms_active": [
         "food_media"
+      ],
+      "sources": [
+        {
+          "platform": "food_media",
+          "url": "https://www.theinfatuation.com/san-francisco/guides/best-new-san-francisco-restaurants-hit-list",
+          "label": "Infatuation Hit List"
+        }
       ]
     },
     {
@@ -742,6 +927,13 @@
       "trending_reason": "Some of the city's best b\u00e1nh m\u00ec sandwiches.",
       "platforms_active": [
         "food_media"
+      ],
+      "sources": [
+        {
+          "platform": "food_media",
+          "url": "https://www.theinfatuation.com/san-francisco/guides/best-new-san-francisco-restaurants-hit-list",
+          "label": "Infatuation Hit List"
+        }
       ]
     },
     {
@@ -754,6 +946,13 @@
       "trending_reason": "Mochiko fried chicken and smashed longanisa patties at Saluhall.",
       "platforms_active": [
         "food_media"
+      ],
+      "sources": [
+        {
+          "platform": "food_media",
+          "url": "https://www.theinfatuation.com/san-francisco/guides/best-new-san-francisco-restaurants-hit-list",
+          "label": "Infatuation Hit List"
+        }
       ]
     },
     {
@@ -766,6 +965,13 @@
       "trending_reason": "Stunning takeout sushi boxes at their new location.",
       "platforms_active": [
         "food_media"
+      ],
+      "sources": [
+        {
+          "platform": "food_media",
+          "url": "https://www.theinfatuation.com/san-francisco/guides/best-new-san-francisco-restaurants-hit-list",
+          "label": "Infatuation Hit List"
+        }
       ]
     },
     {
@@ -778,6 +984,13 @@
       "trending_reason": "Caribbean cocktails and tapas in the Mission.",
       "platforms_active": [
         "food_media"
+      ],
+      "sources": [
+        {
+          "platform": "food_media",
+          "url": "https://www.theinfatuation.com/san-francisco/guides/best-new-san-francisco-restaurants-hit-list",
+          "label": "Infatuation Hit List"
+        }
       ]
     },
     {
@@ -790,6 +1003,13 @@
       "trending_reason": "Excellent soba noodles in Japantown.",
       "platforms_active": [
         "food_media"
+      ],
+      "sources": [
+        {
+          "platform": "food_media",
+          "url": "https://www.theinfatuation.com/san-francisco/guides/best-new-san-francisco-restaurants-hit-list",
+          "label": "Infatuation Hit List"
+        }
       ]
     },
     {
@@ -802,6 +1022,13 @@
       "trending_reason": "Impressive tasting menus inspired by Filipino classics.",
       "platforms_active": [
         "food_media"
+      ],
+      "sources": [
+        {
+          "platform": "food_media",
+          "url": "https://www.theinfatuation.com/san-francisco/guides/best-new-san-francisco-restaurants-hit-list",
+          "label": "Infatuation Hit List"
+        }
       ]
     },
     {
@@ -814,6 +1041,13 @@
       "trending_reason": "Seasonal tasting menu worthy of celebrating special occasions.",
       "platforms_active": [
         "food_media"
+      ],
+      "sources": [
+        {
+          "platform": "food_media",
+          "url": "https://www.theinfatuation.com/san-francisco/guides/best-new-san-francisco-restaurants-hit-list",
+          "label": "Infatuation Hit List"
+        }
       ]
     },
     {
@@ -826,6 +1060,13 @@
       "trending_reason": "Views, vibe, and very good food at the Ferry Building.",
       "platforms_active": [
         "food_media"
+      ],
+      "sources": [
+        {
+          "platform": "food_media",
+          "url": "https://www.theinfatuation.com/san-francisco/guides/best-new-san-francisco-restaurants-hit-list",
+          "label": "Infatuation Hit List"
+        }
       ]
     },
     {
@@ -838,6 +1079,13 @@
       "trending_reason": "Stellar modern Chinese dishes for special occasions.",
       "platforms_active": [
         "food_media"
+      ],
+      "sources": [
+        {
+          "platform": "food_media",
+          "url": "https://www.theinfatuation.com/san-francisco/guides/best-new-san-francisco-restaurants-hit-list",
+          "label": "Infatuation Hit List"
+        }
       ]
     },
     {
@@ -850,6 +1098,13 @@
       "trending_reason": "Flat-out stellar sourdough pizzas.",
       "platforms_active": [
         "food_media"
+      ],
+      "sources": [
+        {
+          "platform": "food_media",
+          "url": "https://www.theinfatuation.com/san-francisco/guides/best-new-san-francisco-restaurants-hit-list",
+          "label": "Infatuation Hit List"
+        }
       ]
     },
     {
@@ -922,6 +1177,13 @@
       "trending_reason": "Groundbreaking fine-dining Chinese in a historic Chinatown banquet hall.",
       "platforms_active": [
         "food_media"
+      ],
+      "sources": [
+        {
+          "platform": "food_media",
+          "url": "https://blog.resy.com/the-hit-list/sf-restaurants/",
+          "label": "Resy Hit List"
+        }
       ]
     },
     {
@@ -934,6 +1196,13 @@
       "trending_reason": "Elevated Malaysian street food tasting menu.",
       "platforms_active": [
         "food_media"
+      ],
+      "sources": [
+        {
+          "platform": "food_media",
+          "url": "https://blog.resy.com/the-hit-list/sf-restaurants/",
+          "label": "Resy Hit List"
+        }
       ]
     },
     {
@@ -946,6 +1215,13 @@
       "trending_reason": "Inventive seafood from a former Quince/Atelier Crenn chef.",
       "platforms_active": [
         "food_media"
+      ],
+      "sources": [
+        {
+          "platform": "food_media",
+          "url": "https://blog.resy.com/the-hit-list/sf-restaurants/",
+          "label": "Resy Hit List"
+        }
       ]
     },
     {
@@ -958,6 +1234,13 @@
       "trending_reason": "Date-night pasta with lasagnette and raviolo al uovo.",
       "platforms_active": [
         "food_media"
+      ],
+      "sources": [
+        {
+          "platform": "food_media",
+          "url": "https://blog.resy.com/the-hit-list/sf-restaurants/",
+          "label": "Resy Hit List"
+        }
       ]
     },
     {
@@ -970,6 +1253,13 @@
       "trending_reason": "Inventive dishes under new chef Brenda Landa.",
       "platforms_active": [
         "food_media"
+      ],
+      "sources": [
+        {
+          "platform": "food_media",
+          "url": "https://blog.resy.com/the-hit-list/sf-restaurants/",
+          "label": "Resy Hit List"
+        }
       ]
     },
     {
@@ -982,6 +1272,13 @@
       "trending_reason": "Most environmentally conscious restaurant \u2014 creative food waste cuisine.",
       "platforms_active": [
         "food_media"
+      ],
+      "sources": [
+        {
+          "platform": "food_media",
+          "url": "https://blog.resy.com/the-hit-list/sf-restaurants/",
+          "label": "Resy Hit List"
+        }
       ]
     },
     {
@@ -994,6 +1291,13 @@
       "trending_reason": "James Beard-nominated beverage program, smoked duck, creative desserts.",
       "platforms_active": [
         "food_media"
+      ],
+      "sources": [
+        {
+          "platform": "food_media",
+          "url": "https://blog.resy.com/the-hit-list/sf-restaurants/",
+          "label": "Resy Hit List"
+        }
       ]
     },
     {
@@ -1006,6 +1310,13 @@
       "trending_reason": "Intimate wine bar with offbeat wines and small plates.",
       "platforms_active": [
         "food_media"
+      ],
+      "sources": [
+        {
+          "platform": "food_media",
+          "url": "https://blog.resy.com/the-hit-list/sf-restaurants/",
+          "label": "Resy Hit List"
+        }
       ]
     },
     {
@@ -1018,6 +1329,13 @@
       "trending_reason": "Regional Thai cuisine inspired by fine-dining kitchens.",
       "platforms_active": [
         "food_media"
+      ],
+      "sources": [
+        {
+          "platform": "food_media",
+          "url": "https://blog.resy.com/the-hit-list/sf-restaurants/",
+          "label": "Resy Hit List"
+        }
       ]
     },
     {
@@ -1030,6 +1348,13 @@
       "trending_reason": "Nearly 50 wines on tap from diverse global regions.",
       "platforms_active": [
         "food_media"
+      ],
+      "sources": [
+        {
+          "platform": "food_media",
+          "url": "https://blog.resy.com/the-hit-list/sf-restaurants/",
+          "label": "Resy Hit List"
+        }
       ]
     },
     {
@@ -1042,6 +1367,13 @@
       "trending_reason": "Your favorite chef's favorite restaurant \u2014 classic seafood-focused Italian.",
       "platforms_active": [
         "food_media"
+      ],
+      "sources": [
+        {
+          "platform": "food_media",
+          "url": "https://blog.resy.com/the-hit-list/sf-restaurants/",
+          "label": "Resy Hit List"
+        }
       ]
     },
     {
@@ -1054,6 +1386,13 @@
       "trending_reason": "Build-your-own bowl cooked on a massive steel grill \u2014 TikTok showstopper.",
       "platforms_active": [
         "food_media"
+      ],
+      "sources": [
+        {
+          "platform": "food_media",
+          "url": "https://www.tiktok.com/discover/fire-ice-restaurant-in-san-francisco",
+          "label": "TikTok Viral"
+        }
       ]
     },
     {
@@ -1066,6 +1405,13 @@
       "trending_reason": "Michelin one-star with $258 tasting menu \u2014 caviar and wagyu.",
       "platforms_active": [
         "food_media"
+      ],
+      "sources": [
+        {
+          "platform": "food_media",
+          "url": "https://www.theinfatuation.com/san-francisco/guides/best-restaurants-in-san-francisco",
+          "label": "Infatuation"
+        }
       ]
     },
     {
@@ -1078,6 +1424,13 @@
       "trending_reason": "Legendary crab cioppino \u2014 a dish that originated in SF.",
       "platforms_active": [
         "food_media"
+      ],
+      "sources": [
+        {
+          "platform": "food_media",
+          "url": "https://blog.resy.com/the-hit-list/sf-restaurants/",
+          "label": "Resy"
+        }
       ]
     },
     {
@@ -1090,6 +1443,13 @@
       "trending_reason": "15-course tasting menu dedicated to eggs \u2014 Humpty Dumpty themed.",
       "platforms_active": [
         "food_media"
+      ],
+      "sources": [
+        {
+          "platform": "food_media",
+          "url": "https://blog.resy.com/the-hit-list/sf-restaurants/",
+          "label": "Resy"
+        }
       ]
     },
     {
@@ -1102,6 +1462,13 @@
       "trending_reason": "New pizza spot with standout Old Faithful pie.",
       "platforms_active": [
         "food_media"
+      ],
+      "sources": [
+        {
+          "platform": "food_media",
+          "url": "https://www.theinfatuation.com/san-francisco/guides/san-francisco-spring-restaurant-openings-2026",
+          "label": "Infatuation Spring"
+        }
       ]
     },
     {
@@ -1114,6 +1481,13 @@
       "trending_reason": "New burger joint in the Sunset.",
       "platforms_active": [
         "food_media"
+      ],
+      "sources": [
+        {
+          "platform": "food_media",
+          "url": "https://www.theinfatuation.com/san-francisco/guides/san-francisco-spring-restaurant-openings-2026",
+          "label": "Infatuation Spring"
+        }
       ]
     },
     {
@@ -1126,6 +1500,13 @@
       "trending_reason": "All-day cafe from the Cotogna team.",
       "platforms_active": [
         "food_media"
+      ],
+      "sources": [
+        {
+          "platform": "food_media",
+          "url": "https://www.theinfatuation.com/san-francisco/guides/san-francisco-spring-restaurant-openings-2026",
+          "label": "Infatuation Spring"
+        }
       ]
     },
     {
@@ -1138,6 +1519,13 @@
       "trending_reason": "New Thai restaurant in West Portal.",
       "platforms_active": [
         "food_media"
+      ],
+      "sources": [
+        {
+          "platform": "food_media",
+          "url": "https://www.theinfatuation.com/san-francisco/guides/san-francisco-spring-restaurant-openings-2026",
+          "label": "Infatuation Spring"
+        }
       ]
     },
     {
@@ -1174,6 +1562,13 @@
       "trending_reason": "Historic restaurant reopening after 6 years at the Huntington Hotel.",
       "platforms_active": [
         "food_media"
+      ],
+      "sources": [
+        {
+          "platform": "food_media",
+          "url": "https://sfstandard.com/2026/03/01/new-san-francisco-restaurants-joujou-big-four/",
+          "label": "SF Standard"
+        }
       ]
     },
     {
@@ -1186,6 +1581,13 @@
       "trending_reason": "Gluten-free trattoria from Montesacro owners \u2014 pizza, pinsa, Italian.",
       "platforms_active": [
         "food_media"
+      ],
+      "sources": [
+        {
+          "platform": "food_media",
+          "url": "https://sfstandard.com/2026/03/01/new-san-francisco-restaurants-joujou-big-four/",
+          "label": "SF Standard"
+        }
       ]
     },
     {
@@ -1198,6 +1600,13 @@
       "trending_reason": "Seasonally changing dishes, excellent as ever.",
       "platforms_active": [
         "food_media"
+      ],
+      "sources": [
+        {
+          "platform": "food_media",
+          "url": "https://www.theinfatuation.com/san-francisco/guides/best-things-sf-february-2026",
+          "label": "Infatuation Feb Eats"
+        }
       ]
     },
     {
@@ -1210,6 +1619,13 @@
       "trending_reason": "One of the best sit-down lunch spots around Stonestown.",
       "platforms_active": [
         "food_media"
+      ],
+      "sources": [
+        {
+          "platform": "food_media",
+          "url": "https://www.theinfatuation.com/san-francisco/guides/best-things-sf-february-2026",
+          "label": "Infatuation Feb Eats"
+        }
       ]
     },
     {
@@ -1222,6 +1638,13 @@
       "trending_reason": "Upscale Thanh Long sister restaurant for special occasions.",
       "platforms_active": [
         "food_media"
+      ],
+      "sources": [
+        {
+          "platform": "food_media",
+          "url": "https://www.theinfatuation.com/san-francisco/guides/best-things-sf-february-2026",
+          "label": "Infatuation Feb Eats"
+        }
       ]
     },
     {
@@ -1234,6 +1657,13 @@
       "trending_reason": "Weekly-changing sandwich menu \u2014 haven't met one they didn't like.",
       "platforms_active": [
         "food_media"
+      ],
+      "sources": [
+        {
+          "platform": "food_media",
+          "url": "https://www.theinfatuation.com/san-francisco/guides/best-things-sf-february-2026",
+          "label": "Infatuation Feb Eats"
+        }
       ]
     },
     {
@@ -1246,6 +1676,13 @@
       "trending_reason": "Fantastic noodle soups in a casual spot.",
       "platforms_active": [
         "food_media"
+      ],
+      "sources": [
+        {
+          "platform": "food_media",
+          "url": "https://www.theinfatuation.com/san-francisco/guides/best-things-sf-february-2026",
+          "label": "Infatuation Feb Eats"
+        }
       ]
     },
     {
@@ -1258,6 +1695,13 @@
       "trending_reason": "Neighborhood go-to you can visit multiple days in a row.",
       "platforms_active": [
         "food_media"
+      ],
+      "sources": [
+        {
+          "platform": "food_media",
+          "url": "https://www.theinfatuation.com/san-francisco/guides/best-things-sf-february-2026",
+          "label": "Infatuation Feb Eats"
+        }
       ]
     },
     {
