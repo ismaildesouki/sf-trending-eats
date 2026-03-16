@@ -13,7 +13,7 @@ interface Restaurant {
   rank: number;
   name: string;
   neighborhood: string | null;
-  city: string | null;
+  city?: string | null;
   cuisine_type: string | null;
   score: number;
   trending_reason: string | null;
@@ -32,6 +32,7 @@ const PLATFORM_LABELS: Record<string, string> = {
   trends: "Search",
   tiktok: "TikTok",
   instagram: "Instagram",
+  food_media: "Food Media",
 };
 
 const PLATFORM_ICONS: Record<string, string> = {
@@ -39,6 +40,7 @@ const PLATFORM_ICONS: Record<string, string> = {
   instagram: "◎",
   yelp: "★",
   reddit: "◆",
+  food_media: "✎",
 };
 
 const PLATFORM_BADGE_STYLES: Record<string, string> = {
@@ -49,6 +51,7 @@ const PLATFORM_BADGE_STYLES: Record<string, string> = {
   trends: "bg-green-100/80 text-green-700 border-green-200/60",
   tiktok: "bg-pink-100/80 text-pink-700 border-pink-200/60",
   instagram: "bg-purple-100/80 text-purple-700 border-purple-200/60",
+  food_media: "bg-emerald-100/80 text-emerald-700 border-emerald-200/60",
 };
 
 const PLATFORM_LINK_STYLES: Record<string, string> = {

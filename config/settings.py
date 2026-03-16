@@ -21,7 +21,7 @@ class YelpConfig:
     api_key: str = os.getenv("YELP_API_KEY", "")
     base_url: str = "https://api.yelp.com/v3"
     location: str = "San Francisco, CA"
-    radius: int = 40000  # meters (~25 miles, covers Bay Area core)
+    radius: int = 16000  # meters (~10 miles, SF city limits)
     search_limit: int = 50
 
 
@@ -71,7 +71,7 @@ class ThreadsConfig:
 class GooglePlacesConfig:
     api_key: str = os.getenv("GOOGLE_PLACES_API_KEY", "")
     location: str = "37.7749,-122.4194"  # SF center
-    radius: int = 40000
+    radius: int = 16000  # ~10 miles, SF city limits
 
 
 @dataclass
@@ -114,7 +114,7 @@ class GeoConfig:
     """Bay Area bounding box for filtering results."""
     lat_center: float = float(os.getenv("GEO_LAT_CENTER", "37.7749"))
     lng_center: float = float(os.getenv("GEO_LNG_CENTER", "-122.4194"))
-    radius_meters: int = int(os.getenv("GEO_RADIUS_METERS", "50000"))
+    radius_meters: int = int(os.getenv("GEO_RADIUS_METERS", "16000"))
 
     # Neighborhood mapping for SF
     neighborhoods: dict = field(default_factory=lambda: {
@@ -136,9 +136,17 @@ class GeoConfig:
         "noe_valley": {"lat": 37.7502, "lng": -122.4337},
         "bernal_heights": {"lat": 37.7388, "lng": -122.4156},
         "potrero_hill": {"lat": 37.7583, "lng": -122.3981},
-        "oakland_downtown": {"lat": 37.8044, "lng": -122.2712},
-        "oakland_temescal": {"lat": 37.8370, "lng": -122.2600},
-        "berkeley_downtown": {"lat": 37.8716, "lng": -122.2727},
+        "fidi": {"lat": 37.7946, "lng": -122.3999},
+        "pacific_heights": {"lat": 37.7925, "lng": -122.4382},
+        "russian_hill": {"lat": 37.8011, "lng": -122.4194},
+        "japantown": {"lat": 37.7854, "lng": -122.4294},
+        "haight": {"lat": 37.7692, "lng": -122.4481},
+        "excelsior": {"lat": 37.7250, "lng": -122.4250},
+        "bayview": {"lat": 37.7297, "lng": -122.3883},
+        "glen_park": {"lat": 37.7340, "lng": -122.4332},
+        "outer_richmond": {"lat": 37.7800, "lng": -122.4900},
+        "fishermans_wharf": {"lat": 37.8080, "lng": -122.4177},
+        "presidio": {"lat": 37.7989, "lng": -122.4662},
     })
 
 
