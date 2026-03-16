@@ -98,6 +98,11 @@ class ScoringConfig:
     # Scoring window (recent activity)
     scoring_window_hours: int = 168  # 7 days
 
+    # Max mentions from a single creator that count toward one restaurant's score.
+    # Prevents prolific creators (e.g. @beli_eats with 9 videos) from inflating
+    # every restaurant they mention via their large follower count.
+    max_creator_mentions_per_restaurant: int = 3
+
 
 @dataclass
 class PublishingConfig:
@@ -172,7 +177,9 @@ class TikTokConfig:
         "whattoeatinsf", "sffoodtiktok", "bayareaeats", "bayareafoodie",
         "bayareafood", "sfnewrestaurant", "sffoodscene",
     ])
-    results_per_hashtag: int = int(os.getenv("TIKTOK_RESULTS_PER_HASHTAG", "100"))
+    results_per_hashtag: int = int(os.getenv("TIKTOK_RESULTS_PER_HASHTAG", "400"))
+    # Batch multiple hashtags per Apify call to reduce overhead
+    hashtags_per_batch: int = int(os.getenv("TIKTOK_HASHTAGS_PER_BATCH", "5"))
 
 
 @dataclass
@@ -197,7 +204,24 @@ class InstagramConfig:
         "whattoeatinsf", "bayareaeats", "bayareafoodie", "bayareafood",
         "sfnewrestaurant", "sffoodscene", "eatinsf",
     ])
-    results_per_hashtag: int = int(os.getenv("INSTAGRAM_RESULTS_PER_HASHTAG", "100"))
+    results_per_hashtag: int = int(os.getenv("INSTAGRAM_RESULTS_PER_HASHTAG", "200"))
+    influencer_profiles: list = field(default_factory=lambda: [
+        "https://www.instagram.com/infaboramay/",
+        "https://www.instagram.com/eloramoon/",
+        "https://www.instagram.com/sffoodie/",
+        "https://www.instagram.com/eatingsf/",
+        "https://www.instagram.com/alwayssf/",
+        "https://www.instagram.com/sfbayareafood/",
+        "https://www.instagram.com/thebolditalic/",
+        "https://www.instagram.com/eatersf/",
+        "https://www.instagram.com/sfchronicle_food/",
+        "https://www.instagram.com/tablehopper/",
+        "https://www.instagram.com/sfeats/",
+        "https://www.instagram.com/norcaleats/",
+        "https://www.instagram.com/sffoodscene/",
+        "https://www.instagram.com/infatuationsf/",
+        "https://www.instagram.com/sfweekly/",
+    ])
 
 
 @dataclass

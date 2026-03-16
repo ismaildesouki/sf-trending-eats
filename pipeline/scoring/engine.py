@@ -19,8 +19,10 @@ Data source: Google Sheets via gspread (replaces PostgreSQL).
 
 import json
 import logging
+import re
 from datetime import datetime, timezone, timedelta
 from dataclasses import dataclass
+from collections import defaultdict
 
 import numpy as np
 
@@ -238,6 +240,40 @@ def _safe_int(val, default: int = 0) -> int:
         return default
 
 
+def _extract_creator(mention: dict) -> str:
+    """
+    Extract a creator identifier from a mention record.
+
+    Tries in order:
+      1. metadata.author_username / metadata.owner_username
+      2. @handle parsed from source_url (e.g. tiktok.com/@beli_eats/video/...)
+      3. Falls back to source_url itself (still useful for dedup within one URL)
+
+    Returns empty string if no creator can be determined.
+    """
+    metadata = mention.get("metadata", "")
+    if isinstance(metadata, str):
+        try:
+            metadata = json.loads(metadata) if metadata else {}
+        except (json.JSONDecodeError, TypeError):
+            metadata = {}
+
+    # Check metadata fields first
+    for key in ("author_username", "owner_username"):
+        val = metadata.get(key, "")
+        if val:
+            return str(val).lower().strip().lstrip("@")
+
+    # Parse @handle from source_url
+    source_url = mention.get("source_url", "")
+    if source_url:
+        match = re.search(r"/@([^/?\s]+)", source_url)
+        if match:
+            return match.group(1).lower().strip()
+
+    return ""
+
+
 def _gather_signals(
     window_start: datetime,
     baseline_start: datetime,
@@ -269,6 +305,14 @@ def _gather_signals(
         if source_id:
             source_restaurant_count[source_id] = source_restaurant_count.get(source_id, 0) + 1
 
+    # ---- Per-creator engagement cap ----
+    # A prolific creator (e.g. @beli_eats with 9 videos) can inflate every
+    # restaurant they mention. We cap how many mentions from a single creator
+    # count toward a given restaurant's score.
+    max_creator_mentions = settings.scoring.max_creator_mentions_per_restaurant
+    # Track how many mentions each (restaurant_id, creator) pair has accumulated
+    creator_mention_count: dict[tuple[int, str], int] = defaultdict(int)
+
     # ---- Classify each mention into scoring window or baseline window ----
     for m in all_mentions:
         mention_time = _parse_time(m.get("time", ""))
@@ -293,6 +337,19 @@ def _gather_signals(
 
         # ---- Scoring window: window_start <= time <= now ----
         if mention_time >= window_start and mention_time <= now:
+            # Per-creator cap: skip if this creator already hit the limit
+            # for this restaurant. Different restaurants are tracked separately.
+            creator = _extract_creator(m)
+            if creator:
+                key = (restaurant_id, creator)
+                creator_mention_count[key] += 1
+                if creator_mention_count[key] > max_creator_mentions:
+                    logger.debug(
+                        f"Creator cap: skipping mention from @{creator} for "
+                        f"restaurant {restaurant_id} (already {max_creator_mentions} mentions)"
+                    )
+                    continue
+
             # Initialize signal entry if new restaurant
             if restaurant_id not in signals:
                 name = restaurant_names.get(

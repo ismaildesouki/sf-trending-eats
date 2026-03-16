@@ -156,26 +156,27 @@ def _parse_video(item: dict) -> dict | None:
         return None
 
 
-def _scrape_hashtag(apify_client: ApifyClient, hashtag: str, max_results: int) -> list[dict]:
+def _scrape_hashtags_batch(apify_client: ApifyClient, hashtags: list[str], max_results: int) -> list[dict]:
     """
-    Run the Apify TikTok hashtag scraper for a single hashtag.
-    This is a blocking call (Apify actor runs synchronously).
+    Run the Apify TikTok hashtag scraper for multiple hashtags in one call.
+    More efficient than one-at-a-time — reduces actor startup overhead.
     """
     try:
         run_input = {
-            "hashtags": [hashtag],
+            "hashtags": hashtags,
             "resultsPerPage": max_results,
         }
 
-        logger.info(f"TikTok: scraping #{hashtag} (max {max_results} results)...")
+        tag_str = ", ".join(f"#{h}" for h in hashtags)
+        logger.info(f"TikTok: scraping batch [{tag_str}] (max {max_results} per hashtag)...")
         run = apify_client.actor(ACTOR_ID).call(run_input=run_input)
 
         items = list(apify_client.dataset(run["defaultDatasetId"]).iterate_items())
-        logger.info(f"TikTok: #{hashtag} returned {len(items)} videos")
+        logger.info(f"TikTok: batch [{tag_str}] returned {len(items)} videos")
         return items
 
     except Exception as e:
-        logger.error(f"TikTok: Apify scrape for #{hashtag} failed: {e}")
+        logger.error(f"TikTok: Apify batch scrape failed: {e}")
         return []
 
 
@@ -214,19 +215,20 @@ async def run(client: httpx.AsyncClient = None) -> dict:
     # Load known restaurant names for matching
     known_names = _get_known_restaurant_names()
 
-    # Collect videos from all hashtags
-    # Apify actor .call() is blocking, so run in executor to avoid blocking event loop
+    # Collect videos from all hashtags in batches for efficiency
     loop = asyncio.get_event_loop()
     all_items = []
-    for hashtag in hashtags:
+    batch_size = getattr(settings.tiktok, "hashtags_per_batch", 5)
+    for i in range(0, len(hashtags), batch_size):
+        batch = hashtags[i:i + batch_size]
         try:
             items = await loop.run_in_executor(
-                None, _scrape_hashtag, apify_client, hashtag, results_per_hashtag
+                None, _scrape_hashtags_batch, apify_client, batch, results_per_hashtag
             )
             all_items.extend(items)
-            stats["hashtags_scraped"] += 1
+            stats["hashtags_scraped"] += len(batch)
         except Exception as e:
-            logger.error(f"TikTok: failed to scrape #{hashtag}: {e}")
+            logger.error(f"TikTok: failed to scrape batch {batch}: {e}")
 
     # Parse and deduplicate videos
     seen_ids = set()
