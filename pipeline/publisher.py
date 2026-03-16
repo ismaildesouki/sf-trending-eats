@@ -16,7 +16,11 @@ from pathlib import Path
 import httpx
 
 from config import settings
-from pipeline.utils.db import get_latest_trending, create_weekly_list, mark_list_published
+from pipeline.utils.db import (
+    get_latest_trending, create_weekly_list, mark_list_published,
+    _get_worksheet, _row_to_dict, _RESTAURANT_COLS, _MENTION_COLS,
+    _parse_json_field,
+)
 
 logger = logging.getLogger(__name__)
 
@@ -31,8 +35,8 @@ async def publish_weekly_list() -> dict:
     """
     stats = {"newsletter_sent": False, "social_content_generated": False, "dashboard_updated": False}
 
-    # Get the latest scored restaurants
-    trending = get_latest_trending(n=settings.publishing.top_n)
+    # Get the latest scored restaurants (fetch extra since we'll filter junk)
+    trending = get_latest_trending(n=settings.publishing.top_n * 3)
 
     if not trending:
         logger.warning("No trending restaurants to publish")
@@ -46,18 +50,82 @@ async def publish_weekly_list() -> dict:
     restaurant_ids = [r["restaurant_id"] for r in trending]
     list_id = create_weekly_list(week_start, restaurant_ids)
 
-    # Format restaurant data
+    # Look up restaurant metadata from the existing trending.json
+    # (the Google Sheet doesn't store neighborhood/cuisine/price — that was curated)
+    existing_metadata: dict[str, dict] = {}
+    existing_path = OUTPUT_DIR / "trending.json"
+    if existing_path.exists():
+        try:
+            existing = json.loads(existing_path.read_text())
+            for r in existing.get("restaurants", []):
+                existing_metadata[r["name"]] = {
+                    "neighborhood": r.get("neighborhood", ""),
+                    "cuisine_type": r.get("cuisine_type", ""),
+                    "price_range": r.get("price_range", ""),
+                }
+        except Exception:
+            logger.warning("Could not load existing trending.json for metadata")
+
+    # Build a set of known real restaurant names (those with curated metadata)
+    known_restaurants = set(existing_metadata.keys())
+
+    # Look up recent mentions for source links
+    mentions_ws = _get_worksheet("mentions")
+    all_mentions = mentions_ws.get_all_records()
+    # Group mentions by restaurant_id, keeping source info
+    restaurant_sources: dict[int, list[dict]] = {}
+    for m in all_mentions:
+        rid = int(float(m.get("restaurant_id", 0) or 0))
+        if rid == 0:
+            continue
+        source_url = m.get("source_url", "")
+        if not source_url:
+            continue
+        if rid not in restaurant_sources:
+            restaurant_sources[rid] = []
+        engagement = m.get("engagement", {})
+        if isinstance(engagement, str):
+            engagement = _parse_json_field(engagement)
+        source_entry = {"platform": m.get("platform", ""), "url": source_url}
+        if engagement.get("plays"):
+            source_entry["plays"] = engagement["plays"]
+        if engagement.get("likes"):
+            source_entry["likes"] = engagement["likes"]
+        restaurant_sources[rid].append(source_entry)
+
+    # Deduplicate sources by URL
+    for rid in restaurant_sources:
+        seen_urls = set()
+        deduped = []
+        for s in restaurant_sources[rid]:
+            if s["url"] not in seen_urls:
+                seen_urls.add(s["url"])
+                deduped.append(s)
+        restaurant_sources[rid] = deduped
+
+    # Format restaurant data — only include known real restaurants
+    # (those with curated metadata from previous runs)
     restaurants_data = []
-    for i, r in enumerate(trending, 1):
+    rank = 1
+    for r in trending:
+        name = r["name"]
+        if name not in known_restaurants:
+            continue
+        rid = int(float(r.get("restaurant_id", 0) or 0))
+        meta = existing_metadata.get(name, {})
+        sources = restaurant_sources.get(rid, [])
         restaurants_data.append({
-            "rank": i,
-            "name": r["name"],
-            "neighborhood": r["neighborhood"],
-            "cuisine_type": r["cuisine_type"],
+            "rank": rank,
+            "name": name,
+            "neighborhood": meta.get("neighborhood", ""),
+            "cuisine_type": meta.get("cuisine_type", ""),
+            "price_range": meta.get("price_range", ""),
             "score": round(r["score"], 2),
-            "trending_reason": r["trending_reason"],
-            "platforms_active": r["platforms_active"],
+            "trending_reason": r.get("trending_reason", ""),
+            "platforms_active": r.get("platforms_active", []),
+            "sources": sources,
         })
+        rank += 1
 
     # 1. Generate newsletter content
     newsletter_html = _generate_newsletter_html(restaurants_data, week_start)
@@ -72,10 +140,13 @@ async def publish_weekly_list() -> dict:
     SOCIAL_OUTPUT.write_text(json.dumps(social_content, indent=2, default=str))
     stats["social_content_generated"] = True
 
+    # Trim to final top_n after filtering
+    restaurants_data = restaurants_data[:settings.publishing.top_n]
+
     # 3. Update dashboard data
     dashboard_data = {
-        "week_start": str(week_start),
         "generated_at": datetime.now(timezone.utc).isoformat(),
+        "city": "San Francisco Bay Area",
         "restaurants": restaurants_data,
     }
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)

@@ -1,34 +1,14 @@
 {
-  "generated_at": "2026-03-15T00:00:00Z",
+  "generated_at": "2026-03-15T18:00:00Z",
   "city": "San Francisco Bay Area",
   "restaurants": [
     {
-      "name": "Butter & Crumble",
-      "neighborhood": "North Beach",
-      "cuisine_type": "Bakery",
-      "price_range": "$$",
-      "score": 42,
-      "trending_reason": "Going viral on TikTok \u2014 576,000 plays from 1 creator.",
-      "platforms_active": [
-        "tiktok"
-      ],
-      "sources": [
-        {
-          "platform": "tiktok",
-          "url": "https://www.tiktok.com/@beli_eats/video/7498542877870411054",
-          "plays": 576000,
-          "likes": 35700
-        }
-      ],
-      "rank": 1
-    },
-    {
-      "name": "Tacos El Patron",
+      "name": "La Taqueria",
       "neighborhood": "Mission District",
       "cuisine_type": "Mexican",
       "price_range": "$",
-      "score": 42,
-      "trending_reason": "Going viral on TikTok \u2014 576,000 plays from 1 creator.",
+      "score": 61,
+      "trending_reason": "Featured in viral tiktok content \u2014 ~1,315,200 attributed plays.",
       "platforms_active": [
         "tiktok"
       ],
@@ -38,57 +18,23 @@
           "url": "https://www.tiktok.com/@beli_eats/video/7498542877870411054",
           "plays": 576000,
           "likes": 35700
-        }
-      ],
-      "rank": 2
-    },
-    {
-      "name": "Sanhowon",
-      "neighborhood": "Mission District",
-      "cuisine_type": "Korean BBQ",
-      "price_range": "$$",
-      "score": 42,
-      "trending_reason": "Going viral on TikTok \u2014 576,000 plays from 1 creator.",
-      "platforms_active": [
-        "tiktok"
-      ],
-      "sources": [
+        },
         {
           "platform": "tiktok",
-          "url": "https://www.tiktok.com/@beli_eats/video/7498542877870411054",
-          "plays": 576000,
-          "likes": 35700
+          "url": "https://www.tiktok.com/@beli_eats/video/7498914301063728427",
+          "plays": 1200000,
+          "likes": 45500
         }
       ],
-      "rank": 3
-    },
-    {
-      "name": "Bette's",
-      "neighborhood": "FiDi",
-      "cuisine_type": "American",
-      "price_range": "$$",
-      "score": 41,
-      "trending_reason": "Going viral on TikTok \u2014 472,400 plays from 1 creator.",
-      "platforms_active": [
-        "tiktok"
-      ],
-      "sources": [
-        {
-          "platform": "tiktok",
-          "url": "https://www.tiktok.com/@sherryeatworld/video/7540788039954582797",
-          "plays": 472400,
-          "likes": 35200
-        }
-      ],
-      "rank": 4
+      "rank": 1
     },
     {
       "name": "Yank Sing",
       "neighborhood": "SoMa",
       "cuisine_type": "Dim Sum",
       "price_range": "$$$",
-      "score": 41,
-      "trending_reason": "SF staple with steady social media presence. 766,300 TikTok plays across 3 posts.",
+      "score": 59,
+      "trending_reason": "Buzzing on instagram, tiktok \u2014 766,300 plays across 3 posts.",
       "platforms_active": [
         "instagram",
         "tiktok"
@@ -112,74 +58,74 @@
           "likes": 1
         }
       ],
+      "rank": 2
+    },
+    {
+      "name": "Woodhouse Fish Co.",
+      "neighborhood": "Castro/FiDi",
+      "cuisine_type": "Seafood",
+      "price_range": "$$",
+      "score": 57,
+      "trending_reason": "Going viral on TikTok \u2014 495,200 plays from 1 creator.",
+      "platforms_active": [
+        "tiktok"
+      ],
+      "sources": [
+        {
+          "platform": "tiktok",
+          "url": "https://www.tiktok.com/@allie.eats/video/7488844620655316266",
+          "plays": 495200,
+          "likes": 22800
+        }
+      ],
+      "rank": 3
+    },
+    {
+      "name": "Bette's",
+      "neighborhood": "FiDi",
+      "cuisine_type": "American",
+      "price_range": "$$",
+      "score": 57,
+      "trending_reason": "Going viral on TikTok \u2014 472,400 plays from 1 creator.",
+      "platforms_active": [
+        "tiktok"
+      ],
+      "sources": [
+        {
+          "platform": "tiktok",
+          "url": "https://www.tiktok.com/@sherryeatworld/video/7540788039954582797",
+          "plays": 472400,
+          "likes": 35200
+        }
+      ],
+      "rank": 4
+    },
+    {
+      "name": "Original Joe's",
+      "neighborhood": "North Beach",
+      "cuisine_type": "Italian-American",
+      "price_range": "$$",
+      "score": 55,
+      "trending_reason": "Going viral on TikTok \u2014 319,400 plays from 1 creator.",
+      "platforms_active": [
+        "tiktok"
+      ],
+      "sources": [
+        {
+          "platform": "tiktok",
+          "url": "https://www.tiktok.com/@zarina.nawabi/video/7548186996255001887",
+          "plays": 319400,
+          "likes": 24600
+        }
+      ],
       "rank": 5
-    },
-    {
-      "name": "Panchita's Pupuseria",
-      "neighborhood": "Mission District",
-      "cuisine_type": "Salvadoran",
-      "price_range": "$",
-      "score": 40,
-      "trending_reason": "Going viral on TikTok \u2014 259,400 plays from 1 creator.",
-      "platforms_active": [
-        "tiktok"
-      ],
-      "sources": [
-        {
-          "platform": "tiktok",
-          "url": "https://www.tiktok.com/@mattiasblanco/video/7595738580232768781",
-          "plays": 259400,
-          "likes": 30300
-        }
-      ],
-      "rank": 6
-    },
-    {
-      "name": "Maruwu Seicha",
-      "neighborhood": "Japantown",
-      "cuisine_type": "Japanese/Tea",
-      "price_range": "$",
-      "score": 40,
-      "trending_reason": "Going viral on TikTok \u2014 338,400 plays from 1 creator.",
-      "platforms_active": [
-        "tiktok"
-      ],
-      "sources": [
-        {
-          "platform": "tiktok",
-          "url": "https://www.tiktok.com/@allie.eats/video/7566470646209776927",
-          "plays": 338400,
-          "likes": 29900
-        }
-      ],
-      "rank": 7
-    },
-    {
-      "name": "Takoyaki Yamachan",
-      "neighborhood": "Japantown",
-      "cuisine_type": "Japanese",
-      "price_range": "$",
-      "score": 40,
-      "trending_reason": "Going viral on TikTok \u2014 338,400 plays from 1 creator.",
-      "platforms_active": [
-        "tiktok"
-      ],
-      "sources": [
-        {
-          "platform": "tiktok",
-          "url": "https://www.tiktok.com/@allie.eats/video/7566470646209776927",
-          "plays": 338400,
-          "likes": 29900
-        }
-      ],
-      "rank": 8
     },
     {
       "name": "Ninniku",
       "neighborhood": "Lower Pac Heights",
       "cuisine_type": "Japanese/Ramen",
       "price_range": "$$",
-      "score": 39,
+      "score": 54,
       "trending_reason": "Going viral on TikTok \u2014 241,000 plays from 1 creator.",
       "platforms_active": [
         "tiktok"
@@ -192,95 +138,35 @@
           "likes": 18800
         }
       ],
-      "rank": 9
+      "rank": 6
     },
     {
-      "name": "Fusion Dumpling",
-      "neighborhood": "Chinatown",
-      "cuisine_type": "Chinese",
-      "price_range": "$",
-      "score": 38,
-      "trending_reason": "Going viral on TikTok \u2014 195,800 plays from 1 creator.",
-      "platforms_active": [
-        "tiktok"
-      ],
-      "sources": [
-        {
-          "platform": "tiktok",
-          "url": "https://www.tiktok.com/@sherryeatworld/video/7491817363126471978",
-          "plays": 195800,
-          "likes": 7986
-        }
-      ],
-      "rank": 10
-    },
-    {
-      "name": "Il Canto Cafe",
-      "neighborhood": "Financial District",
-      "cuisine_type": "Cafe/Brunch",
+      "name": "Mensho Tokyo",
+      "neighborhood": "SoMa",
+      "cuisine_type": "Japanese/Ramen",
       "price_range": "$$",
-      "score": 36,
-      "trending_reason": "Going viral on TikTok \u2014 111,900 plays from 1 creator.",
+      "score": 54,
+      "trending_reason": "Going viral on TikTok \u2014 221,400 plays from 1 creator.",
       "platforms_active": [
         "tiktok"
       ],
       "sources": [
         {
           "platform": "tiktok",
-          "url": "https://www.tiktok.com/@beli_eats/video/7563806731327900983",
-          "plays": 111900,
-          "likes": 6313
+          "url": "https://www.tiktok.com/@paucoys/video/7512632736142724374",
+          "plays": 221400,
+          "likes": 5918
         }
       ],
-      "rank": 11
-    },
-    {
-      "name": "Breakfast Little",
-      "neighborhood": "Mission District",
-      "cuisine_type": "Brunch",
-      "price_range": "$",
-      "score": 36,
-      "trending_reason": "Going viral on TikTok \u2014 111,900 plays from 1 creator.",
-      "platforms_active": [
-        "tiktok"
-      ],
-      "sources": [
-        {
-          "platform": "tiktok",
-          "url": "https://www.tiktok.com/@beli_eats/video/7563806731327900983",
-          "plays": 111900,
-          "likes": 6313
-        }
-      ],
-      "rank": 12
-    },
-    {
-      "name": "Al Carajo",
-      "neighborhood": "Mission District",
-      "cuisine_type": "Mexican",
-      "price_range": "$",
-      "score": 36,
-      "trending_reason": "Going viral on TikTok \u2014 111,900 plays from 1 creator.",
-      "platforms_active": [
-        "tiktok"
-      ],
-      "sources": [
-        {
-          "platform": "tiktok",
-          "url": "https://www.tiktok.com/@beli_eats/video/7563806731327900983",
-          "plays": 111900,
-          "likes": 6313
-        }
-      ],
-      "rank": 13
+      "rank": 7
     },
     {
       "name": "El Farolito",
       "neighborhood": "Mission District",
       "cuisine_type": "Mexican",
       "price_range": "$",
-      "score": 27,
-      "trending_reason": "SF staple with steady social media presence. 835,400 TikTok plays across 2 posts.",
+      "score": 53,
+      "trending_reason": "Featured in viral tiktok content \u2014 ~201,666 attributed plays.",
       "platforms_active": [
         "tiktok"
       ],
@@ -298,6 +184,126 @@
           "likes": 30300
         }
       ],
+      "rank": 8
+    },
+    {
+      "name": "Fusion Dumpling",
+      "neighborhood": "Chinatown",
+      "cuisine_type": "Chinese",
+      "price_range": "$",
+      "score": 53,
+      "trending_reason": "Going viral on TikTok \u2014 195,800 plays from 1 creator.",
+      "platforms_active": [
+        "tiktok"
+      ],
+      "sources": [
+        {
+          "platform": "tiktok",
+          "url": "https://www.tiktok.com/@sherryeatworld/video/7491817363126471978",
+          "plays": 195800,
+          "likes": 7986
+        }
+      ],
+      "rank": 9
+    },
+    {
+      "name": "Maruwu Seicha",
+      "neighborhood": "Japantown",
+      "cuisine_type": "Japanese/Tea",
+      "price_range": "$",
+      "score": 53,
+      "trending_reason": "Featured in viral tiktok content \u2014 ~169,200 attributed plays.",
+      "platforms_active": [
+        "tiktok"
+      ],
+      "sources": [
+        {
+          "platform": "tiktok",
+          "url": "https://www.tiktok.com/@allie.eats/video/7566470646209776927",
+          "plays": 338400,
+          "likes": 29900
+        }
+      ],
+      "rank": 10
+    },
+    {
+      "name": "Takoyaki Yamachan",
+      "neighborhood": "Japantown",
+      "cuisine_type": "Japanese",
+      "price_range": "$",
+      "score": 53,
+      "trending_reason": "Featured in viral tiktok content \u2014 ~169,200 attributed plays.",
+      "platforms_active": [
+        "tiktok"
+      ],
+      "sources": [
+        {
+          "platform": "tiktok",
+          "url": "https://www.tiktok.com/@allie.eats/video/7566470646209776927",
+          "plays": 338400,
+          "likes": 29900
+        }
+      ],
+      "rank": 11
+    },
+    {
+      "name": "Butter & Crumble",
+      "neighborhood": "North Beach",
+      "cuisine_type": "Bakery",
+      "price_range": "$$",
+      "score": 51,
+      "trending_reason": "Featured in viral tiktok content \u2014 ~115,200 attributed plays.",
+      "platforms_active": [
+        "tiktok"
+      ],
+      "sources": [
+        {
+          "platform": "tiktok",
+          "url": "https://www.tiktok.com/@beli_eats/video/7498542877870411054",
+          "plays": 576000,
+          "likes": 35700
+        }
+      ],
+      "rank": 12
+    },
+    {
+      "name": "Tacos El Patron",
+      "neighborhood": "Mission District",
+      "cuisine_type": "Mexican",
+      "price_range": "$",
+      "score": 51,
+      "trending_reason": "Featured in viral tiktok content \u2014 ~115,200 attributed plays.",
+      "platforms_active": [
+        "tiktok"
+      ],
+      "sources": [
+        {
+          "platform": "tiktok",
+          "url": "https://www.tiktok.com/@beli_eats/video/7498542877870411054",
+          "plays": 576000,
+          "likes": 35700
+        }
+      ],
+      "rank": 13
+    },
+    {
+      "name": "Sanhowon",
+      "neighborhood": "Mission District",
+      "cuisine_type": "Korean BBQ",
+      "price_range": "$$",
+      "score": 51,
+      "trending_reason": "Featured in viral tiktok content \u2014 ~115,200 attributed plays.",
+      "platforms_active": [
+        "tiktok"
+      ],
+      "sources": [
+        {
+          "platform": "tiktok",
+          "url": "https://www.tiktok.com/@beli_eats/video/7498542877870411054",
+          "plays": 576000,
+          "likes": 35700
+        }
+      ],
       "rank": 14
     },
     {
@@ -305,8 +311,8 @@
       "neighborhood": "Mission District",
       "cuisine_type": "Burmese/Thai",
       "price_range": "$",
-      "score": 25,
-      "trending_reason": "SF staple with steady social media presence. 260,927 TikTok plays across 2 posts.",
+      "score": 50,
+      "trending_reason": "Building momentum on tiktok \u2014 86,848 plays across 2 posts.",
       "platforms_active": [
         "tiktok"
       ],
@@ -327,11 +333,91 @@
       "rank": 15
     },
     {
+      "name": "Panchita's Pupuseria",
+      "neighborhood": "Mission District",
+      "cuisine_type": "Salvadoran",
+      "price_range": "$",
+      "score": 50,
+      "trending_reason": "Building momentum on tiktok \u2014 86,466 plays across 1 posts.",
+      "platforms_active": [
+        "tiktok"
+      ],
+      "sources": [
+        {
+          "platform": "tiktok",
+          "url": "https://www.tiktok.com/@mattiasblanco/video/7595738580232768781",
+          "plays": 259400,
+          "likes": 30300
+        }
+      ],
+      "rank": 16
+    },
+    {
+      "name": "Il Canto Cafe",
+      "neighborhood": "Financial District",
+      "cuisine_type": "Cafe/Brunch",
+      "price_range": "$$",
+      "score": 46,
+      "trending_reason": "Building momentum on tiktok \u2014 37,300 plays across 1 posts.",
+      "platforms_active": [
+        "tiktok"
+      ],
+      "sources": [
+        {
+          "platform": "tiktok",
+          "url": "https://www.tiktok.com/@beli_eats/video/7563806731327900983",
+          "plays": 111900,
+          "likes": 6313
+        }
+      ],
+      "rank": 17
+    },
+    {
+      "name": "Breakfast Little",
+      "neighborhood": "Mission District",
+      "cuisine_type": "Brunch",
+      "price_range": "$",
+      "score": 46,
+      "trending_reason": "Building momentum on tiktok \u2014 37,300 plays across 1 posts.",
+      "platforms_active": [
+        "tiktok"
+      ],
+      "sources": [
+        {
+          "platform": "tiktok",
+          "url": "https://www.tiktok.com/@beli_eats/video/7563806731327900983",
+          "plays": 111900,
+          "likes": 6313
+        }
+      ],
+      "rank": 18
+    },
+    {
+      "name": "Al Carajo",
+      "neighborhood": "Mission District",
+      "cuisine_type": "Mexican",
+      "price_range": "$",
+      "score": 46,
+      "trending_reason": "Building momentum on tiktok \u2014 37,300 plays across 1 posts.",
+      "platforms_active": [
+        "tiktok"
+      ],
+      "sources": [
+        {
+          "platform": "tiktok",
+          "url": "https://www.tiktok.com/@beli_eats/video/7563806731327900983",
+          "plays": 111900,
+          "likes": 6313
+        }
+      ],
+      "rank": 19
+    },
+    {
       "name": "Hamburguesa Bar",
       "neighborhood": "SoMa",
       "cuisine_type": "Burgers",
       "price_range": "$",
-      "score": 24,
+      "score": 35,
       "trending_reason": "Newly spotted on tiktok \u2014 one to watch.",
       "platforms_active": [
         "tiktok"
@@ -344,14 +430,14 @@
           "likes": 91
         }
       ],
-      "rank": 16
+      "rank": 20
     },
     {
       "name": "Dragon Eats",
       "neighborhood": "Hayes Valley",
       "cuisine_type": "Chinese",
       "price_range": "$",
-      "score": 22,
+      "score": 26,
       "trending_reason": "Newly spotted on tiktok \u2014 one to watch.",
       "platforms_active": [
         "tiktok"
@@ -364,124 +450,54 @@
           "likes": 69
         }
       ],
-      "rank": 17
-    },
-    {
-      "name": "La Taqueria",
-      "neighborhood": "Mission District",
-      "cuisine_type": "Mexican",
-      "price_range": "$",
-      "score": 14,
-      "trending_reason": "SF staple with steady social media presence. 1,776,000 TikTok plays across 2 posts.",
-      "platforms_active": [
-        "tiktok"
-      ],
-      "sources": [
-        {
-          "platform": "tiktok",
-          "url": "https://www.tiktok.com/@beli_eats/video/7498542877870411054",
-          "plays": 576000,
-          "likes": 35700
-        },
-        {
-          "platform": "tiktok",
-          "url": "https://www.tiktok.com/@beli_eats/video/7498914301063728427",
-          "plays": 1200000,
-          "likes": 45500
-        }
-      ],
-      "rank": 18
-    },
-    {
-      "name": "Original Joe's",
-      "neighborhood": "North Beach",
-      "cuisine_type": "Italian-American",
-      "price_range": "$$",
-      "score": 12,
-      "trending_reason": "SF staple with steady social media presence. 319,400 TikTok plays across 1 posts.",
-      "platforms_active": [
-        "tiktok"
-      ],
-      "sources": [
-        {
-          "platform": "tiktok",
-          "url": "https://www.tiktok.com/@zarina.nawabi/video/7548186996255001887",
-          "plays": 319400,
-          "likes": 24600
-        }
-      ],
-      "rank": 19
-    },
-    {
-      "name": "Woodhouse Fish Co.",
-      "neighborhood": "Castro/FiDi",
-      "cuisine_type": "Seafood",
-      "price_range": "$$",
-      "score": 12,
-      "trending_reason": "SF staple with steady social media presence. 495,200 TikTok plays across 1 posts.",
-      "platforms_active": [
-        "tiktok"
-      ],
-      "sources": [
-        {
-          "platform": "tiktok",
-          "url": "https://www.tiktok.com/@allie.eats/video/7488844620655316266",
-          "plays": 495200,
-          "likes": 22800
-        }
-      ],
-      "rank": 20
-    },
-    {
-      "name": "Mensho Tokyo",
-      "neighborhood": "SoMa",
-      "cuisine_type": "Japanese/Ramen",
-      "price_range": "$$",
-      "score": 11,
-      "trending_reason": "SF staple with steady social media presence. 221,400 TikTok plays across 1 posts.",
-      "platforms_active": [
-        "tiktok"
-      ],
-      "sources": [
-        {
-          "platform": "tiktok",
-          "url": "https://www.tiktok.com/@paucoys/video/7512632736142724374",
-          "plays": 221400,
-          "likes": 5918
-        }
-      ],
       "rank": 21
     },
     {
-      "name": "Woo Can Cook at Prescott Market",
-      "neighborhood": "West Oakland",
+      "name": "Delicious Dim Sum",
+      "neighborhood": "Chinatown",
       "cuisine_type": "Chinese",
-      "price_range": "$$",
-      "score": 9,
-      "trending_reason": "Multiple recent mentions building momentum on instagram.",
+      "price_range": "$",
+      "score": 26,
+      "trending_reason": "SF staple with steady social media presence. 1,527 TikTok plays across 1 posts.",
       "platforms_active": [
-        "instagram"
+        "tiktok"
       ],
       "sources": [
         {
-          "platform": "instagram",
-          "url": "https://www.instagram.com/p/DVzkPhylJgA/",
-          "likes": 35
-        },
-        {
-          "platform": "instagram",
-          "url": "https://www.instagram.com/p/DVrZB_0Essa/",
-          "likes": 127
+          "platform": "tiktok",
+          "url": "https://www.tiktok.com/@vandili607/video/7611995829779451166",
+          "plays": 1527,
+          "likes": 69
         }
       ],
       "rank": 22
+    },
+    {
+      "name": "Saigon Sandwich",
+      "neighborhood": "Tenderloin",
+      "cuisine_type": "Vietnamese",
+      "price_range": "$",
+      "score": 26,
+      "trending_reason": "SF staple with steady social media presence. 1,527 TikTok plays across 1 posts.",
+      "platforms_active": [
+        "tiktok"
+      ],
+      "sources": [
+        {
+          "platform": "tiktok",
+          "url": "https://www.tiktok.com/@vandili607/video/7611995829779451166",
+          "plays": 1527,
+          "likes": 69
+        }
+      ],
+      "rank": 23
     },
     {
       "name": "Kahnfections",
       "neighborhood": "SoMa",
       "cuisine_type": "Bakery",
       "price_range": "$$",
-      "score": 9,
+      "score": 24,
       "trending_reason": "Multiple recent mentions building momentum on instagram.",
       "platforms_active": [
         "instagram"
@@ -498,54 +514,114 @@
           "likes": 258
         }
       ],
-      "rank": 23
-    },
-    {
-      "name": "Delicious Dim Sum",
-      "neighborhood": "Chinatown",
-      "cuisine_type": "Chinese",
-      "price_range": "$",
-      "score": 7,
-      "trending_reason": "SF staple with steady social media presence. 1,527 TikTok plays across 1 posts.",
-      "platforms_active": [
-        "tiktok"
-      ],
-      "sources": [
-        {
-          "platform": "tiktok",
-          "url": "https://www.tiktok.com/@vandili607/video/7611995829779451166",
-          "plays": 1527,
-          "likes": 69
-        }
-      ],
       "rank": 24
     },
     {
-      "name": "Saigon Sandwich",
-      "neighborhood": "Tenderloin",
-      "cuisine_type": "Vietnamese",
-      "price_range": "$",
-      "score": 7,
-      "trending_reason": "SF staple with steady social media presence. 1,527 TikTok plays across 1 posts.",
+      "name": "Woo Can Cook at Prescott Market",
+      "neighborhood": "West Oakland",
+      "cuisine_type": "Chinese",
+      "price_range": "$$",
+      "score": 22,
+      "trending_reason": "Multiple recent mentions building momentum on instagram.",
       "platforms_active": [
-        "tiktok"
+        "instagram"
       ],
       "sources": [
         {
-          "platform": "tiktok",
-          "url": "https://www.tiktok.com/@vandili607/video/7611995829779451166",
-          "plays": 1527,
-          "likes": 69
+          "platform": "instagram",
+          "url": "https://www.instagram.com/p/DVzkPhylJgA/",
+          "likes": 35
+        },
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/p/DVrZB_0Essa/",
+          "likes": 127
         }
       ],
       "rank": 25
+    },
+    {
+      "name": "Blue Plate",
+      "neighborhood": "Mission District",
+      "cuisine_type": "American/New",
+      "price_range": "$$",
+      "score": 22,
+      "trending_reason": "Newly spotted on instagram \u2014 one to watch.",
+      "platforms_active": [
+        "instagram"
+      ],
+      "sources": [
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/p/DVmtZFSji4p/",
+          "likes": 152
+        }
+      ],
+      "rank": 26
+    },
+    {
+      "name": "United Dumplings",
+      "neighborhood": "Oakland",
+      "cuisine_type": "Chinese",
+      "price_range": "$$",
+      "score": 19,
+      "trending_reason": "Newly spotted on instagram \u2014 one to watch.",
+      "platforms_active": [
+        "instagram"
+      ],
+      "sources": [
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/p/DVlZYxRk_tQ/",
+          "likes": 79
+        }
+      ],
+      "rank": 27
+    },
+    {
+      "name": "Lobalita",
+      "neighborhood": "Marina District",
+      "cuisine_type": "Bar/Restaurant",
+      "price_range": "$$",
+      "score": 18,
+      "trending_reason": "Newly spotted on instagram \u2014 one to watch.",
+      "platforms_active": [
+        "instagram"
+      ],
+      "sources": [
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/p/DV11MsBkmzT/",
+          "likes": 59
+        }
+      ],
+      "rank": 28
+    },
+    {
+      "name": "The Front Porch",
+      "neighborhood": "Bernal Heights",
+      "cuisine_type": "Southern",
+      "price_range": "$$",
+      "score": 17,
+      "trending_reason": "Newly spotted on instagram \u2014 one to watch.",
+      "platforms_active": [
+        "instagram"
+      ],
+      "sources": [
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/p/DVxSQS8jimt/",
+          "likes": 51
+        }
+      ],
+      "rank": 29
     },
     {
       "name": "Paper Son Coffee",
       "neighborhood": "SoMa",
       "cuisine_type": "Cafe",
       "price_range": "$$",
-      "score": 7,
+      "score": 16,
       "trending_reason": "Multiple recent mentions building momentum on instagram.",
       "platforms_active": [
         "instagram"
@@ -562,95 +638,52 @@
           "likes": 22
         }
       ],
-      "rank": 26
-    },
-    {
-      "name": "Blue Plate",
-      "neighborhood": "Mission District",
-      "cuisine_type": "American/New",
-      "price_range": "$$",
-      "score": 7,
-      "trending_reason": "Newly spotted on instagram \u2014 one to watch.",
-      "platforms_active": [
-        "instagram"
-      ],
-      "sources": [
-        {
-          "platform": "instagram",
-          "url": "https://www.instagram.com/p/DVmtZFSji4p/",
-          "likes": 152
-        }
-      ],
-      "rank": 27
-    },
-    {
-      "name": "Florio",
-      "neighborhood": "Pacific Heights",
-      "cuisine_type": "Italian/French",
-      "price_range": "$$$",
-      "score": 6,
-      "trending_reason": "Multiple recent mentions building momentum on instagram.",
-      "platforms_active": [
-        "instagram"
-      ],
-      "sources": [
-        {
-          "platform": "instagram",
-          "url": "https://www.instagram.com/p/DVzn5Ariu1k/",
-          "likes": 4
-        },
-        {
-          "platform": "instagram",
-          "url": "https://www.instagram.com/p/DVw2Cw7AZio/",
-          "likes": 13
-        }
-      ],
-      "rank": 28
-    },
-    {
-      "name": "United Dumplings",
-      "neighborhood": "Oakland",
-      "cuisine_type": "Chinese",
-      "price_range": "$$",
-      "score": 6,
-      "trending_reason": "Newly spotted on instagram \u2014 one to watch.",
-      "platforms_active": [
-        "instagram"
-      ],
-      "sources": [
-        {
-          "platform": "instagram",
-          "url": "https://www.instagram.com/p/DVlZYxRk_tQ/",
-          "likes": 79
-        }
-      ],
-      "rank": 29
-    },
-    {
-      "name": "The Front Porch",
-      "neighborhood": "Bernal Heights",
-      "cuisine_type": "Southern",
-      "price_range": "$$",
-      "score": 6,
-      "trending_reason": "Newly spotted on instagram \u2014 one to watch.",
-      "platforms_active": [
-        "instagram"
-      ],
-      "sources": [
-        {
-          "platform": "instagram",
-          "url": "https://www.instagram.com/p/DVxSQS8jimt/",
-          "likes": 51
-        }
-      ],
       "rank": 30
+    },
+    {
+      "name": "Scoma's",
+      "neighborhood": "Fisherman's Wharf",
+      "cuisine_type": "Seafood",
+      "price_range": "$$$",
+      "score": 15,
+      "trending_reason": "SF staple with steady social media presence. 0 TikTok plays across 1 posts.",
+      "platforms_active": [
+        "instagram"
+      ],
+      "sources": [
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/p/DVzAqo6geub/",
+          "likes": 32
+        }
+      ],
+      "rank": 31
+    },
+    {
+      "name": "Frenchie Wine Bar",
+      "neighborhood": "Hayes Valley",
+      "cuisine_type": "French",
+      "price_range": "$$$",
+      "score": 15,
+      "trending_reason": "Newly spotted on instagram \u2014 one to watch.",
+      "platforms_active": [
+        "instagram"
+      ],
+      "sources": [
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/p/DVxRjlNilaL/",
+          "likes": 29
+        }
+      ],
+      "rank": 32
     },
     {
       "name": "Hook Fish Co.",
       "neighborhood": "Outer Sunset",
       "cuisine_type": "Seafood",
       "price_range": "$$",
-      "score": 6,
+      "score": 14,
       "trending_reason": "Newly spotted on instagram \u2014 one to watch.",
       "platforms_active": [
         "instagram"
@@ -662,14 +695,14 @@
           "likes": 54
         }
       ],
-      "rank": 31
+      "rank": 33
     },
     {
       "name": "Saru Hand Roll Bar",
       "neighborhood": "Noe Valley",
       "cuisine_type": "Japanese/Sushi",
       "price_range": "$$",
-      "score": 6,
+      "score": 14,
       "trending_reason": "Newly spotted on instagram \u2014 one to watch.",
       "platforms_active": [
         "instagram"
@@ -681,14 +714,52 @@
           "likes": 54
         }
       ],
-      "rank": 32
+      "rank": 34
+    },
+    {
+      "name": "Le Marais Bakery",
+      "neighborhood": "Castro",
+      "cuisine_type": "Bakery/French",
+      "price_range": "$$",
+      "score": 14,
+      "trending_reason": "Newly spotted on instagram \u2014 one to watch.",
+      "platforms_active": [
+        "instagram"
+      ],
+      "sources": [
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/p/DVz1tZBDvtt/",
+          "likes": 22
+        }
+      ],
+      "rank": 35
+    },
+    {
+      "name": "The Fold Cafe",
+      "neighborhood": "Mission District",
+      "cuisine_type": "Cafe",
+      "price_range": "$$",
+      "score": 14,
+      "trending_reason": "Newly spotted on instagram \u2014 one to watch.",
+      "platforms_active": [
+        "instagram"
+      ],
+      "sources": [
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/p/DVeBJJFERGR/",
+          "likes": 22
+        }
+      ],
+      "rank": 36
     },
     {
       "name": "Native Twins Coffee",
       "neighborhood": "Pacific Heights",
       "cuisine_type": "Cafe",
       "price_range": "$$",
-      "score": 6,
+      "score": 13,
       "trending_reason": "Multiple recent mentions building momentum on instagram.",
       "platforms_active": [
         "instagram"
@@ -705,71 +776,38 @@
           "likes": 15
         }
       ],
-      "rank": 33
+      "rank": 37
     },
     {
-      "name": "Lobalita",
-      "neighborhood": "Marina District",
-      "cuisine_type": "Bar/Restaurant",
-      "price_range": "$$",
-      "score": 6,
-      "trending_reason": "Newly spotted on instagram \u2014 one to watch.",
-      "platforms_active": [
-        "instagram"
-      ],
-      "sources": [
-        {
-          "platform": "instagram",
-          "url": "https://www.instagram.com/p/DV11MsBkmzT/",
-          "likes": 59
-        }
-      ],
-      "rank": 34
-    },
-    {
-      "name": "Le Marais Bakery",
-      "neighborhood": "Castro",
-      "cuisine_type": "Bakery/French",
-      "price_range": "$$",
-      "score": 5,
-      "trending_reason": "Newly spotted on instagram \u2014 one to watch.",
-      "platforms_active": [
-        "instagram"
-      ],
-      "sources": [
-        {
-          "platform": "instagram",
-          "url": "https://www.instagram.com/p/DVz1tZBDvtt/",
-          "likes": 22
-        }
-      ],
-      "rank": 35
-    },
-    {
-      "name": "Frenchie Wine Bar",
-      "neighborhood": "Hayes Valley",
-      "cuisine_type": "French",
+      "name": "Florio",
+      "neighborhood": "Pacific Heights",
+      "cuisine_type": "Italian/French",
       "price_range": "$$$",
-      "score": 5,
-      "trending_reason": "Newly spotted on instagram \u2014 one to watch.",
+      "score": 13,
+      "trending_reason": "Multiple recent mentions building momentum on instagram.",
       "platforms_active": [
         "instagram"
       ],
       "sources": [
         {
           "platform": "instagram",
-          "url": "https://www.instagram.com/p/DVxRjlNilaL/",
-          "likes": 29
+          "url": "https://www.instagram.com/p/DVzn5Ariu1k/",
+          "likes": 4
+        },
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/p/DVw2Cw7AZio/",
+          "likes": 13
         }
       ],
-      "rank": 36
+      "rank": 38
     },
     {
       "name": "Bosco",
       "neighborhood": "North Beach",
       "cuisine_type": "Italian",
       "price_range": "$$$",
-      "score": 5,
+      "score": 13,
       "trending_reason": "Newly spotted on instagram \u2014 one to watch.",
       "platforms_active": [
         "instagram"
@@ -781,14 +819,128 @@
           "likes": 17
         }
       ],
-      "rank": 37
+      "rank": 39
+    },
+    {
+      "name": "La Promenade Cafe",
+      "neighborhood": "Inner Richmond",
+      "cuisine_type": "Cafe/French",
+      "price_range": "$$",
+      "score": 12,
+      "trending_reason": "Newly spotted on instagram \u2014 one to watch.",
+      "platforms_active": [
+        "instagram"
+      ],
+      "sources": [
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/p/DVjSkVrgoAr/",
+          "likes": 15
+        }
+      ],
+      "rank": 40
+    },
+    {
+      "name": "Falasteen SF",
+      "neighborhood": "Noe Valley",
+      "cuisine_type": "Palestinian",
+      "price_range": "$$",
+      "score": 11,
+      "trending_reason": "Newly spotted on instagram \u2014 one to watch.",
+      "platforms_active": [
+        "instagram"
+      ],
+      "sources": [
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/p/DV1IV_7geel/",
+          "likes": 13
+        }
+      ],
+      "rank": 41
+    },
+    {
+      "name": "Cafe Gonzalez",
+      "neighborhood": "Mission District",
+      "cuisine_type": "Cafe",
+      "price_range": "$",
+      "score": 11,
+      "trending_reason": "Newly spotted on instagram \u2014 one to watch.",
+      "platforms_active": [
+        "instagram"
+      ],
+      "sources": [
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/p/DVeXassksSR/",
+          "likes": 12
+        }
+      ],
+      "rank": 42
+    },
+    {
+      "name": "Braid Bakery",
+      "neighborhood": "Various Locations",
+      "cuisine_type": "Bakery",
+      "price_range": "$$",
+      "score": 10,
+      "trending_reason": "Newly spotted on instagram \u2014 one to watch.",
+      "platforms_active": [
+        "instagram"
+      ],
+      "sources": [
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/p/DVrvp-5D_K0/",
+          "likes": 10
+        }
+      ],
+      "rank": 43
+    },
+    {
+      "name": "Thai House Express",
+      "neighborhood": "Castro",
+      "cuisine_type": "Thai",
+      "price_range": "$$",
+      "score": 9,
+      "trending_reason": "Newly spotted on instagram \u2014 one to watch.",
+      "platforms_active": [
+        "instagram"
+      ],
+      "sources": [
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/p/DV1mLijFMVP/",
+          "likes": 7
+        }
+      ],
+      "rank": 44
+    },
+    {
+      "name": "Trestle",
+      "neighborhood": "North Beach",
+      "cuisine_type": "American/New",
+      "price_range": "$$",
+      "score": 9,
+      "trending_reason": "Newly spotted on instagram \u2014 one to watch.",
+      "platforms_active": [
+        "instagram"
+      ],
+      "sources": [
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/p/DV1QJ97lGPB/",
+          "likes": 7
+        }
+      ],
+      "rank": 45
     },
     {
       "name": "Hedge Coffee",
       "neighborhood": "SoMa",
       "cuisine_type": "Cafe",
       "price_range": "$$",
-      "score": 5,
+      "score": 7,
       "trending_reason": "Multiple recent mentions building momentum on instagram.",
       "platforms_active": [
         "instagram"
@@ -805,128 +957,14 @@
           "likes": 2
         }
       ],
-      "rank": 38
+      "rank": 46
     },
     {
-      "name": "The Fold Cafe",
-      "neighborhood": "Mission District",
-      "cuisine_type": "Cafe",
-      "price_range": "$$",
-      "score": 5,
-      "trending_reason": "Newly spotted on instagram \u2014 one to watch.",
-      "platforms_active": [
-        "instagram"
-      ],
-      "sources": [
-        {
-          "platform": "instagram",
-          "url": "https://www.instagram.com/p/DVeBJJFERGR/",
-          "likes": 22
-        }
-      ],
-      "rank": 39
-    },
-    {
-      "name": "Falasteen SF",
-      "neighborhood": "Noe Valley",
-      "cuisine_type": "Palestinian",
-      "price_range": "$$",
-      "score": 4,
-      "trending_reason": "Newly spotted on instagram \u2014 one to watch.",
-      "platforms_active": [
-        "instagram"
-      ],
-      "sources": [
-        {
-          "platform": "instagram",
-          "url": "https://www.instagram.com/p/DV1IV_7geel/",
-          "likes": 13
-        }
-      ],
-      "rank": 40
-    },
-    {
-      "name": "Thai House Express",
-      "neighborhood": "Castro",
-      "cuisine_type": "Thai",
-      "price_range": "$$",
-      "score": 4,
-      "trending_reason": "Newly spotted on instagram \u2014 one to watch.",
-      "platforms_active": [
-        "instagram"
-      ],
-      "sources": [
-        {
-          "platform": "instagram",
-          "url": "https://www.instagram.com/p/DV1mLijFMVP/",
-          "likes": 7
-        }
-      ],
-      "rank": 41
-    },
-    {
-      "name": "Trestle",
-      "neighborhood": "North Beach",
-      "cuisine_type": "American/New",
-      "price_range": "$$",
-      "score": 4,
-      "trending_reason": "Newly spotted on instagram \u2014 one to watch.",
-      "platforms_active": [
-        "instagram"
-      ],
-      "sources": [
-        {
-          "platform": "instagram",
-          "url": "https://www.instagram.com/p/DV1QJ97lGPB/",
-          "likes": 7
-        }
-      ],
-      "rank": 42
-    },
-    {
-      "name": "La Promenade Cafe",
+      "name": "Q Specialty Coffee",
       "neighborhood": "Inner Richmond",
-      "cuisine_type": "Cafe/French",
-      "price_range": "$$",
-      "score": 4,
-      "trending_reason": "Newly spotted on instagram \u2014 one to watch.",
-      "platforms_active": [
-        "instagram"
-      ],
-      "sources": [
-        {
-          "platform": "instagram",
-          "url": "https://www.instagram.com/p/DVjSkVrgoAr/",
-          "likes": 15
-        }
-      ],
-      "rank": 43
-    },
-    {
-      "name": "Cafe Gonzalez",
-      "neighborhood": "Mission District",
       "cuisine_type": "Cafe",
-      "price_range": "$",
-      "score": 4,
-      "trending_reason": "Newly spotted on instagram \u2014 one to watch.",
-      "platforms_active": [
-        "instagram"
-      ],
-      "sources": [
-        {
-          "platform": "instagram",
-          "url": "https://www.instagram.com/p/DVeXassksSR/",
-          "likes": 12
-        }
-      ],
-      "rank": 44
-    },
-    {
-      "name": "Braid Bakery",
-      "neighborhood": "Various Locations",
-      "cuisine_type": "Bakery",
       "price_range": "$$",
-      "score": 4,
+      "score": 7,
       "trending_reason": "Newly spotted on instagram \u2014 one to watch.",
       "platforms_active": [
         "instagram"
@@ -934,18 +972,18 @@
       "sources": [
         {
           "platform": "instagram",
-          "url": "https://www.instagram.com/p/DVrvp-5D_K0/",
-          "likes": 10
+          "url": "https://www.instagram.com/p/DVhmqK4CfFj/",
+          "likes": 4
         }
       ],
-      "rank": 45
+      "rank": 47
     },
     {
       "name": "Taisan Huakee",
       "neighborhood": "Geary Street",
       "cuisine_type": "Chinese",
       "price_range": "$",
-      "score": 3,
+      "score": 6,
       "trending_reason": "Newly spotted on instagram \u2014 one to watch.",
       "platforms_active": [
         "instagram"
@@ -957,7 +995,83 @@
           "likes": 3
         }
       ],
-      "rank": 46
+      "rank": 48
+    },
+    {
+      "name": "Breakwater Barbecue",
+      "neighborhood": "Dogpatch",
+      "cuisine_type": "BBQ",
+      "price_range": "$$",
+      "score": 6,
+      "trending_reason": "Newly spotted on instagram \u2014 one to watch.",
+      "platforms_active": [
+        "instagram"
+      ],
+      "sources": [
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/p/DV1oSX1Elq3/",
+          "likes": 3
+        }
+      ],
+      "rank": 49
+    },
+    {
+      "name": "Day Moon Bread",
+      "neighborhood": "Outer Sunset",
+      "cuisine_type": "Bakery",
+      "price_range": "$",
+      "score": 6,
+      "trending_reason": "Newly spotted on instagram \u2014 one to watch.",
+      "platforms_active": [
+        "instagram"
+      ],
+      "sources": [
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/p/DVpvlVqkW_1/",
+          "likes": 3
+        }
+      ],
+      "rank": 50
+    },
+    {
+      "name": "RT Bistro",
+      "neighborhood": "Inner Sunset",
+      "cuisine_type": "American/New",
+      "price_range": "$$",
+      "score": 5,
+      "trending_reason": "Newly spotted on instagram \u2014 one to watch.",
+      "platforms_active": [
+        "instagram"
+      ],
+      "sources": [
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/p/DV1MkH4GCpc/",
+          "likes": 2
+        }
+      ],
+      "rank": 51
+    },
+    {
+      "name": "El Dorado",
+      "neighborhood": "Downtown",
+      "cuisine_type": "Latin",
+      "price_range": "$$",
+      "score": 5,
+      "trending_reason": "Newly spotted on instagram \u2014 one to watch.",
+      "platforms_active": [
+        "instagram"
+      ],
+      "sources": [
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/p/DVwigamE-Uk/",
+          "likes": 2
+        }
+      ],
+      "rank": 52
     },
     {
       "name": "Mariposas",
@@ -980,71 +1094,14 @@
           "likes": 1
         }
       ],
-      "rank": 47
-    },
-    {
-      "name": "Breakwater Barbecue",
-      "neighborhood": "Dogpatch",
-      "cuisine_type": "BBQ",
-      "price_range": "$$",
-      "score": 3,
-      "trending_reason": "Newly spotted on instagram \u2014 one to watch.",
-      "platforms_active": [
-        "instagram"
-      ],
-      "sources": [
-        {
-          "platform": "instagram",
-          "url": "https://www.instagram.com/p/DV1oSX1Elq3/",
-          "likes": 3
-        }
-      ],
-      "rank": 48
-    },
-    {
-      "name": "Q Specialty Coffee",
-      "neighborhood": "Inner Richmond",
-      "cuisine_type": "Cafe",
-      "price_range": "$$",
-      "score": 3,
-      "trending_reason": "Newly spotted on instagram \u2014 one to watch.",
-      "platforms_active": [
-        "instagram"
-      ],
-      "sources": [
-        {
-          "platform": "instagram",
-          "url": "https://www.instagram.com/p/DVhmqK4CfFj/",
-          "likes": 4
-        }
-      ],
-      "rank": 49
-    },
-    {
-      "name": "Day Moon Bread",
-      "neighborhood": "Outer Sunset",
-      "cuisine_type": "Bakery",
-      "price_range": "$",
-      "score": 3,
-      "trending_reason": "Newly spotted on instagram \u2014 one to watch.",
-      "platforms_active": [
-        "instagram"
-      ],
-      "sources": [
-        {
-          "platform": "instagram",
-          "url": "https://www.instagram.com/p/DVpvlVqkW_1/",
-          "likes": 3
-        }
-      ],
-      "rank": 50
+      "rank": 53
     },
     {
       "name": "Urban Kitchen",
       "neighborhood": "East Bay",
       "cuisine_type": "Indian",
       "price_range": "$$",
-      "score": 2,
+      "score": 3,
       "trending_reason": "Newly spotted on instagram \u2014 one to watch.",
       "platforms_active": [
         "instagram"
@@ -1056,7 +1113,64 @@
           "likes": 1
         }
       ],
-      "rank": 51
+      "rank": 54
+    },
+    {
+      "name": "Amoura",
+      "neighborhood": "SoMa",
+      "cuisine_type": "Mediterranean",
+      "price_range": "$$$",
+      "score": 3,
+      "trending_reason": "Newly spotted on instagram \u2014 one to watch.",
+      "platforms_active": [
+        "instagram"
+      ],
+      "sources": [
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/p/DVyj09GlP5C/",
+          "likes": 1
+        }
+      ],
+      "rank": 55
+    },
+    {
+      "name": "Sheba Lounge",
+      "neighborhood": "Inner Sunset",
+      "cuisine_type": "Ethiopian",
+      "price_range": "$$",
+      "score": 3,
+      "trending_reason": "Newly spotted on instagram \u2014 one to watch.",
+      "platforms_active": [
+        "instagram"
+      ],
+      "sources": [
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/p/DV0D9hwk-RN/",
+          "likes": 1
+        }
+      ],
+      "rank": 56
+    },
+    {
+      "name": "Toy Soldier",
+      "neighborhood": "Financial District",
+      "cuisine_type": "American/New",
+      "price_range": "$$",
+      "score": 3,
+      "trending_reason": "Newly spotted on instagram \u2014 one to watch.",
+      "platforms_active": [
+        "instagram"
+      ],
+      "sources": [
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/p/DV12K_UEl8y/",
+          "likes": 1
+        }
+      ],
+      "rank": 57
     },
     {
       "name": "Bao Bao Dumpling",
@@ -1074,83 +1188,7 @@
           "url": "https://www.instagram.com/p/DVzSJrpEkib/"
         }
       ],
-      "rank": 52
-    },
-    {
-      "name": "Scoma's",
-      "neighborhood": "Fisherman's Wharf",
-      "cuisine_type": "Seafood",
-      "price_range": "$$$",
-      "score": 2,
-      "trending_reason": "SF staple with steady social media presence. 0 TikTok plays across 1 posts.",
-      "platforms_active": [
-        "instagram"
-      ],
-      "sources": [
-        {
-          "platform": "instagram",
-          "url": "https://www.instagram.com/p/DVzAqo6geub/",
-          "likes": 32
-        }
-      ],
-      "rank": 53
-    },
-    {
-      "name": "Amoura",
-      "neighborhood": "SoMa",
-      "cuisine_type": "Mediterranean",
-      "price_range": "$$$",
-      "score": 2,
-      "trending_reason": "Newly spotted on instagram \u2014 one to watch.",
-      "platforms_active": [
-        "instagram"
-      ],
-      "sources": [
-        {
-          "platform": "instagram",
-          "url": "https://www.instagram.com/p/DVyj09GlP5C/",
-          "likes": 1
-        }
-      ],
-      "rank": 54
-    },
-    {
-      "name": "RT Bistro",
-      "neighborhood": "Inner Sunset",
-      "cuisine_type": "American/New",
-      "price_range": "$$",
-      "score": 2,
-      "trending_reason": "Newly spotted on instagram \u2014 one to watch.",
-      "platforms_active": [
-        "instagram"
-      ],
-      "sources": [
-        {
-          "platform": "instagram",
-          "url": "https://www.instagram.com/p/DV1MkH4GCpc/",
-          "likes": 2
-        }
-      ],
-      "rank": 55
-    },
-    {
-      "name": "Sheba Lounge",
-      "neighborhood": "Inner Sunset",
-      "cuisine_type": "Ethiopian",
-      "price_range": "$$",
-      "score": 2,
-      "trending_reason": "Newly spotted on instagram \u2014 one to watch.",
-      "platforms_active": [
-        "instagram"
-      ],
-      "sources": [
-        {
-          "platform": "instagram",
-          "url": "https://www.instagram.com/p/DV0D9hwk-RN/",
-          "likes": 1
-        }
-      ],
-      "rank": 56
+      "rank": 58
     },
     {
       "name": "Itria",
@@ -1166,44 +1204,6 @@
         {
           "platform": "instagram",
           "url": "https://www.instagram.com/p/DVwtPNcgWgT/"
-        }
-      ],
-      "rank": 57
-    },
-    {
-      "name": "El Dorado",
-      "neighborhood": "Downtown",
-      "cuisine_type": "Latin",
-      "price_range": "$$",
-      "score": 2,
-      "trending_reason": "Newly spotted on instagram \u2014 one to watch.",
-      "platforms_active": [
-        "instagram"
-      ],
-      "sources": [
-        {
-          "platform": "instagram",
-          "url": "https://www.instagram.com/p/DVwigamE-Uk/",
-          "likes": 2
-        }
-      ],
-      "rank": 58
-    },
-    {
-      "name": "Toy Soldier",
-      "neighborhood": "Financial District",
-      "cuisine_type": "American/New",
-      "price_range": "$$",
-      "score": 2,
-      "trending_reason": "Newly spotted on instagram \u2014 one to watch.",
-      "platforms_active": [
-        "instagram"
-      ],
-      "sources": [
-        {
-          "platform": "instagram",
-          "url": "https://www.instagram.com/p/DV12K_UEl8y/",
-          "likes": 1
         }
       ],
       "rank": 59

@@ -259,6 +259,16 @@ def _gather_signals(
     mentions_ws = _get_worksheet("mentions")
     all_mentions = mentions_ws.get_all_records()
 
+    # ---- Pre-scan: count how many restaurants each source_id mentions ----
+    # When a single video/post mentions N restaurants, we split engagement
+    # proportionally so roundup-style content doesn't inflate every restaurant
+    # it mentions with the full engagement of the video.
+    source_restaurant_count: dict[str, int] = {}
+    for m in all_mentions:
+        source_id = m.get("source_id", "")
+        if source_id:
+            source_restaurant_count[source_id] = source_restaurant_count.get(source_id, 0) + 1
+
     # ---- Classify each mention into scoring window or baseline window ----
     for m in all_mentions:
         mention_time = _parse_time(m.get("time", ""))
@@ -270,11 +280,16 @@ def _gather_signals(
             continue
 
         platform = m.get("platform", "unknown")
+        source_id = m.get("source_id", "")
         engagement = _parse_engagement(m.get("engagement", ""))
         sentiment = _safe_float(m.get("sentiment_score"))
         author_reach = _safe_int(m.get("author_reach"))
 
         eng_total = _total_engagement(engagement)
+
+        # Split engagement across co-mentioned restaurants from the same source
+        n_restaurants_in_source = source_restaurant_count.get(source_id, 1) if source_id else 1
+        eng_share = eng_total / n_restaurants_in_source
 
         # ---- Scoring window: window_start <= time <= now ----
         if mention_time >= window_start and mention_time <= now:
@@ -296,7 +311,7 @@ def _gather_signals(
             # Running average for sentiment
             sig.avg_sentiment = (sig.avg_sentiment + sentiment) / 2
 
-            sig.engagement_current += eng_total
+            sig.engagement_current += eng_share
             sig.max_reach = max(sig.max_reach, author_reach)
 
             if author_reach > 10000:
@@ -321,7 +336,7 @@ def _gather_signals(
             sig = signals[restaurant_id]
             # Accumulate raw baseline counts (we'll normalize to weekly later)
             sig.mentions_baseline += 1
-            sig.engagement_previous += eng_total
+            sig.engagement_previous += eng_share
 
     # ---- Normalize baseline to weekly averages ----
     baseline_weeks = max((window_start - baseline_start).days / 7, 1)
