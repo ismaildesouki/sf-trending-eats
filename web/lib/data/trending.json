@@ -1,253 +1,9 @@
 {
-  "generated_at": "2026-03-15T19:50:00Z",
+  "generated_at": "2026-03-16T02:00:00Z",
   "city": "San Francisco",
   "restaurants": [
     {
       "rank": 1,
-      "name": "Yank Sing",
-      "neighborhood": "SoMa",
-      "cuisine_type": "Dim Sum",
-      "price_range": "$$$",
-      "score": 71,
-      "trending_reason": "Viral on instagram, tiktok \u2014 1,532,600 plays from 2 creators. Buzzing on instagram, tiktok \u2014 766,300 plays across 3 posts.",
-      "platforms_active": [
-        "instagram",
-        "tiktok"
-      ],
-      "sources": [
-        {
-          "platform": "tiktok",
-          "url": "https://www.tiktok.com/@eatwithnora/video/7592821966726237471",
-          "plays": 71100,
-          "likes": 6434
-        },
-        {
-          "platform": "tiktok",
-          "url": "https://www.tiktok.com/@allie.eats/video/7501030128005172522",
-          "plays": 695200,
-          "likes": 42300
-        },
-        {
-          "platform": "instagram",
-          "url": "https://www.instagram.com/p/DVz2z3vlLfq/",
-          "likes": 1
-        }
-      ]
-    },
-    {
-      "rank": 2,
-      "name": "La Taqueria",
-      "neighborhood": "Mission District",
-      "cuisine_type": "Mexican",
-      "price_range": "$",
-      "score": 69,
-      "trending_reason": "Viral on instagram, tiktok \u2014 3,552,000 plays from 1 creator. Featured in viral tiktok content \u2014 ~1,315,200 attributed plays.",
-      "platforms_active": [
-        "instagram",
-        "tiktok"
-      ],
-      "sources": [
-        {
-          "platform": "tiktok",
-          "url": "https://www.tiktok.com/@beli_eats/video/7498542877870411054",
-          "plays": 576000,
-          "likes": 35700
-        },
-        {
-          "platform": "tiktok",
-          "url": "https://www.tiktok.com/@beli_eats/video/7498914301063728427",
-          "plays": 1200000,
-          "likes": 45500
-        },
-        {
-          "platform": "instagram",
-          "url": "https://www.instagram.com/p/DVPh7_2EXK_/",
-          "likes": 16
-        }
-      ]
-    },
-    {
-      "rank": 3,
-      "name": "Bette's",
-      "neighborhood": "FiDi",
-      "cuisine_type": "American",
-      "price_range": "$$",
-      "score": 57,
-      "trending_reason": "Viral on instagram, tiktok \u2014 967,600 plays from 2 creators. Going viral on TikTok \u2014 472,400 plays from 1 creator.",
-      "platforms_active": [
-        "instagram",
-        "tiktok"
-      ],
-      "sources": [
-        {
-          "platform": "tiktok",
-          "url": "https://www.tiktok.com/@sherryeatworld/video/7540788039954582797",
-          "plays": 472400,
-          "likes": 35200
-        },
-        {
-          "platform": "tiktok",
-          "url": "https://www.tiktok.com/@allie.eats/video/7488844620655316266",
-          "plays": 495200,
-          "likes": 22800
-        },
-        {
-          "platform": "instagram",
-          "url": "https://www.instagram.com/p/DVv5cVRlMai/",
-          "likes": -1
-        },
-        {
-          "platform": "instagram",
-          "url": "https://www.instagram.com/p/DV1NPtDAnzr/",
-          "likes": 15
-        },
-        {
-          "platform": "instagram",
-          "url": "https://www.instagram.com/p/DViGMM3D7hT/",
-          "likes": 44
-        },
-        {
-          "platform": "instagram",
-          "url": "https://www.instagram.com/p/DV15qJJEum3/",
-          "likes": 1
-        }
-      ]
-    },
-    {
-      "rank": 4,
-      "name": "El Farolito",
-      "neighborhood": "Mission District",
-      "cuisine_type": "Mexican",
-      "price_range": "$",
-      "score": 55,
-      "trending_reason": "Viral on tiktok \u2014 259,400 plays from 1 creator. Featured in viral tiktok content \u2014 ~201,666 attributed plays.",
-      "platforms_active": [
-        "tiktok"
-      ],
-      "sources": [
-        {
-          "platform": "tiktok",
-          "url": "https://www.tiktok.com/@beli_eats/video/7498542877870411054",
-          "plays": 576000,
-          "likes": 35700
-        },
-        {
-          "platform": "tiktok",
-          "url": "https://www.tiktok.com/@mattiasblanco/video/7595738580232768781",
-          "plays": 259400,
-          "likes": 30300
-        }
-      ]
-    },
-    {
-      "rank": 5,
-      "name": "Hamburguesa Bar",
-      "neighborhood": "SoMa",
-      "cuisine_type": "Burgers",
-      "price_range": "$",
-      "score": 46,
-      "trending_reason": "Buzzing across 3 social posts from 1 creators. After-work or late-night burger and beer spot.",
-      "platforms_active": [
-        "food_media",
-        "instagram",
-        "tiktok"
-      ],
-      "sources": [
-        {
-          "platform": "tiktok",
-          "url": "https://www.tiktok.com/@franksbites/video/7613235985685482782",
-          "plays": 3242,
-          "likes": 91
-        },
-        {
-          "platform": "instagram",
-          "url": "https://www.instagram.com/p/DU5_5Wbjjjr/",
-          "likes": -1
-        }
-      ]
-    },
-    {
-      "rank": 6,
-      "name": "Maruwu Seicha",
-      "neighborhood": "Japantown",
-      "cuisine_type": "Japanese/Tea",
-      "price_range": "$",
-      "score": 46,
-      "trending_reason": "Viral on tiktok \u2014 1,353,600 plays from 1 creator. Featured in viral tiktok content \u2014 ~169,200 attributed plays.",
-      "platforms_active": [
-        "tiktok"
-      ],
-      "sources": [
-        {
-          "platform": "tiktok",
-          "url": "https://www.tiktok.com/@allie.eats/video/7566470646209776927",
-          "plays": 338400,
-          "likes": 29900
-        }
-      ]
-    },
-    {
-      "rank": 7,
-      "name": "Il Canto Cafe",
-      "neighborhood": "Financial District",
-      "cuisine_type": "Cafe/Brunch",
-      "price_range": "$$",
-      "score": 41,
-      "trending_reason": "Viral on tiktok \u2014 335,700 plays from 1 creator. Building momentum on tiktok \u2014 37,300 plays across 1 posts.",
-      "platforms_active": [
-        "tiktok"
-      ],
-      "sources": [
-        {
-          "platform": "tiktok",
-          "url": "https://www.tiktok.com/@beli_eats/video/7563806731327900983",
-          "plays": 111900,
-          "likes": 6313
-        }
-      ]
-    },
-    {
-      "rank": 8,
-      "name": "Ninniku",
-      "neighborhood": "Lower Pac Heights",
-      "cuisine_type": "Japanese/Ramen",
-      "price_range": "$$",
-      "score": 40,
-      "trending_reason": "Viral on tiktok \u2014 482,000 plays from 1 creator. Going viral on TikTok \u2014 241,000 plays from 1 creator.",
-      "platforms_active": [
-        "tiktok"
-      ],
-      "sources": [
-        {
-          "platform": "tiktok",
-          "url": "https://www.tiktok.com/@heatherr.eats/video/7517830301096201527",
-          "plays": 241000,
-          "likes": 18800
-        }
-      ]
-    },
-    {
-      "rank": 9,
-      "name": "Mensho Tokyo",
-      "neighborhood": "SoMa",
-      "cuisine_type": "Japanese/Ramen",
-      "price_range": "$$",
-      "score": 40,
-      "trending_reason": "Viral on tiktok \u2014 442,800 plays from 1 creator. Going viral on TikTok \u2014 221,400 plays from 1 creator.",
-      "platforms_active": [
-        "tiktok"
-      ],
-      "sources": [
-        {
-          "platform": "tiktok",
-          "url": "https://www.tiktok.com/@paucoys/video/7512632736142724374",
-          "plays": 221400,
-          "likes": 5918
-        }
-      ]
-    },
-    {
-      "rank": 10,
       "name": "JouJou",
       "neighborhood": "Design District",
       "cuisine_type": "French",
@@ -276,37 +32,23 @@
       ]
     },
     {
-      "rank": 11,
-      "name": "Fusion Dumpling",
-      "neighborhood": "Chinatown",
-      "cuisine_type": "Chinese",
+      "rank": 2,
+      "name": "Yamo",
+      "neighborhood": "Mission District",
+      "cuisine_type": "Burmese/Thai",
       "price_range": "$",
-      "score": 37,
-      "trending_reason": "Viral on tiktok \u2014 195,800 plays from 1 creator. Going viral on TikTok \u2014 195,800 plays from 1 creator.",
+      "score": 32,
+      "trending_reason": "Viral in 2026 \u2014 260,927 plays from 2 creators.",
       "platforms_active": [
         "tiktok"
       ],
       "sources": [
         {
           "platform": "tiktok",
-          "url": "https://www.tiktok.com/@sherryeatworld/video/7491817363126471978",
-          "plays": 195800,
-          "likes": 7986
-        }
-      ]
-    },
-    {
-      "rank": 12,
-      "name": "Dragon Eats",
-      "neighborhood": "Hayes Valley",
-      "cuisine_type": "Chinese",
-      "price_range": "$",
-      "score": 32,
-      "trending_reason": "Buzzing across 4 social posts from 1 creators. Newly spotted on tiktok \u2014 one to watch.",
-      "platforms_active": [
-        "tiktok"
-      ],
-      "sources": [
+          "url": "https://www.tiktok.com/@mattiasblanco/video/7595738580232768781",
+          "plays": 259400,
+          "likes": 30300
+        },
         {
           "platform": "tiktok",
           "url": "https://www.tiktok.com/@vandili607/video/7611995829779451166",
@@ -316,7 +58,7 @@
       ]
     },
     {
-      "rank": 13,
+      "rank": 3,
       "name": "Izakaya Rintaro",
       "neighborhood": "Mission District",
       "cuisine_type": "Japanese",
@@ -340,12 +82,12 @@
       ]
     },
     {
-      "rank": 14,
+      "rank": 4,
       "name": "Maria Isabel",
       "neighborhood": "Mission District",
       "cuisine_type": "Mexican",
       "price_range": "$$$",
-      "score": 30,
+      "score": 27,
       "trending_reason": "Upscale Mexican from the Dalida team \u2014 seafood-focused, seasonally changing menu.",
       "platforms_active": [
         "food_media",
@@ -369,236 +111,7 @@
       ]
     },
     {
-      "rank": 15,
-      "name": "The Thonglor",
-      "neighborhood": "Lower Nob Hill",
-      "cuisine_type": "Thai",
-      "price_range": "$$",
-      "score": 27,
-      "trending_reason": "Buzzing across 6 social posts from 0 creators. Outstanding pad thai at this intimate eight-table spot.",
-      "platforms_active": [
-        "food_media",
-        "instagram"
-      ],
-      "sources": [
-        {
-          "platform": "food_media",
-          "url": "https://www.theinfatuation.com/san-francisco/guides/best-restaurants-in-san-francisco",
-          "label": "Infatuation Best 25"
-        },
-        {
-          "platform": "instagram",
-          "url": "https://www.instagram.com/p/DVPtfS0kdrq/",
-          "likes": 1
-        }
-      ]
-    },
-    {
-      "rank": 16,
-      "name": "Yamo",
-      "neighborhood": "Mission District",
-      "cuisine_type": "Burmese/Thai",
-      "price_range": "$",
-      "score": 26,
-      "trending_reason": "Building momentum on tiktok \u2014 86,848 plays across 2 posts.",
-      "platforms_active": [
-        "tiktok"
-      ],
-      "sources": [
-        {
-          "platform": "tiktok",
-          "url": "https://www.tiktok.com/@mattiasblanco/video/7595738580232768781",
-          "plays": 259400,
-          "likes": 30300
-        },
-        {
-          "platform": "tiktok",
-          "url": "https://www.tiktok.com/@vandili607/video/7611995829779451166",
-          "plays": 1527,
-          "likes": 69
-        }
-      ]
-    },
-    {
-      "rank": 17,
-      "name": "Kahnfections",
-      "neighborhood": "SoMa",
-      "cuisine_type": "Bakery",
-      "price_range": "$$",
-      "score": 25,
-      "trending_reason": "Buzzing across 9 social posts from 0 creators. Multiple recent mentions building momentum on instagram.",
-      "platforms_active": [
-        "instagram"
-      ],
-      "sources": [
-        {
-          "platform": "instagram",
-          "url": "https://www.instagram.com/p/DVmWYiXgbXI/",
-          "likes": 6
-        },
-        {
-          "platform": "instagram",
-          "url": "https://www.instagram.com/p/DVv5d_HktDA/",
-          "likes": 258
-        },
-        {
-          "platform": "instagram",
-          "url": "https://www.instagram.com/p/DVt7OfbEiSd/"
-        },
-        {
-          "platform": "instagram",
-          "url": "https://www.instagram.com/p/DVtsc37j0ci/",
-          "likes": 19
-        }
-      ]
-    },
-    {
-      "rank": 18,
-      "name": "Paper Son Coffee",
-      "neighborhood": "SoMa",
-      "cuisine_type": "Cafe",
-      "price_range": "$$",
-      "score": 25,
-      "trending_reason": "Buzzing across 16 social posts from 0 creators. Multiple recent mentions building momentum on instagram.",
-      "platforms_active": [
-        "instagram"
-      ],
-      "sources": [
-        {
-          "platform": "instagram",
-          "url": "https://www.instagram.com/p/DVwAt1KAi7s/",
-          "likes": 14
-        },
-        {
-          "platform": "instagram",
-          "url": "https://www.instagram.com/p/DVwApz3AoaZ/",
-          "likes": 22
-        },
-        {
-          "platform": "instagram",
-          "url": "https://www.instagram.com/p/DVwAcx7gtOX/",
-          "likes": 12
-        }
-      ]
-    },
-    {
-      "rank": 19,
-      "name": "The Fold Cafe",
-      "neighborhood": "Mission District",
-      "cuisine_type": "Cafe",
-      "price_range": "$$",
-      "score": 23,
-      "trending_reason": "Buzzing across 10 social posts from 0 creators. Newly spotted on instagram \u2014 one to watch.",
-      "platforms_active": [
-        "instagram"
-      ],
-      "sources": [
-        {
-          "platform": "instagram",
-          "url": "https://www.instagram.com/p/DVeBJJFERGR/",
-          "likes": 22
-        },
-        {
-          "platform": "instagram",
-          "url": "https://www.instagram.com/p/DVeBO9WkRIE/",
-          "likes": 6
-        },
-        {
-          "platform": "instagram",
-          "url": "https://www.instagram.com/p/DVeBCYGkWLj/",
-          "likes": 8
-        }
-      ]
-    },
-    {
-      "rank": 20,
-      "name": "Trestle",
-      "neighborhood": "North Beach",
-      "cuisine_type": "American/New",
-      "price_range": "$$",
-      "score": 22,
-      "trending_reason": "Buzzing across 12 social posts from 0 creators. Newly spotted on instagram \u2014 one to watch.",
-      "platforms_active": [
-        "instagram"
-      ],
-      "sources": [
-        {
-          "platform": "instagram",
-          "url": "https://www.instagram.com/p/DV1QJ97lGPB/",
-          "likes": 7
-        },
-        {
-          "platform": "instagram",
-          "url": "https://www.instagram.com/p/DV1PCQeE9-u/"
-        }
-      ]
-    },
-    {
-      "rank": 21,
-      "name": "El Dorado",
-      "neighborhood": "Downtown",
-      "cuisine_type": "Latin",
-      "price_range": "$$",
-      "score": 21,
-      "trending_reason": "Buzzing across 17 social posts from 0 creators. Newly spotted on instagram \u2014 one to watch.",
-      "platforms_active": [
-        "instagram"
-      ],
-      "sources": [
-        {
-          "platform": "instagram",
-          "url": "https://www.instagram.com/p/DVwigamE-Uk/",
-          "likes": 2
-        },
-        {
-          "platform": "instagram",
-          "url": "https://www.instagram.com/p/DVzC7OMk3WC/",
-          "likes": 2
-        },
-        {
-          "platform": "instagram",
-          "url": "https://www.instagram.com/p/DV1j6Djk70a/"
-        },
-        {
-          "platform": "instagram",
-          "url": "https://www.instagram.com/p/DN3j2Lj5KDC/",
-          "likes": 26
-        }
-      ]
-    },
-    {
-      "rank": 22,
-      "name": "Mariposas",
-      "neighborhood": "Mission District",
-      "cuisine_type": "Peruvian",
-      "price_range": "$$",
-      "score": 21,
-      "trending_reason": "Buzzing across 23 social posts from 0 creators. Multiple recent mentions building momentum on instagram.",
-      "platforms_active": [
-        "instagram"
-      ],
-      "sources": [
-        {
-          "platform": "instagram",
-          "url": "https://www.instagram.com/p/DVzFTGHk-Hp/"
-        },
-        {
-          "platform": "instagram",
-          "url": "https://www.instagram.com/p/DVjkWvOk5FF/",
-          "likes": 1
-        },
-        {
-          "platform": "instagram",
-          "url": "https://www.instagram.com/p/DV1vJcyE5Gm/"
-        },
-        {
-          "platform": "instagram",
-          "url": "https://www.instagram.com/p/DVhTGZzExIH/"
-        }
-      ]
-    },
-    {
-      "rank": 23,
+      "rank": 5,
       "name": "Sol Bakery",
       "neighborhood": "NoPa",
       "cuisine_type": "Bakery",
@@ -622,12 +135,133 @@
       ]
     },
     {
-      "rank": 24,
+      "rank": 6,
+      "name": "Bodega SF",
+      "neighborhood": "Tenderloin",
+      "cuisine_type": "Vietnamese",
+      "price_range": "$$$",
+      "score": 20,
+      "trending_reason": "Northern Vietnamese cuisine with unexpected creative touches.",
+      "platforms_active": [
+        "food_media",
+        "instagram"
+      ],
+      "sources": [
+        {
+          "platform": "food_media",
+          "url": "https://www.theinfatuation.com/san-francisco/guides/best-restaurants-in-san-francisco",
+          "label": "Infatuation Best 25"
+        },
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/p/DVPh7_2EXK_/",
+          "likes": 16
+        }
+      ]
+    },
+    {
+      "rank": 7,
+      "name": "The Thonglor",
+      "neighborhood": "Lower Nob Hill",
+      "cuisine_type": "Thai",
+      "price_range": "$$",
+      "score": 19,
+      "trending_reason": "Buzzing across 6 social posts from 0 creators. Outstanding pad thai at this intimate eight-table spot.",
+      "platforms_active": [
+        "food_media",
+        "instagram"
+      ],
+      "sources": [
+        {
+          "platform": "food_media",
+          "url": "https://www.theinfatuation.com/san-francisco/guides/best-restaurants-in-san-francisco",
+          "label": "Infatuation Best 25"
+        },
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/p/DVPtfS0kdrq/",
+          "likes": 1
+        }
+      ]
+    },
+    {
+      "rank": 8,
+      "name": "Yank Sing",
+      "neighborhood": "SoMa",
+      "cuisine_type": "Dim Sum",
+      "price_range": "$$$",
+      "score": 18,
+      "trending_reason": "Viral in 2026 \u2014 71,100 plays from 1 creator.",
+      "platforms_active": [
+        "instagram",
+        "tiktok"
+      ],
+      "sources": [
+        {
+          "platform": "tiktok",
+          "url": "https://www.tiktok.com/@eatwithnora/video/7592821966726237471",
+          "plays": 71100,
+          "likes": 6434
+        },
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/p/DVz2z3vlLfq/",
+          "likes": 1
+        }
+      ]
+    },
+    {
+      "rank": 9,
+      "name": "Ken",
+      "neighborhood": "Lower Haight",
+      "cuisine_type": "Japanese/Omakase",
+      "price_range": "$$$$",
+      "score": 18,
+      "trending_reason": "Seven-seat omakase counter, intimate party atmosphere.",
+      "platforms_active": [
+        "food_media",
+        "instagram"
+      ],
+      "sources": [
+        {
+          "platform": "food_media",
+          "url": "https://www.theinfatuation.com/san-francisco/guides/best-restaurants-in-san-francisco",
+          "label": "Infatuation Best 25"
+        },
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/p/DV1zngridsz/",
+          "likes": -1
+        }
+      ]
+    },
+    {
+      "rank": 10,
+      "name": "El Farolito",
+      "neighborhood": "Mission District",
+      "cuisine_type": "Mexican",
+      "price_range": "$",
+      "score": 16,
+      "trending_reason": "Viral in 2026 \u2014 259,400 plays from 1 creator.",
+      "platforms_active": [
+        "tiktok"
+      ],
+      "sources": [
+        {
+          "platform": "tiktok",
+          "url": "https://www.tiktok.com/@mattiasblanco/video/7595738580232768781",
+          "plays": 259400,
+          "likes": 30300
+        }
+      ]
+    },
+    {
+      "rank": 11,
       "name": "RT Bistro",
       "neighborhood": "Inner Sunset",
       "cuisine_type": "American/New",
       "price_range": "$$",
-      "score": 20,
+      "score": 16,
       "trending_reason": "Neighborhood bistro energy from the Rich Table team.",
       "platforms_active": [
         "food_media",
@@ -651,209 +285,13 @@
       ]
     },
     {
-      "rank": 25,
-      "name": "Woodhouse Fish Co.",
-      "neighborhood": "Castro/FiDi",
-      "cuisine_type": "Seafood",
-      "price_range": "$$",
-      "score": 17,
-      "trending_reason": "Going viral on TikTok \u2014 495,200 plays from 1 creator.",
-      "platforms_active": [
-        "tiktok"
-      ],
-      "sources": [
-        {
-          "platform": "tiktok",
-          "url": "https://www.tiktok.com/@allie.eats/video/7488844620655316266",
-          "plays": 495200,
-          "likes": 22800
-        }
-      ]
-    },
-    {
-      "rank": 26,
-      "name": "Original Joe's",
-      "neighborhood": "North Beach",
-      "cuisine_type": "Italian-American",
-      "price_range": "$$",
-      "score": 17,
-      "trending_reason": "Going viral on TikTok \u2014 319,400 plays from 1 creator.",
-      "platforms_active": [
-        "tiktok"
-      ],
-      "sources": [
-        {
-          "platform": "tiktok",
-          "url": "https://www.tiktok.com/@zarina.nawabi/video/7548186996255001887",
-          "plays": 319400,
-          "likes": 24600
-        }
-      ]
-    },
-    {
-      "rank": 27,
-      "name": "Takoyaki Yamachan",
-      "neighborhood": "Japantown",
-      "cuisine_type": "Japanese",
-      "price_range": "$",
-      "score": 17,
-      "trending_reason": "Featured in viral tiktok content \u2014 ~169,200 attributed plays.",
-      "platforms_active": [
-        "tiktok"
-      ],
-      "sources": [
-        {
-          "platform": "tiktok",
-          "url": "https://www.tiktok.com/@allie.eats/video/7566470646209776927",
-          "plays": 338400,
-          "likes": 29900
-        }
-      ]
-    },
-    {
-      "rank": 28,
-      "name": "Butter & Crumble",
-      "neighborhood": "North Beach",
-      "cuisine_type": "Bakery",
-      "price_range": "$$",
-      "score": 17,
-      "trending_reason": "Featured in viral tiktok content \u2014 ~115,200 attributed plays.",
-      "platforms_active": [
-        "tiktok"
-      ],
-      "sources": [
-        {
-          "platform": "tiktok",
-          "url": "https://www.tiktok.com/@beli_eats/video/7498542877870411054",
-          "plays": 576000,
-          "likes": 35700
-        }
-      ]
-    },
-    {
-      "rank": 29,
-      "name": "Tacos El Patron",
-      "neighborhood": "Mission District",
-      "cuisine_type": "Mexican",
-      "price_range": "$",
-      "score": 17,
-      "trending_reason": "Featured in viral tiktok content \u2014 ~115,200 attributed plays.",
-      "platforms_active": [
-        "tiktok"
-      ],
-      "sources": [
-        {
-          "platform": "tiktok",
-          "url": "https://www.tiktok.com/@beli_eats/video/7498542877870411054",
-          "plays": 576000,
-          "likes": 35700
-        }
-      ]
-    },
-    {
-      "rank": 30,
-      "name": "Sanhowon",
-      "neighborhood": "Mission District",
-      "cuisine_type": "Korean BBQ",
-      "price_range": "$$",
-      "score": 17,
-      "trending_reason": "Featured in viral tiktok content \u2014 ~115,200 attributed plays.",
-      "platforms_active": [
-        "tiktok"
-      ],
-      "sources": [
-        {
-          "platform": "tiktok",
-          "url": "https://www.tiktok.com/@beli_eats/video/7498542877870411054",
-          "plays": 576000,
-          "likes": 35700
-        }
-      ]
-    },
-    {
-      "rank": 31,
-      "name": "Breakfast Little",
-      "neighborhood": "Mission District",
-      "cuisine_type": "Brunch",
-      "price_range": "$",
-      "score": 17,
-      "trending_reason": "Building momentum on tiktok \u2014 37,300 plays across 1 posts.",
-      "platforms_active": [
-        "instagram",
-        "tiktok"
-      ],
-      "sources": [
-        {
-          "platform": "tiktok",
-          "url": "https://www.tiktok.com/@beli_eats/video/7563806731327900983",
-          "plays": 111900,
-          "likes": 6313
-        },
-        {
-          "platform": "instagram",
-          "url": "https://www.instagram.com/p/DU5_5Wbjjjr/",
-          "likes": -1
-        }
-      ]
-    },
-    {
-      "rank": 32,
-      "name": "Ken",
-      "neighborhood": "Lower Haight",
-      "cuisine_type": "Japanese/Omakase",
-      "price_range": "$$$$",
-      "score": 17,
-      "trending_reason": "Seven-seat omakase counter, intimate party atmosphere.",
-      "platforms_active": [
-        "food_media",
-        "instagram"
-      ],
-      "sources": [
-        {
-          "platform": "food_media",
-          "url": "https://www.theinfatuation.com/san-francisco/guides/best-restaurants-in-san-francisco",
-          "label": "Infatuation Best 25"
-        },
-        {
-          "platform": "instagram",
-          "url": "https://www.instagram.com/p/DV1zngridsz/",
-          "likes": -1
-        }
-      ]
-    },
-    {
-      "rank": 33,
-      "name": "Bodega SF",
-      "neighborhood": "Tenderloin",
-      "cuisine_type": "Vietnamese",
-      "price_range": "$$$",
-      "score": 17,
-      "trending_reason": "Northern Vietnamese cuisine with unexpected creative touches.",
-      "platforms_active": [
-        "food_media",
-        "instagram"
-      ],
-      "sources": [
-        {
-          "platform": "food_media",
-          "url": "https://www.theinfatuation.com/san-francisco/guides/best-restaurants-in-san-francisco",
-          "label": "Infatuation Best 25"
-        },
-        {
-          "platform": "instagram",
-          "url": "https://www.instagram.com/p/DVPh7_2EXK_/",
-          "likes": 16
-        }
-      ]
-    },
-    {
-      "rank": 34,
+      "rank": 12,
       "name": "Panchita's Pupuseria",
       "neighborhood": "Mission District",
       "cuisine_type": "Salvadoran",
       "price_range": "$",
       "score": 16,
-      "trending_reason": "Building momentum on tiktok \u2014 86,466 plays across 1 posts.",
+      "trending_reason": "Viral in 2026 \u2014 259,400 plays from 1 creator.",
       "platforms_active": [
         "tiktok"
       ],
@@ -867,79 +305,7 @@
       ]
     },
     {
-      "rank": 35,
-      "name": "Native Twins Coffee",
-      "neighborhood": "Pacific Heights",
-      "cuisine_type": "Cafe",
-      "price_range": "$$",
-      "score": 16,
-      "trending_reason": "Buzzing across 6 social posts from 0 creators. Multiple recent mentions building momentum on instagram.",
-      "platforms_active": [
-        "instagram"
-      ],
-      "sources": [
-        {
-          "platform": "instagram",
-          "url": "https://www.instagram.com/p/DV1NWkmAmph/",
-          "likes": 5
-        },
-        {
-          "platform": "instagram",
-          "url": "https://www.instagram.com/p/DV1NPtDAnzr/",
-          "likes": 15
-        },
-        {
-          "platform": "instagram",
-          "url": "https://www.instagram.com/p/DV1NGS-AqWv/",
-          "likes": 8
-        }
-      ]
-    },
-    {
-      "rank": 36,
-      "name": "Itria",
-      "neighborhood": "Mission District",
-      "cuisine_type": "Italian",
-      "price_range": "$$$",
-      "score": 16,
-      "trending_reason": "Buzzing across 8 social posts from 0 creators. Newly spotted on instagram \u2014 one to watch.",
-      "platforms_active": [
-        "instagram"
-      ],
-      "sources": [
-        {
-          "platform": "instagram",
-          "url": "https://www.instagram.com/p/DVwtPNcgWgT/"
-        },
-        {
-          "platform": "instagram",
-          "url": "https://www.instagram.com/p/DVwtyeDAcec/",
-          "likes": 13
-        }
-      ]
-    },
-    {
-      "rank": 37,
-      "name": "Al Carajo",
-      "neighborhood": "Mission District",
-      "cuisine_type": "Mexican",
-      "price_range": "$",
-      "score": 15,
-      "trending_reason": "Building momentum on tiktok \u2014 37,300 plays across 1 posts.",
-      "platforms_active": [
-        "tiktok"
-      ],
-      "sources": [
-        {
-          "platform": "tiktok",
-          "url": "https://www.tiktok.com/@beli_eats/video/7563806731327900983",
-          "plays": 111900,
-          "likes": 6313
-        }
-      ]
-    },
-    {
-      "rank": 38,
+      "rank": 13,
       "name": "Noodle In A Haystack",
       "neighborhood": "Richmond",
       "cuisine_type": "Japanese",
@@ -958,7 +324,7 @@
       ]
     },
     {
-      "rank": 39,
+      "rank": 14,
       "name": "San Ho Won",
       "neighborhood": "Mission District",
       "cuisine_type": "Korean",
@@ -977,7 +343,7 @@
       ]
     },
     {
-      "rank": 40,
+      "rank": 15,
       "name": "Showa Le Gourmet Tonkatsu",
       "neighborhood": "SoMa",
       "cuisine_type": "Japanese",
@@ -996,7 +362,7 @@
       ]
     },
     {
-      "rank": 41,
+      "rank": 16,
       "name": "Mandalay",
       "neighborhood": "Richmond",
       "cuisine_type": "Burmese",
@@ -1015,7 +381,7 @@
       ]
     },
     {
-      "rank": 42,
+      "rank": 17,
       "name": "Californios",
       "neighborhood": "SoMa",
       "cuisine_type": "Mexican Fine Dining",
@@ -1034,7 +400,7 @@
       ]
     },
     {
-      "rank": 43,
+      "rank": 18,
       "name": "Flour + Water",
       "neighborhood": "Mission District",
       "cuisine_type": "Italian/Pasta",
@@ -1053,7 +419,7 @@
       ]
     },
     {
-      "rank": 44,
+      "rank": 19,
       "name": "Verjus",
       "neighborhood": "Jackson Square",
       "cuisine_type": "French",
@@ -1072,7 +438,7 @@
       ]
     },
     {
-      "rank": 45,
+      "rank": 20,
       "name": "Yuanbao Jiaozi",
       "neighborhood": "Sunset",
       "cuisine_type": "Chinese/Dumplings",
@@ -1091,7 +457,7 @@
       ]
     },
     {
-      "rank": 46,
+      "rank": 21,
       "name": "Nari",
       "neighborhood": "Japantown",
       "cuisine_type": "Thai",
@@ -1110,7 +476,7 @@
       ]
     },
     {
-      "rank": 47,
+      "rank": 22,
       "name": "Good Mong Kok",
       "neighborhood": "Chinatown",
       "cuisine_type": "Dim Sum",
@@ -1129,7 +495,7 @@
       ]
     },
     {
-      "rank": 48,
+      "rank": 23,
       "name": "Beit Rima",
       "neighborhood": "Duboce Triangle",
       "cuisine_type": "Palestinian",
@@ -1148,7 +514,7 @@
       ]
     },
     {
-      "rank": 49,
+      "rank": 24,
       "name": "Outta Sight Pizza",
       "neighborhood": "Tenderloin",
       "cuisine_type": "Pizza",
@@ -1167,7 +533,7 @@
       ]
     },
     {
-      "rank": 50,
+      "rank": 25,
       "name": "Niku Steakhouse",
       "neighborhood": "SoMa",
       "cuisine_type": "Japanese/Steak",
@@ -1186,7 +552,33 @@
       ]
     },
     {
-      "rank": 51,
+      "rank": 26,
+      "name": "Hamburguesa Bar",
+      "neighborhood": "SoMa",
+      "cuisine_type": "Burgers",
+      "price_range": "$",
+      "score": 14,
+      "trending_reason": "Active on social media \u2014 3,242 plays.",
+      "platforms_active": [
+        "instagram",
+        "tiktok"
+      ],
+      "sources": [
+        {
+          "platform": "tiktok",
+          "url": "https://www.tiktok.com/@franksbites/video/7613235985685482782",
+          "plays": 3242,
+          "likes": 91
+        },
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/p/DU5_5Wbjjjr/",
+          "likes": -1
+        }
+      ]
+    },
+    {
+      "rank": 27,
       "name": "The Big Four",
       "neighborhood": "Nob Hill",
       "cuisine_type": "American Fine Dining",
@@ -1220,7 +612,7 @@
       ]
     },
     {
-      "rank": 52,
+      "rank": 28,
       "name": "Saigonese Caf\u00e9",
       "neighborhood": "Embarcadero",
       "cuisine_type": "Vietnamese",
@@ -1239,7 +631,7 @@
       ]
     },
     {
-      "rank": 53,
+      "rank": 29,
       "name": "Izzy & Wooks",
       "neighborhood": "SoMa",
       "cuisine_type": "Filipino",
@@ -1258,7 +650,7 @@
       ]
     },
     {
-      "rank": 54,
+      "rank": 30,
       "name": "Aji Kiji",
       "neighborhood": "Financial District",
       "cuisine_type": "Japanese/Sushi",
@@ -1277,7 +669,7 @@
       ]
     },
     {
-      "rank": 55,
+      "rank": 31,
       "name": "Sora Soba Dining",
       "neighborhood": "Japantown",
       "cuisine_type": "Japanese",
@@ -1296,7 +688,7 @@
       ]
     },
     {
-      "rank": 56,
+      "rank": 32,
       "name": "Restaurant Naides",
       "neighborhood": "Nob Hill",
       "cuisine_type": "Filipino Fine Dining",
@@ -1315,7 +707,7 @@
       ]
     },
     {
-      "rank": 57,
+      "rank": 33,
       "name": "Arquet",
       "neighborhood": "Embarcadero",
       "cuisine_type": "American",
@@ -1334,7 +726,7 @@
       ]
     },
     {
-      "rank": 58,
+      "rank": 34,
       "name": "The Happy Crane",
       "neighborhood": "Hayes Valley",
       "cuisine_type": "Chinese",
@@ -1353,7 +745,7 @@
       ]
     },
     {
-      "rank": 59,
+      "rank": 35,
       "name": "Jules",
       "neighborhood": "Lower Haight",
       "cuisine_type": "Pizza",
@@ -1372,459 +764,12 @@
       ]
     },
     {
-      "rank": 60,
-      "name": "Delicious Dim Sum",
-      "neighborhood": "Chinatown",
-      "cuisine_type": "Chinese",
-      "price_range": "$",
-      "score": 10,
-      "trending_reason": "SF staple with steady social media presence. 1,527 TikTok plays across 1 posts.",
-      "platforms_active": [
-        "tiktok"
-      ],
-      "sources": [
-        {
-          "platform": "tiktok",
-          "url": "https://www.tiktok.com/@vandili607/video/7611995829779451166",
-          "plays": 1527,
-          "likes": 69
-        }
-      ]
-    },
-    {
-      "rank": 61,
-      "name": "Saigon Sandwich",
-      "neighborhood": "Tenderloin",
-      "cuisine_type": "Vietnamese",
-      "price_range": "$",
-      "score": 10,
-      "trending_reason": "SF staple with steady social media presence. 1,527 TikTok plays across 1 posts.",
-      "platforms_active": [
-        "tiktok"
-      ],
-      "sources": [
-        {
-          "platform": "tiktok",
-          "url": "https://www.tiktok.com/@vandili607/video/7611995829779451166",
-          "plays": 1527,
-          "likes": 69
-        }
-      ]
-    },
-    {
-      "rank": 62,
-      "name": "Mister Jiu's",
-      "neighborhood": "Chinatown",
-      "cuisine_type": "Chinese Fine Dining",
-      "price_range": "$$$$",
-      "score": 10,
-      "trending_reason": "Groundbreaking fine-dining Chinese in a historic Chinatown banquet hall.",
-      "platforms_active": [
-        "food_media"
-      ],
-      "sources": [
-        {
-          "platform": "food_media",
-          "url": "https://blog.resy.com/the-hit-list/sf-restaurants/",
-          "label": "Resy Hit List"
-        }
-      ]
-    },
-    {
-      "rank": 63,
-      "name": "Azalina's",
-      "neighborhood": "Tenderloin",
-      "cuisine_type": "Malaysian",
-      "price_range": "$$$",
-      "score": 10,
-      "trending_reason": "Elevated Malaysian street food tasting menu.",
-      "platforms_active": [
-        "food_media"
-      ],
-      "sources": [
-        {
-          "platform": "food_media",
-          "url": "https://blog.resy.com/the-hit-list/sf-restaurants/",
-          "label": "Resy Hit List"
-        }
-      ]
-    },
-    {
-      "rank": 64,
-      "name": "Maritime Boat Club",
-      "neighborhood": "Embarcadero",
-      "cuisine_type": "Seafood",
-      "price_range": "$$$",
-      "score": 10,
-      "trending_reason": "Inventive seafood from a former Quince/Atelier Crenn chef.",
-      "platforms_active": [
-        "food_media"
-      ],
-      "sources": [
-        {
-          "platform": "food_media",
-          "url": "https://blog.resy.com/the-hit-list/sf-restaurants/",
-          "label": "Resy Hit List"
-        }
-      ]
-    },
-    {
-      "rank": 65,
-      "name": "Collina",
-      "neighborhood": "Nob Hill",
-      "cuisine_type": "Italian/Pasta",
-      "price_range": "$$",
-      "score": 10,
-      "trending_reason": "Date-night pasta with lasagnette and raviolo al uovo.",
-      "platforms_active": [
-        "food_media"
-      ],
-      "sources": [
-        {
-          "platform": "food_media",
-          "url": "https://blog.resy.com/the-hit-list/sf-restaurants/",
-          "label": "Resy Hit List"
-        }
-      ]
-    },
-    {
-      "rank": 66,
-      "name": "Outerlands",
-      "neighborhood": "Outer Sunset",
-      "cuisine_type": "Californian",
-      "price_range": "$$",
-      "score": 10,
-      "trending_reason": "Inventive dishes under new chef Brenda Landa.",
-      "platforms_active": [
-        "food_media"
-      ],
-      "sources": [
-        {
-          "platform": "food_media",
-          "url": "https://blog.resy.com/the-hit-list/sf-restaurants/",
-          "label": "Resy Hit List"
-        }
-      ]
-    },
-    {
-      "rank": 67,
-      "name": "Shuggie's",
-      "neighborhood": "Mission District",
-      "cuisine_type": "Californian",
-      "price_range": "$$",
-      "score": 10,
-      "trending_reason": "Most environmentally conscious restaurant \u2014 creative food waste cuisine.",
-      "platforms_active": [
-        "food_media"
-      ],
-      "sources": [
-        {
-          "platform": "food_media",
-          "url": "https://blog.resy.com/the-hit-list/sf-restaurants/",
-          "label": "Resy Hit List"
-        }
-      ]
-    },
-    {
-      "rank": 68,
-      "name": "The Morris",
-      "neighborhood": "Mission District",
-      "cuisine_type": "American",
-      "price_range": "$$$",
-      "score": 10,
-      "trending_reason": "James Beard-nominated beverage program, smoked duck, creative desserts.",
-      "platforms_active": [
-        "food_media"
-      ],
-      "sources": [
-        {
-          "platform": "food_media",
-          "url": "https://blog.resy.com/the-hit-list/sf-restaurants/",
-          "label": "Resy Hit List"
-        }
-      ]
-    },
-    {
-      "rank": 69,
-      "name": "Prik Hom",
-      "neighborhood": "Jordan Park",
-      "cuisine_type": "Thai",
-      "price_range": "$$$",
-      "score": 10,
-      "trending_reason": "Regional Thai cuisine inspired by fine-dining kitchens.",
-      "platforms_active": [
-        "food_media"
-      ],
-      "sources": [
-        {
-          "platform": "food_media",
-          "url": "https://blog.resy.com/the-hit-list/sf-restaurants/",
-          "label": "Resy Hit List"
-        }
-      ]
-    },
-    {
-      "rank": 70,
-      "name": "Pearl 6101",
-      "neighborhood": "Richmond",
-      "cuisine_type": "Italian/Seafood",
-      "price_range": "$$$",
-      "score": 10,
-      "trending_reason": "Your favorite chef's favorite restaurant \u2014 classic seafood-focused Italian.",
-      "platforms_active": [
-        "food_media"
-      ],
-      "sources": [
-        {
-          "platform": "food_media",
-          "url": "https://blog.resy.com/the-hit-list/sf-restaurants/",
-          "label": "Resy Hit List"
-        }
-      ]
-    },
-    {
-      "rank": 71,
-      "name": "FiRE + iCE",
-      "neighborhood": "Fisherman's Wharf",
-      "cuisine_type": "Interactive Grill",
-      "price_range": "$$",
-      "score": 10,
-      "trending_reason": "Build-your-own bowl cooked on a massive steel grill \u2014 TikTok showstopper.",
-      "platforms_active": [
-        "food_media"
-      ],
-      "sources": [
-        {
-          "platform": "food_media",
-          "url": "https://www.tiktok.com/discover/fire-ice-restaurant-in-san-francisco",
-          "label": "TikTok Viral"
-        }
-      ]
-    },
-    {
-      "rank": 72,
-      "name": "Avery",
-      "neighborhood": "Mission District",
-      "cuisine_type": "American Fine Dining",
-      "price_range": "$$$$",
-      "score": 10,
-      "trending_reason": "Michelin one-star with $258 tasting menu \u2014 caviar and wagyu.",
-      "platforms_active": [
-        "food_media"
-      ],
-      "sources": [
-        {
-          "platform": "food_media",
-          "url": "https://www.theinfatuation.com/san-francisco/guides/best-restaurants-in-san-francisco",
-          "label": "Infatuation"
-        }
-      ]
-    },
-    {
-      "rank": 73,
-      "name": "Sotto Mare",
-      "neighborhood": "North Beach",
-      "cuisine_type": "Seafood/Italian",
-      "price_range": "$$",
-      "score": 10,
-      "trending_reason": "Legendary crab cioppino \u2014 a dish that originated in SF.",
-      "platforms_active": [
-        "food_media"
-      ],
-      "sources": [
-        {
-          "platform": "food_media",
-          "url": "https://blog.resy.com/the-hit-list/sf-restaurants/",
-          "label": "Resy"
-        }
-      ]
-    },
-    {
-      "rank": 74,
-      "name": "Merchant Roots",
-      "neighborhood": "Mission District",
-      "cuisine_type": "American",
-      "price_range": "$$$$",
-      "score": 10,
-      "trending_reason": "15-course tasting menu dedicated to eggs \u2014 Humpty Dumpty themed.",
-      "platforms_active": [
-        "food_media"
-      ],
-      "sources": [
-        {
-          "platform": "food_media",
-          "url": "https://blog.resy.com/the-hit-list/sf-restaurants/",
-          "label": "Resy"
-        }
-      ]
-    },
-    {
-      "rank": 75,
-      "name": "Blue Plate",
-      "neighborhood": "Mission District",
-      "cuisine_type": "American/New",
-      "price_range": "$$",
-      "score": 10,
-      "trending_reason": "Buzzing across 3 social posts from 0 creators. Newly spotted on instagram \u2014 one to watch.",
-      "platforms_active": [
-        "instagram"
-      ],
-      "sources": [
-        {
-          "platform": "instagram",
-          "url": "https://www.instagram.com/p/DVmtZFSji4p/",
-          "likes": 152
-        }
-      ]
-    },
-    {
-      "rank": 76,
-      "name": "Florio",
-      "neighborhood": "Pacific Heights",
-      "cuisine_type": "Italian/French",
-      "price_range": "$$$",
-      "score": 10,
-      "trending_reason": "Buzzing across 3 social posts from 0 creators. Multiple recent mentions building momentum on instagram.",
-      "platforms_active": [
-        "instagram"
-      ],
-      "sources": [
-        {
-          "platform": "instagram",
-          "url": "https://www.instagram.com/p/DVzn5Ariu1k/",
-          "likes": 4
-        },
-        {
-          "platform": "instagram",
-          "url": "https://www.instagram.com/p/DVw2Cw7AZio/",
-          "likes": 13
-        }
-      ]
-    },
-    {
-      "rank": 77,
-      "name": "Bao Bao Dumpling",
-      "neighborhood": "Inner Richmond",
-      "cuisine_type": "Chinese",
-      "price_range": "$",
-      "score": 10,
-      "trending_reason": "Buzzing across 5 social posts from 0 creators. Newly spotted on instagram \u2014 one to watch.",
-      "platforms_active": [
-        "instagram"
-      ],
-      "sources": [
-        {
-          "platform": "instagram",
-          "url": "https://www.instagram.com/p/DVzSJrpEkib/"
-        },
-        {
-          "platform": "instagram",
-          "url": "https://www.instagram.com/p/DVzR0zEEn1M/"
-        }
-      ]
-    },
-    {
-      "rank": 78,
-      "name": "Bosco",
-      "neighborhood": "North Beach",
-      "cuisine_type": "Italian",
-      "price_range": "$$$",
-      "score": 9,
-      "trending_reason": "Buzzing across 3 social posts from 0 creators. Newly spotted on instagram \u2014 one to watch.",
-      "platforms_active": [
-        "instagram"
-      ],
-      "sources": [
-        {
-          "platform": "instagram",
-          "url": "https://www.instagram.com/p/DVj4cu4gfU3/",
-          "likes": 17
-        }
-      ]
-    },
-    {
-      "rank": 79,
-      "name": "Rose Pizzeria",
-      "neighborhood": "Richmond",
-      "cuisine_type": "Pizza",
-      "price_range": "$$",
-      "score": 8,
-      "trending_reason": "New pizza spot with standout Old Faithful pie.",
-      "platforms_active": [
-        "food_media"
-      ],
-      "sources": [
-        {
-          "platform": "food_media",
-          "url": "https://www.theinfatuation.com/san-francisco/guides/san-francisco-spring-restaurant-openings-2026",
-          "label": "Infatuation Spring"
-        }
-      ]
-    },
-    {
-      "rank": 80,
-      "name": "Maillards",
-      "neighborhood": "Outer Sunset",
-      "cuisine_type": "Burgers",
-      "price_range": "$",
-      "score": 8,
-      "trending_reason": "New burger joint in the Sunset.",
-      "platforms_active": [
-        "food_media"
-      ],
-      "sources": [
-        {
-          "platform": "food_media",
-          "url": "https://www.theinfatuation.com/san-francisco/guides/san-francisco-spring-restaurant-openings-2026",
-          "label": "Infatuation Spring"
-        }
-      ]
-    },
-    {
-      "rank": 81,
-      "name": "Bar Coto",
-      "neighborhood": "Jackson Square",
-      "cuisine_type": "Italian/Cafe",
-      "price_range": "$$",
-      "score": 8,
-      "trending_reason": "All-day cafe from the Cotogna team.",
-      "platforms_active": [
-        "food_media"
-      ],
-      "sources": [
-        {
-          "platform": "food_media",
-          "url": "https://www.theinfatuation.com/san-francisco/guides/san-francisco-spring-restaurant-openings-2026",
-          "label": "Infatuation Spring"
-        }
-      ]
-    },
-    {
-      "rank": 82,
-      "name": "Tur",
-      "neighborhood": "West Portal",
-      "cuisine_type": "Thai",
-      "price_range": "$$",
-      "score": 8,
-      "trending_reason": "New Thai restaurant in West Portal.",
-      "platforms_active": [
-        "food_media"
-      ],
-      "sources": [
-        {
-          "platform": "food_media",
-          "url": "https://www.theinfatuation.com/san-francisco/guides/san-francisco-spring-restaurant-openings-2026",
-          "label": "Infatuation Spring"
-        }
-      ]
-    },
-    {
-      "rank": 83,
+      "rank": 36,
       "name": "Le Soleil",
       "neighborhood": "Stonestown",
       "cuisine_type": "Vietnamese",
       "price_range": "$$",
-      "score": 8,
+      "score": 11,
       "trending_reason": "One of the best sit-down lunch spots around Stonestown.",
       "platforms_active": [
         "food_media",
@@ -1844,50 +789,433 @@
       ]
     },
     {
-      "rank": 84,
-      "name": "Thai House Express",
-      "neighborhood": "Castro",
-      "cuisine_type": "Thai",
-      "price_range": "$$",
-      "score": 8,
-      "trending_reason": "Buzzing across 3 social posts from 0 creators. Newly spotted on instagram \u2014 one to watch.",
+      "rank": 37,
+      "name": "Dragon Eats",
+      "neighborhood": "Hayes Valley",
+      "cuisine_type": "Chinese",
+      "price_range": "$",
+      "score": 10,
+      "trending_reason": "Active on social media \u2014 1,527 plays.",
       "platforms_active": [
-        "instagram"
+        "tiktok"
       ],
       "sources": [
         {
-          "platform": "instagram",
-          "url": "https://www.instagram.com/p/DV1mLijFMVP/",
-          "likes": 7
+          "platform": "tiktok",
+          "url": "https://www.tiktok.com/@vandili607/video/7611995829779451166",
+          "plays": 1527,
+          "likes": 69
         }
       ]
     },
     {
-      "rank": 85,
-      "name": "Hedge Coffee",
-      "neighborhood": "SoMa",
-      "cuisine_type": "Cafe",
+      "rank": 38,
+      "name": "Delicious Dim Sum",
+      "neighborhood": "Chinatown",
+      "cuisine_type": "Chinese",
+      "price_range": "$",
+      "score": 10,
+      "trending_reason": "Active on social media \u2014 1,527 plays.",
+      "platforms_active": [
+        "tiktok"
+      ],
+      "sources": [
+        {
+          "platform": "tiktok",
+          "url": "https://www.tiktok.com/@vandili607/video/7611995829779451166",
+          "plays": 1527,
+          "likes": 69
+        }
+      ]
+    },
+    {
+      "rank": 39,
+      "name": "Saigon Sandwich",
+      "neighborhood": "Tenderloin",
+      "cuisine_type": "Vietnamese",
+      "price_range": "$",
+      "score": 10,
+      "trending_reason": "Active on social media \u2014 1,527 plays.",
+      "platforms_active": [
+        "tiktok"
+      ],
+      "sources": [
+        {
+          "platform": "tiktok",
+          "url": "https://www.tiktok.com/@vandili607/video/7611995829779451166",
+          "plays": 1527,
+          "likes": 69
+        }
+      ]
+    },
+    {
+      "rank": 40,
+      "name": "Mister Jiu's",
+      "neighborhood": "Chinatown",
+      "cuisine_type": "Chinese Fine Dining",
+      "price_range": "$$$$",
+      "score": 10,
+      "trending_reason": "Groundbreaking fine-dining Chinese in a historic Chinatown banquet hall.",
+      "platforms_active": [
+        "food_media"
+      ],
+      "sources": [
+        {
+          "platform": "food_media",
+          "url": "https://blog.resy.com/the-hit-list/sf-restaurants/",
+          "label": "Resy Hit List"
+        }
+      ]
+    },
+    {
+      "rank": 41,
+      "name": "Azalina's",
+      "neighborhood": "Tenderloin",
+      "cuisine_type": "Malaysian",
+      "price_range": "$$$",
+      "score": 10,
+      "trending_reason": "Elevated Malaysian street food tasting menu.",
+      "platforms_active": [
+        "food_media"
+      ],
+      "sources": [
+        {
+          "platform": "food_media",
+          "url": "https://blog.resy.com/the-hit-list/sf-restaurants/",
+          "label": "Resy Hit List"
+        }
+      ]
+    },
+    {
+      "rank": 42,
+      "name": "Maritime Boat Club",
+      "neighborhood": "Embarcadero",
+      "cuisine_type": "Seafood",
+      "price_range": "$$$",
+      "score": 10,
+      "trending_reason": "Inventive seafood from a former Quince/Atelier Crenn chef.",
+      "platforms_active": [
+        "food_media"
+      ],
+      "sources": [
+        {
+          "platform": "food_media",
+          "url": "https://blog.resy.com/the-hit-list/sf-restaurants/",
+          "label": "Resy Hit List"
+        }
+      ]
+    },
+    {
+      "rank": 43,
+      "name": "Collina",
+      "neighborhood": "Nob Hill",
+      "cuisine_type": "Italian/Pasta",
       "price_range": "$$",
-      "score": 8,
-      "trending_reason": "Buzzing across 3 social posts from 0 creators. Multiple recent mentions building momentum on instagram.",
+      "score": 10,
+      "trending_reason": "Date-night pasta with lasagnette and raviolo al uovo.",
+      "platforms_active": [
+        "food_media"
+      ],
+      "sources": [
+        {
+          "platform": "food_media",
+          "url": "https://blog.resy.com/the-hit-list/sf-restaurants/",
+          "label": "Resy Hit List"
+        }
+      ]
+    },
+    {
+      "rank": 44,
+      "name": "Outerlands",
+      "neighborhood": "Outer Sunset",
+      "cuisine_type": "Californian",
+      "price_range": "$$",
+      "score": 10,
+      "trending_reason": "Inventive dishes under new chef Brenda Landa.",
+      "platforms_active": [
+        "food_media"
+      ],
+      "sources": [
+        {
+          "platform": "food_media",
+          "url": "https://blog.resy.com/the-hit-list/sf-restaurants/",
+          "label": "Resy Hit List"
+        }
+      ]
+    },
+    {
+      "rank": 45,
+      "name": "Shuggie's",
+      "neighborhood": "Mission District",
+      "cuisine_type": "Californian",
+      "price_range": "$$",
+      "score": 10,
+      "trending_reason": "Most environmentally conscious restaurant \u2014 creative food waste cuisine.",
+      "platforms_active": [
+        "food_media"
+      ],
+      "sources": [
+        {
+          "platform": "food_media",
+          "url": "https://blog.resy.com/the-hit-list/sf-restaurants/",
+          "label": "Resy Hit List"
+        }
+      ]
+    },
+    {
+      "rank": 46,
+      "name": "The Morris",
+      "neighborhood": "Mission District",
+      "cuisine_type": "American",
+      "price_range": "$$$",
+      "score": 10,
+      "trending_reason": "James Beard-nominated beverage program, smoked duck, creative desserts.",
+      "platforms_active": [
+        "food_media"
+      ],
+      "sources": [
+        {
+          "platform": "food_media",
+          "url": "https://blog.resy.com/the-hit-list/sf-restaurants/",
+          "label": "Resy Hit List"
+        }
+      ]
+    },
+    {
+      "rank": 47,
+      "name": "Prik Hom",
+      "neighborhood": "Jordan Park",
+      "cuisine_type": "Thai",
+      "price_range": "$$$",
+      "score": 10,
+      "trending_reason": "Regional Thai cuisine inspired by fine-dining kitchens.",
+      "platforms_active": [
+        "food_media"
+      ],
+      "sources": [
+        {
+          "platform": "food_media",
+          "url": "https://blog.resy.com/the-hit-list/sf-restaurants/",
+          "label": "Resy Hit List"
+        }
+      ]
+    },
+    {
+      "rank": 48,
+      "name": "Pearl 6101",
+      "neighborhood": "Richmond",
+      "cuisine_type": "Italian/Seafood",
+      "price_range": "$$$",
+      "score": 10,
+      "trending_reason": "Your favorite chef's favorite restaurant \u2014 classic seafood-focused Italian.",
+      "platforms_active": [
+        "food_media"
+      ],
+      "sources": [
+        {
+          "platform": "food_media",
+          "url": "https://blog.resy.com/the-hit-list/sf-restaurants/",
+          "label": "Resy Hit List"
+        }
+      ]
+    },
+    {
+      "rank": 49,
+      "name": "FiRE + iCE",
+      "neighborhood": "Fisherman's Wharf",
+      "cuisine_type": "Interactive Grill",
+      "price_range": "$$",
+      "score": 10,
+      "trending_reason": "Build-your-own bowl cooked on a massive steel grill \u2014 TikTok showstopper.",
+      "platforms_active": [
+        "food_media"
+      ],
+      "sources": [
+        {
+          "platform": "food_media",
+          "url": "https://www.tiktok.com/discover/fire-ice-restaurant-in-san-francisco",
+          "label": "TikTok Viral"
+        }
+      ]
+    },
+    {
+      "rank": 50,
+      "name": "Sotto Mare",
+      "neighborhood": "North Beach",
+      "cuisine_type": "Seafood/Italian",
+      "price_range": "$$",
+      "score": 10,
+      "trending_reason": "Legendary crab cioppino \u2014 a dish that originated in SF.",
+      "platforms_active": [
+        "food_media"
+      ],
+      "sources": [
+        {
+          "platform": "food_media",
+          "url": "https://blog.resy.com/the-hit-list/sf-restaurants/",
+          "label": "Resy"
+        }
+      ]
+    },
+    {
+      "rank": 51,
+      "name": "Merchant Roots",
+      "neighborhood": "Mission District",
+      "cuisine_type": "American",
+      "price_range": "$$$$",
+      "score": 10,
+      "trending_reason": "15-course tasting menu dedicated to eggs \u2014 Humpty Dumpty themed.",
+      "platforms_active": [
+        "food_media"
+      ],
+      "sources": [
+        {
+          "platform": "food_media",
+          "url": "https://blog.resy.com/the-hit-list/sf-restaurants/",
+          "label": "Resy"
+        }
+      ]
+    },
+    {
+      "rank": 52,
+      "name": "Kahnfections",
+      "neighborhood": "SoMa",
+      "cuisine_type": "Bakery",
+      "price_range": "$$",
+      "score": 9,
+      "trending_reason": "Buzzing across 9 social posts from 0 creators. Multiple recent mentions building momentum on instagram.",
       "platforms_active": [
         "instagram"
       ],
       "sources": [
         {
           "platform": "instagram",
-          "url": "https://www.instagram.com/p/DVrLgqIjyVH/",
-          "likes": 2
+          "url": "https://www.instagram.com/p/DVmWYiXgbXI/",
+          "likes": 6
         },
         {
           "platform": "instagram",
-          "url": "https://www.instagram.com/p/DVm9RbjlCda/",
-          "likes": 2
+          "url": "https://www.instagram.com/p/DVv5d_HktDA/",
+          "likes": 258
+        },
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/p/DVt7OfbEiSd/"
+        },
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/p/DVtsc37j0ci/",
+          "likes": 19
         }
       ]
     },
     {
-      "rank": 86,
+      "rank": 53,
+      "name": "Rose Pizzeria",
+      "neighborhood": "Richmond",
+      "cuisine_type": "Pizza",
+      "price_range": "$$",
+      "score": 8,
+      "trending_reason": "New pizza spot with standout Old Faithful pie.",
+      "platforms_active": [
+        "food_media"
+      ],
+      "sources": [
+        {
+          "platform": "food_media",
+          "url": "https://www.theinfatuation.com/san-francisco/guides/san-francisco-spring-restaurant-openings-2026",
+          "label": "Infatuation Spring"
+        }
+      ]
+    },
+    {
+      "rank": 54,
+      "name": "Maillards",
+      "neighborhood": "Outer Sunset",
+      "cuisine_type": "Burgers",
+      "price_range": "$",
+      "score": 8,
+      "trending_reason": "New burger joint in the Sunset.",
+      "platforms_active": [
+        "food_media"
+      ],
+      "sources": [
+        {
+          "platform": "food_media",
+          "url": "https://www.theinfatuation.com/san-francisco/guides/san-francisco-spring-restaurant-openings-2026",
+          "label": "Infatuation Spring"
+        }
+      ]
+    },
+    {
+      "rank": 55,
+      "name": "Bar Coto",
+      "neighborhood": "Jackson Square",
+      "cuisine_type": "Italian/Cafe",
+      "price_range": "$$",
+      "score": 8,
+      "trending_reason": "All-day cafe from the Cotogna team.",
+      "platforms_active": [
+        "food_media"
+      ],
+      "sources": [
+        {
+          "platform": "food_media",
+          "url": "https://www.theinfatuation.com/san-francisco/guides/san-francisco-spring-restaurant-openings-2026",
+          "label": "Infatuation Spring"
+        }
+      ]
+    },
+    {
+      "rank": 56,
+      "name": "Tur",
+      "neighborhood": "West Portal",
+      "cuisine_type": "Thai",
+      "price_range": "$$",
+      "score": 8,
+      "trending_reason": "New Thai restaurant in West Portal.",
+      "platforms_active": [
+        "food_media"
+      ],
+      "sources": [
+        {
+          "platform": "food_media",
+          "url": "https://www.theinfatuation.com/san-francisco/guides/san-francisco-spring-restaurant-openings-2026",
+          "label": "Infatuation Spring"
+        }
+      ]
+    },
+    {
+      "rank": 57,
+      "name": "Paper Son Coffee",
+      "neighborhood": "SoMa",
+      "cuisine_type": "Cafe",
+      "price_range": "$$",
+      "score": 7,
+      "trending_reason": "Buzzing across 16 social posts from 0 creators. Multiple recent mentions building momentum on instagram.",
+      "platforms_active": [
+        "instagram"
+      ],
+      "sources": [
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/p/DVwAt1KAi7s/",
+          "likes": 14
+        },
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/p/DVwApz3AoaZ/",
+          "likes": 22
+        },
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/p/DVwAcx7gtOX/",
+          "likes": 12
+        }
+      ]
+    },
+    {
+      "rank": 58,
       "name": "Clementina",
       "neighborhood": "Richmond",
       "cuisine_type": "Italian",
@@ -1906,45 +1234,99 @@
       ]
     },
     {
-      "rank": 87,
-      "name": "The Front Porch",
-      "neighborhood": "Bernal Heights",
-      "cuisine_type": "Southern",
+      "rank": 59,
+      "name": "Bette's",
+      "neighborhood": "FiDi",
+      "cuisine_type": "American",
       "price_range": "$$",
-      "score": 7,
-      "trending_reason": "Newly spotted on instagram \u2014 one to watch.",
+      "score": 6,
+      "trending_reason": "Viral on instagram, tiktok \u2014 967,600 plays from 2 creators. Going viral on TikTok \u2014 472,400 plays from 1 creator.",
       "platforms_active": [
         "instagram"
       ],
       "sources": [
         {
           "platform": "instagram",
-          "url": "https://www.instagram.com/p/DVxSQS8jimt/",
-          "likes": 51
+          "url": "https://www.instagram.com/p/DVv5cVRlMai/",
+          "likes": -1
+        },
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/p/DV1NPtDAnzr/",
+          "likes": 15
+        },
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/p/DViGMM3D7hT/",
+          "likes": 44
+        },
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/p/DV15qJJEum3/",
+          "likes": 1
         }
       ]
     },
     {
-      "rank": 88,
-      "name": "Q Specialty Coffee",
-      "neighborhood": "Inner Richmond",
+      "rank": 60,
+      "name": "The Fold Cafe",
+      "neighborhood": "Mission District",
       "cuisine_type": "Cafe",
       "price_range": "$$",
-      "score": 7,
-      "trending_reason": "Buzzing across 3 social posts from 0 creators. Newly spotted on instagram \u2014 one to watch.",
+      "score": 6,
+      "trending_reason": "Buzzing across 10 social posts from 0 creators. Newly spotted on instagram \u2014 one to watch.",
       "platforms_active": [
         "instagram"
       ],
       "sources": [
         {
           "platform": "instagram",
-          "url": "https://www.instagram.com/p/DVhmqK4CfFj/",
-          "likes": 4
+          "url": "https://www.instagram.com/p/DVeBJJFERGR/",
+          "likes": 22
+        },
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/p/DVeBO9WkRIE/",
+          "likes": 6
+        },
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/p/DVeBCYGkWLj/",
+          "likes": 8
         }
       ]
     },
     {
-      "rank": 89,
+      "rank": 61,
+      "name": "Native Twins Coffee",
+      "neighborhood": "Pacific Heights",
+      "cuisine_type": "Cafe",
+      "price_range": "$$",
+      "score": 6,
+      "trending_reason": "Buzzing across 6 social posts from 0 creators. Multiple recent mentions building momentum on instagram.",
+      "platforms_active": [
+        "instagram"
+      ],
+      "sources": [
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/p/DV1NWkmAmph/",
+          "likes": 5
+        },
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/p/DV1NPtDAnzr/",
+          "likes": 15
+        },
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/p/DV1NGS-AqWv/",
+          "likes": 8
+        }
+      ]
+    },
+    {
+      "rank": 62,
       "name": "Nopa",
       "neighborhood": "Western Addition",
       "cuisine_type": "Californian",
@@ -1963,7 +1345,7 @@
       ]
     },
     {
-      "rank": 90,
+      "rank": 63,
       "name": "Crustacean",
       "neighborhood": "Financial District",
       "cuisine_type": "Vietnamese/Seafood",
@@ -1982,7 +1364,7 @@
       ]
     },
     {
-      "rank": 91,
+      "rank": 64,
       "name": "The Hornet",
       "neighborhood": "Pacific Heights",
       "cuisine_type": "Sandwiches",
@@ -2001,7 +1383,7 @@
       ]
     },
     {
-      "rank": 92,
+      "rank": 65,
       "name": "Pho 2000",
       "neighborhood": "Little Saigon",
       "cuisine_type": "Vietnamese",
@@ -2020,7 +1402,7 @@
       ]
     },
     {
-      "rank": 93,
+      "rank": 66,
       "name": "Cole Valley Tavern",
       "neighborhood": "Cole Valley",
       "cuisine_type": "American",
@@ -2039,12 +1421,107 @@
       ]
     },
     {
-      "rank": 94,
+      "rank": 67,
+      "name": "El Dorado",
+      "neighborhood": "Downtown",
+      "cuisine_type": "Latin",
+      "price_range": "$$",
+      "score": 5,
+      "trending_reason": "Buzzing across 17 social posts from 0 creators. Newly spotted on instagram \u2014 one to watch.",
+      "platforms_active": [
+        "instagram"
+      ],
+      "sources": [
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/p/DVwigamE-Uk/",
+          "likes": 2
+        },
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/p/DVzC7OMk3WC/",
+          "likes": 2
+        },
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/p/DV1j6Djk70a/"
+        },
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/p/DN3j2Lj5KDC/",
+          "likes": 26
+        }
+      ]
+    },
+    {
+      "rank": 68,
+      "name": "Avery",
+      "neighborhood": "Mission District",
+      "cuisine_type": "American Fine Dining",
+      "price_range": "$$$$",
+      "score": 5,
+      "trending_reason": "Michelin one-star with $258 tasting menu \u2014 caviar and wagyu.",
+      "platforms_active": [
+        "food_media"
+      ],
+      "sources": [
+        {
+          "platform": "food_media",
+          "url": "https://www.theinfatuation.com/san-francisco/guides/best-restaurants-in-san-francisco",
+          "label": "Infatuation"
+        }
+      ]
+    },
+    {
+      "rank": 69,
+      "name": "Blue Plate",
+      "neighborhood": "Mission District",
+      "cuisine_type": "American/New",
+      "price_range": "$$",
+      "score": 4,
+      "trending_reason": "Buzzing across 3 social posts from 0 creators. Newly spotted on instagram \u2014 one to watch.",
+      "platforms_active": [
+        "instagram"
+      ],
+      "sources": [
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/p/DVmtZFSji4p/",
+          "likes": 152
+        }
+      ]
+    },
+    {
+      "rank": 70,
+      "name": "Florio",
+      "neighborhood": "Pacific Heights",
+      "cuisine_type": "Italian/French",
+      "price_range": "$$$",
+      "score": 4,
+      "trending_reason": "Buzzing across 3 social posts from 0 creators. Multiple recent mentions building momentum on instagram.",
+      "platforms_active": [
+        "instagram"
+      ],
+      "sources": [
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/p/DVzn5Ariu1k/",
+          "likes": 4
+        },
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/p/DVw2Cw7AZio/",
+          "likes": 13
+        }
+      ]
+    },
+    {
+      "rank": 71,
       "name": "La Promenade Cafe",
       "neighborhood": "Inner Richmond",
       "cuisine_type": "Cafe/French",
       "price_range": "$$",
-      "score": 6,
+      "score": 4,
       "trending_reason": "Newly spotted on instagram \u2014 one to watch.",
       "platforms_active": [
         "instagram"
@@ -2063,12 +1540,50 @@
       ]
     },
     {
-      "rank": 95,
+      "rank": 72,
+      "name": "Bosco",
+      "neighborhood": "North Beach",
+      "cuisine_type": "Italian",
+      "price_range": "$$$",
+      "score": 3,
+      "trending_reason": "Buzzing across 3 social posts from 0 creators. Newly spotted on instagram \u2014 one to watch.",
+      "platforms_active": [
+        "instagram"
+      ],
+      "sources": [
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/p/DVj4cu4gfU3/",
+          "likes": 17
+        }
+      ]
+    },
+    {
+      "rank": 73,
+      "name": "The Front Porch",
+      "neighborhood": "Bernal Heights",
+      "cuisine_type": "Southern",
+      "price_range": "$$",
+      "score": 3,
+      "trending_reason": "Newly spotted on instagram \u2014 one to watch.",
+      "platforms_active": [
+        "instagram"
+      ],
+      "sources": [
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/p/DVxSQS8jimt/",
+          "likes": 51
+        }
+      ]
+    },
+    {
+      "rank": 74,
       "name": "Frenchie Wine Bar",
       "neighborhood": "Hayes Valley",
       "cuisine_type": "French",
       "price_range": "$$$",
-      "score": 5,
+      "score": 3,
       "trending_reason": "Newly spotted on instagram \u2014 one to watch.",
       "platforms_active": [
         "instagram"
@@ -2082,12 +1597,12 @@
       ]
     },
     {
-      "rank": 96,
+      "rank": 75,
       "name": "Saru Hand Roll Bar",
       "neighborhood": "Noe Valley",
       "cuisine_type": "Japanese/Sushi",
       "price_range": "$$",
-      "score": 5,
+      "score": 3,
       "trending_reason": "Newly spotted on instagram \u2014 one to watch.",
       "platforms_active": [
         "instagram"
@@ -2101,12 +1616,12 @@
       ]
     },
     {
-      "rank": 97,
+      "rank": 76,
       "name": "Le Marais Bakery",
       "neighborhood": "Castro",
       "cuisine_type": "Bakery/French",
       "price_range": "$$",
-      "score": 5,
+      "score": 3,
       "trending_reason": "Newly spotted on instagram \u2014 one to watch.",
       "platforms_active": [
         "instagram"
@@ -2120,69 +1635,7 @@
       ]
     },
     {
-      "rank": 98,
-      "name": "Taisan Huakee",
-      "neighborhood": "Geary Street",
-      "cuisine_type": "Chinese",
-      "price_range": "$",
-      "score": 5,
-      "trending_reason": "Newly spotted on instagram \u2014 one to watch.",
-      "platforms_active": [
-        "instagram"
-      ],
-      "sources": [
-        {
-          "platform": "instagram",
-          "url": "https://www.instagram.com/p/DVz_5Z-lAdx/",
-          "likes": 3
-        }
-      ]
-    },
-    {
-      "rank": 99,
-      "name": "Sheba Lounge",
-      "neighborhood": "Inner Sunset",
-      "cuisine_type": "Ethiopian",
-      "price_range": "$$",
-      "score": 5,
-      "trending_reason": "Newly spotted on instagram \u2014 one to watch.",
-      "platforms_active": [
-        "instagram"
-      ],
-      "sources": [
-        {
-          "platform": "instagram",
-          "url": "https://www.instagram.com/p/DV0D9hwk-RN/",
-          "likes": 1
-        },
-        {
-          "platform": "instagram",
-          "url": "https://www.instagram.com/p/DVzKCOgAZwV/",
-          "likes": 2
-        }
-      ]
-    },
-    {
-      "rank": 100,
-      "name": "Falasteen SF",
-      "neighborhood": "Noe Valley",
-      "cuisine_type": "Palestinian",
-      "price_range": "$$",
-      "score": 4,
-      "trending_reason": "Newly spotted on instagram \u2014 one to watch.",
-      "platforms_active": [
-        "instagram"
-      ],
-      "sources": [
-        {
-          "platform": "instagram",
-          "url": "https://www.instagram.com/p/DV1IV_7geel/",
-          "likes": 13
-        }
-      ]
-    },
-    {
-      "rank": 101,
+      "rank": 77,
       "name": "Scoma's",
       "neighborhood": "Fisherman's Wharf",
       "cuisine_type": "Seafood",
@@ -2201,7 +1654,7 @@
       ]
     },
     {
-      "rank": 102,
+      "rank": 78,
       "name": "Hook Fish Co.",
       "neighborhood": "Outer Sunset",
       "cuisine_type": "Seafood",
@@ -2220,69 +1673,120 @@
       ]
     },
     {
-      "rank": 103,
-      "name": "Breakwater Barbecue",
-      "neighborhood": "Dogpatch",
-      "cuisine_type": "BBQ",
-      "price_range": "$$",
-      "score": 3,
-      "trending_reason": "Newly spotted on instagram \u2014 one to watch.",
-      "platforms_active": [
-        "instagram"
-      ],
-      "sources": [
-        {
-          "platform": "instagram",
-          "url": "https://www.instagram.com/p/DV1oSX1Elq3/",
-          "likes": 3
-        }
-      ]
-    },
-    {
-      "rank": 104,
-      "name": "Day Moon Bread",
-      "neighborhood": "Outer Sunset",
-      "cuisine_type": "Bakery",
+      "rank": 79,
+      "name": "La Taqueria",
+      "neighborhood": "Mission District",
+      "cuisine_type": "Mexican",
       "price_range": "$",
-      "score": 3,
-      "trending_reason": "Newly spotted on instagram \u2014 one to watch.",
+      "score": 2,
+      "trending_reason": "Viral on instagram, tiktok \u2014 3,552,000 plays from 1 creator. Featured in viral tiktok content \u2014 ~1,315,200 attributed plays.",
       "platforms_active": [
         "instagram"
       ],
       "sources": [
         {
           "platform": "instagram",
-          "url": "https://www.instagram.com/p/DVpvlVqkW_1/",
-          "likes": 3
+          "url": "https://www.instagram.com/p/DVPh7_2EXK_/",
+          "likes": 16
         }
       ]
     },
     {
-      "rank": 105,
-      "name": "Amoura",
-      "neighborhood": "SoMa",
-      "cuisine_type": "Mediterranean",
-      "price_range": "$$$",
-      "score": 3,
-      "trending_reason": "Newly spotted on instagram \u2014 one to watch.",
-      "platforms_active": [
-        "instagram"
-      ],
-      "sources": [
-        {
-          "platform": "instagram",
-          "url": "https://www.instagram.com/p/DVyj09GlP5C/",
-          "likes": 1
-        }
-      ]
-    },
-    {
-      "rank": 106,
-      "name": "Toy Soldier",
-      "neighborhood": "Financial District",
+      "rank": 80,
+      "name": "Trestle",
+      "neighborhood": "North Beach",
       "cuisine_type": "American/New",
       "price_range": "$$",
-      "score": 3,
+      "score": 2,
+      "trending_reason": "Buzzing across 12 social posts from 0 creators. Newly spotted on instagram \u2014 one to watch.",
+      "platforms_active": [
+        "instagram"
+      ],
+      "sources": [
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/p/DV1QJ97lGPB/",
+          "likes": 7
+        },
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/p/DV1PCQeE9-u/"
+        }
+      ]
+    },
+    {
+      "rank": 81,
+      "name": "Itria",
+      "neighborhood": "Mission District",
+      "cuisine_type": "Italian",
+      "price_range": "$$$",
+      "score": 2,
+      "trending_reason": "Buzzing across 8 social posts from 0 creators. Newly spotted on instagram \u2014 one to watch.",
+      "platforms_active": [
+        "instagram"
+      ],
+      "sources": [
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/p/DVwtPNcgWgT/"
+        },
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/p/DVwtyeDAcec/",
+          "likes": 13
+        }
+      ]
+    },
+    {
+      "rank": 82,
+      "name": "Thai House Express",
+      "neighborhood": "Castro",
+      "cuisine_type": "Thai",
+      "price_range": "$$",
+      "score": 2,
+      "trending_reason": "Buzzing across 3 social posts from 0 creators. Newly spotted on instagram \u2014 one to watch.",
+      "platforms_active": [
+        "instagram"
+      ],
+      "sources": [
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/p/DV1mLijFMVP/",
+          "likes": 7
+        }
+      ]
+    },
+    {
+      "rank": 83,
+      "name": "Hedge Coffee",
+      "neighborhood": "SoMa",
+      "cuisine_type": "Cafe",
+      "price_range": "$$",
+      "score": 2,
+      "trending_reason": "Buzzing across 3 social posts from 0 creators. Multiple recent mentions building momentum on instagram.",
+      "platforms_active": [
+        "instagram"
+      ],
+      "sources": [
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/p/DVrLgqIjyVH/",
+          "likes": 2
+        },
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/p/DVm9RbjlCda/",
+          "likes": 2
+        }
+      ]
+    },
+    {
+      "rank": 84,
+      "name": "Sheba Lounge",
+      "neighborhood": "Inner Sunset",
+      "cuisine_type": "Ethiopian",
+      "price_range": "$$",
+      "score": 2,
       "trending_reason": "Newly spotted on instagram \u2014 one to watch.",
       "platforms_active": [
         "instagram"
@@ -2290,13 +1794,37 @@
       "sources": [
         {
           "platform": "instagram",
-          "url": "https://www.instagram.com/p/DV12K_UEl8y/",
+          "url": "https://www.instagram.com/p/DV0D9hwk-RN/",
           "likes": 1
+        },
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/p/DVzKCOgAZwV/",
+          "likes": 2
         }
       ]
     },
     {
-      "rank": 107,
+      "rank": 85,
+      "name": "Falasteen SF",
+      "neighborhood": "Noe Valley",
+      "cuisine_type": "Palestinian",
+      "price_range": "$$",
+      "score": 2,
+      "trending_reason": "Newly spotted on instagram \u2014 one to watch.",
+      "platforms_active": [
+        "instagram"
+      ],
+      "sources": [
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/p/DV1IV_7geel/",
+          "likes": 13
+        }
+      ]
+    },
+    {
+      "rank": 86,
       "name": "Cafe Gonzalez",
       "neighborhood": "Mission District",
       "cuisine_type": "Cafe",
@@ -2315,7 +1843,7 @@
       ]
     },
     {
-      "rank": 108,
+      "rank": 87,
       "name": "Braid Bakery",
       "neighborhood": "Various Locations",
       "cuisine_type": "Bakery",
@@ -2330,6 +1858,192 @@
           "platform": "instagram",
           "url": "https://www.instagram.com/p/DVrvp-5D_K0/",
           "likes": 10
+        }
+      ]
+    },
+    {
+      "rank": 88,
+      "name": "Mariposas",
+      "neighborhood": "Mission District",
+      "cuisine_type": "Peruvian",
+      "price_range": "$$",
+      "score": 1,
+      "trending_reason": "Buzzing across 23 social posts from 0 creators. Multiple recent mentions building momentum on instagram.",
+      "platforms_active": [
+        "instagram"
+      ],
+      "sources": [
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/p/DVzFTGHk-Hp/"
+        },
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/p/DVjkWvOk5FF/",
+          "likes": 1
+        },
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/p/DV1vJcyE5Gm/"
+        },
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/p/DVhTGZzExIH/"
+        }
+      ]
+    },
+    {
+      "rank": 89,
+      "name": "Q Specialty Coffee",
+      "neighborhood": "Inner Richmond",
+      "cuisine_type": "Cafe",
+      "price_range": "$$",
+      "score": 1,
+      "trending_reason": "Buzzing across 3 social posts from 0 creators. Newly spotted on instagram \u2014 one to watch.",
+      "platforms_active": [
+        "instagram"
+      ],
+      "sources": [
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/p/DVhmqK4CfFj/",
+          "likes": 4
+        }
+      ]
+    },
+    {
+      "rank": 90,
+      "name": "Taisan Huakee",
+      "neighborhood": "Geary Street",
+      "cuisine_type": "Chinese",
+      "price_range": "$",
+      "score": 1,
+      "trending_reason": "Newly spotted on instagram \u2014 one to watch.",
+      "platforms_active": [
+        "instagram"
+      ],
+      "sources": [
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/p/DVz_5Z-lAdx/",
+          "likes": 3
+        }
+      ]
+    },
+    {
+      "rank": 91,
+      "name": "Breakwater Barbecue",
+      "neighborhood": "Dogpatch",
+      "cuisine_type": "BBQ",
+      "price_range": "$$",
+      "score": 1,
+      "trending_reason": "Newly spotted on instagram \u2014 one to watch.",
+      "platforms_active": [
+        "instagram"
+      ],
+      "sources": [
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/p/DV1oSX1Elq3/",
+          "likes": 3
+        }
+      ]
+    },
+    {
+      "rank": 92,
+      "name": "Day Moon Bread",
+      "neighborhood": "Outer Sunset",
+      "cuisine_type": "Bakery",
+      "price_range": "$",
+      "score": 1,
+      "trending_reason": "Newly spotted on instagram \u2014 one to watch.",
+      "platforms_active": [
+        "instagram"
+      ],
+      "sources": [
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/p/DVpvlVqkW_1/",
+          "likes": 3
+        }
+      ]
+    },
+    {
+      "rank": 93,
+      "name": "Amoura",
+      "neighborhood": "SoMa",
+      "cuisine_type": "Mediterranean",
+      "price_range": "$$$",
+      "score": 1,
+      "trending_reason": "Newly spotted on instagram \u2014 one to watch.",
+      "platforms_active": [
+        "instagram"
+      ],
+      "sources": [
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/p/DVyj09GlP5C/",
+          "likes": 1
+        }
+      ]
+    },
+    {
+      "rank": 94,
+      "name": "Toy Soldier",
+      "neighborhood": "Financial District",
+      "cuisine_type": "American/New",
+      "price_range": "$$",
+      "score": 1,
+      "trending_reason": "Newly spotted on instagram \u2014 one to watch.",
+      "platforms_active": [
+        "instagram"
+      ],
+      "sources": [
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/p/DV12K_UEl8y/",
+          "likes": 1
+        }
+      ]
+    },
+    {
+      "rank": 95,
+      "name": "Breakfast Little",
+      "neighborhood": "Mission District",
+      "cuisine_type": "Brunch",
+      "price_range": "$",
+      "score": 0,
+      "trending_reason": "Building momentum on tiktok \u2014 37,300 plays across 1 posts.",
+      "platforms_active": [
+        "instagram"
+      ],
+      "sources": [
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/p/DU5_5Wbjjjr/",
+          "likes": -1
+        }
+      ]
+    },
+    {
+      "rank": 96,
+      "name": "Bao Bao Dumpling",
+      "neighborhood": "Inner Richmond",
+      "cuisine_type": "Chinese",
+      "price_range": "$",
+      "score": 0,
+      "trending_reason": "Buzzing across 5 social posts from 0 creators. Newly spotted on instagram \u2014 one to watch.",
+      "platforms_active": [
+        "instagram"
+      ],
+      "sources": [
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/p/DVzSJrpEkib/"
+        },
+        {
+          "platform": "instagram",
+          "url": "https://www.instagram.com/p/DVzR0zEEn1M/"
         }
       ]
     }
